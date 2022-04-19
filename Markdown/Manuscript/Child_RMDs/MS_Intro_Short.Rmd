@@ -4,4 +4,4 @@ author: "Author"
 date: "`r Sys.Date()`"
 output: html_document
 ---
-`r ifelse(is.na(params$X@background_1L_chr),"",params$X@background_1L_chr)` 
+<!-- `r ifelse(is.na(params$X@background_1L_chr),"",params$X@background_1L_chr)`  -->
