@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Hamilton, Matthew. (2022). ms_tmpl: Generate a template scientific manuscript. Zenodo. https://doi.org/10.5281/zenodo.5866880"
+authors:
+  - family-names: "Hamilton"
+    given-names: "Matthew"
+    orcid: https://orcid.org/0000-0001-7407-9194
+title: "ms_tmpl: Generate a template scientific manuscript"
+version: 0.1.1
+doi: 10.5281/zenodo.5866880 
+date-released: 2022-04-19
+url: "https://github.com/ready4-dev/ms_tmpl"

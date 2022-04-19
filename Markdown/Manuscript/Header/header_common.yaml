@@ -1,0 +1,48 @@
+title: A framework for implementing open source models of the systems shaping mental health outcomes in young people
+author:
+  - Matthew P Hamilton:
+      email: matthew.hamilton@orygen.org.au
+      institute: [Orygen]
+      correspondence: true
+  - name: Caroline X Gao
+    email: caroline.gao@orygen.org.au
+    institute: [Orygen, CYMH, Monash]
+  - name: Glen  Wiesner
+    email: glen.wiesner@heartfoundation.org.au
+    institute: [HF]
+  - name: John  Gillam
+    email: john.gillam@unimelb.edu.au
+    institute: [CYMH]
+  - name: Kate M Filia
+    email: kate.filia@orygen.org.au
+    institute: [Orygen, CYMH]
+  - name: Jana M Menssink
+    email: jana.menssink@orygen.org.au
+    institute: [Orygen, CYMH]
+  - name: Petra  Plencnerova
+    email: pplencnerova@headspace.org.au
+    institute: [Headspace]
+  - name: Patrick D McGorry
+    email: pat.mcgorry@orygen.org.au
+    institute: [Orygen, CYMH]
+  - name: Alexandra  Parker
+    email: alex.parker@vu.edu.au
+    institute: [VU]
+  - name: Jonathan  Karnon
+    email: jonathan.karnon@flinders.edu.au
+    institute: [Flinders]
+  - name: Sue M Cotton
+    email: sue.cotton@orygen.org.au
+    institute: [Orygen, CYMH]
+  - name: Cathrine  Mihalopoulos
+    email: cathy.mihalopoulos@deakin.edu.au
+    institute: [Monash]
+institute:
+  - Orygen: Orygen, Parkville, Australia
+  - CYMH: Centre for Youth Mental Health; University of Melbourne, Parkville, Australia
+  - Monash: School of Public Health and Preventive Medicine, Monash University, Clayton, Australia
+  - HF: Heart Foundation, Melbourne, Australia
+  - Headspace: headspace National Youth Mental Health Foundation, Melbourne, Australia
+  - VU: Victoria University, Footscray, Australia
+  - Flinders: Flinders University, Adelaide, Australia
+keywords:  open source models, health economics, mental disorders

@@ -1,0 +1,22 @@
+---
+bibliography: ../Data/references.bib
+output: 
+  bookdown::html_document2: 
+    pandoc_args: 
+      - "--metadata-file=../Header/header_common.yaml"
+      - '--lua-filter=../Filters/scholarly-metadata.lua'
+      - '--lua-filter=../Filters/author-info-blocks.lua'
+params:
+  X: NULL
+abstract: "`r paste0(stringr::str_replace_all(stringr::str_replace_all(stringr::str_replace_all(stringr::str_replace_all(readLines('../Header/abstract.txt'),'\\\\\\\\textbf',''),'\\{','**'),'\\}','**'),'\\\\\\\\newline','\\\\n'),collapse=' ')`"
+graphics: yes
+csl: plos.csl
+---
+
+```{r echo = F}
+library(ready4show)
+```
+
+```{r child="../Child_RMDs/All_Content.Rmd", echo=FALSE}
+```
+

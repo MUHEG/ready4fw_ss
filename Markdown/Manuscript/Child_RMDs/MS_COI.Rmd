@@ -1,0 +1,9 @@
+---
+title: "COI"
+author: "Author"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+
+`r ifelse(is.na(params$X@coi_1L_chr),"",params$X@coi_1L_chr)`
