@@ -7,11 +7,11 @@ We aimed to develop a conceptual and technical framework for implementing open s
 \\newline
 \\newline
 \\textbf{Methods: }
-We created a software development kit in R to support standardised implementation of open source computational models. We applied this toolkit to developing open source models to map youth mental health measures to health utility, which we assessed against five principles using 17 standards.
+We created a software development kit in R to support standardised implementation of mental health systems models. As a worked example, we applied the toolkit to develop open source youth mental health utility mapping models, which we assessed against five principles using 17 standards.
 \\newline
 \\newline
 \\textbf{Results: }
-Six R packages and a coding style dataset provide a toolkit for implementing mental health models that TIMELY - Transparent, Iterative, Modular, Epitomised, Licensed and Yielding. We used this toolkit to develop utility mapping models that fully met X and partially met Y TIMELY standards.
+Six R packages and a coding style dataset provide a toolkit for implementing mental health models that are TIMELY - Transparent, Iterative, Modular, Epitomised, Licensed and Yielding. The utility mapping models we developed with this toolkit fully met X and partially met Y TIMELY standards.
 \\newline
 \\newline
 \\textbf{Conclusion: }

@@ -6,3 +6,8 @@ output: html_document
 ---
 
 <!-- Add aims text here -->
+In this article, we aim to:
+
+i. Describe a suggested framework for implementing open source mental health systems models comprised of a foundation set of modelling principles and standards and a software development toolkit.
+
+ii. Provide a worked example of applying the framework to developing open source models for mapping psychological measures to health utility in young people.

@@ -1,0 +1,16 @@
+---
+title: "Doodles"
+author: "Matthew Hamilton"
+date: '2022-04-19'
+output: html_document
+---
+
+ISPOR T & V: 
+a multiapplication model, transparency, validation,
+For a multiapplication model, transparency, validation,
+and reporting are ongoing processes. The multiapplica-
+tion model is described (transparency)24 and validated,25
+and the descriptions and validations are continuously
+updated as science and the model evolve.26 In addition,
+each instantiation of the model is described, validated,
+and reported as each application is done.27

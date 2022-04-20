@@ -5,3 +5,55 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 <!-- `r ifelse(is.na(params$X@background_1L_chr),"",params$X@background_1L_chr)`  -->
+Mental disorders impose high health, social and economic burdens worldwide [@RN8]. Much of this burden is potentially avertable [@RN25], but poorly financed mental health systems are ill-equiped for this challenge[@RN22][@RN23]. A number of high income countries have begun to increase public expenditures on mental health services[@RN26], and in some cases have embraced ambitious programs of major structural reforms to mental health service systems[REFSGOHERE]. The large and widespread mental health impacts of the COVID pandemic[LANCET], ***CLIMATE AND MENTAL HEALTH*** have also highlighted the need to improve the resilience and emergency preparedness of these systems. Policymakers have also been encouraged to place a greater emphasis on tackling the social determinants of mental disorder[@RN11].
+
+Although combinations of investment, service system improvement and policy innovation are required, the theoretical basis for understanding the systems in which mental disorder emerges and is treated is weak [@RN2111]. It remains unclear why increased investments in mental health care have yet to have discernable impacts on population mental health [@RN26]. The voluminous evidence base in mental health economics predominantly addresses issues relating to the affordability and value for money of individual programs [@RN34], with the features and behaviours of complex systems relatively unexplored by mental health simulation studies [@RN73]. The literature about how the requirements, characteristics and performance of mental health services are shaped by spatiotemporal context is underdeveloped [@RN42].  Better evidence is also required about how to achieve population mental health gain from social determinants based strategies [@RN43].
+
+These major gaps in our understanding of the systems shaping population mental health may partly explain why stringent scientific standards of the type required for the development of therapeutic goods are not applied to the task of re-engineering mental health systems. Lively debates within the mental health policymaking community extend beyond normative issues (what should policy aim to achieve) to technical questions (which system financing and organising choices are most likely to achieve specified objectives) that a more mature mental health systems modelling field might better address.
+
+There is a general lack of scientific theories about the properties and behaviours of mental health systems. There is therefore scope for increased use of multi-application, dynamic systems modelling approaches that can provide insights about interdependencies between candidate policy settings that static models of isolated scenarios cannot (Occhipinti, 2021). These types of insights could be highly relevant to systems planners seeking to prioritise, sequence and target elements of complex reform programs and to anticipate and mitigate risks to the successful implementation of these reforms. 
+
+However, developing such models can be major and complex undertakings which in turn may make them particularly prone to errors (see Fig 1 from (Saltelli, 2019)). Although, more flexible - higher burden of transparency and validation. This leads to computational model issue. This leads to open source.
+
+The absence of common standards and taxonomies make it hard to develop these more extensive models by simply combining existing mental health models.
+
+ which can be used to generate credible predictions about how these systems might respond to phased, multi-component redesign strategies
+
+Developing theories that produce valid and useful predictions about the potential impacts and feasibility of phased, multi-component programs of policy and service system reform is most likely a major and long term challenge. This undertaking might become more tractable if it could be chunked into smaller tasks and progressed by a research community that, even when working independently, routinely test, re-use and extend each other's work. 
+
+Common standards and frameworks for how computational models are developed could address some of these challenges [@RN73]. 
+
+Outputs from discrete projects should be reproducible, generalisable and able to be linked like Lego bricks to progressively assemble more complex and realistic representations of the systems being modelled.
+
+ Similarly,
+
+
+
+ 
+
+However, of the three components that comprise a mental health computer simulation model - the conceptual model, the mathematical model and the computational model - only the first two are typically developed and reported in a manner that facilitates reuse, refinement and extension by others. This is problematic as the code implementation is where the theory represented by a simulation model is most fully elaborated. In the limited cases where code is made publicly available it is typically in the form of programs (an algorithm that performs one task) rather than code libraries (where the primary algorithm is decomponsed into multiple component algorithms, that can be re-used for a potentially large number of other purposes). 
+
+
+
+
+
+It is frequently claimed that better approaches to the organising and financing of mental health service systems can generate significant gains in population health (Saxena, 2007; Chisholm, 2016).  Over the last two decades, policymakers in Australia have acted on these claims by investing in a series of major systemic mental health reforms, with improving the mental health of young people a major focus (McGorry, 2017). The scope and complexity of these reforms has increased over time, with the Victorian Government’s current plan to overhaul mental health service delivery (Victoria, 2021) arguably the most ambitious to-date. 
+
+ Although Australian mental health policy and system design processes has a formally specified role for a robust model-based decision aid, this tool,  the National Mental Health Services Planning Framework, has limited capacity to meet many of the core decision-support requirements of systems planners (Commission, 2020). These requirements are diverse and extensive, but are likely to include models that can:
+
+•	anticipate the distribution and evolution of risk factors and need for mental health care by region and population group;
+
+•	identify the budget, equity and efficiency impacts of alternative resource allocations between mental health programs;
+
+•	provide guidance about how services can be optimally configured to achieve outcomes such as minimising wait times, maximising health gain, meeting patient preferences and improving societal welfare; and
+
+•	predict how the supply, location and behaviour of mental healthcare providers change in response to alternative incentives and conditions.
+
+Although a number of these or similar types of models have been developed for the Australian context, the validity, utility and accessibility of these models vary considerably. Access to some model-based decision aids and their constituent algorithms and data is highly restricted. The relevance of models to current and future decision contexts can also be limited as mental health models are rarely routinely updated with new data and improved algorithms. 
+
+In addition to issues relating to improving the quality and usefulness of models that address narrowly defined topics, there are additional challenges concerning the development of models with much broader scope. 
+
+Open source frameworks, which have been recommended for the development of mental health modelling field (Long, 2018), have the potential to help address a number of these challenges. Open source approaches can promote common standards and interoperability, improve model transparency and facilitate routine updates to rectify errors, update data and add features. They may also have educational value in developing the health systems modelling field (Dunlop, 2017).
+
+However, open source computational models also present a range of conceptual, technical, legal and resourcing issues compared to more traditional approaches to model development. If these issues can be successfully addressed, there are potential benefits to both decision makers (who will have access to more relevant and trustworthy model-based decision aids) and modellers (for whom complex models will become more tractable through improved access to relevant code and data).
+

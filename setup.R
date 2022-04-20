@@ -39,8 +39,8 @@ X <- renewSlot(X,
                  args_ls <- X@abstract_args_ls
                  args_ls$abstract_ls <- list(Background = "Open source approaches have the scope to improve the transparency, quality and decision utility of health economic models of mental health systems. ",
                                              Objectives = "We aimed to develop a conceptual and technical framework for implementing open source mental health systems models and illustrate how it can be applicatied to economic topics in youth mental health.",
-                                             Methods = "We created a software development kit in R to support standardised implementation of open source computational models. We applied this toolkit to developing open source models to map youth mental health measures to health utility, which we assessed against five principles using 17 standards.",
-                                             Results = "Six R packages and a coding style dataset provide a toolkit for implementing mental health models that TIMELY - Transparent, Iterative, Modular, Epitomised, Licensed and Yielding. We used this toolkit to develop utility mapping models that fully met X and partially met Y TIMELY standards.", 
+                                             Methods = "We created a software development kit in R to support standardised implementation of mental health systems models. As a worked example, we applied the toolkit to develop open source youth mental health utility mapping models, which we assessed against five principles using 17 standards.",
+                                             Results = "Six R packages and a coding style dataset provide a toolkit for implementing mental health models that are TIMELY - Transparent, Iterative, Modular, Epitomised, Licensed and Yielding. The utility mapping models we developed with this toolkit fully met X and partially met Y TIMELY standards.", 
                                              Conclusion = "Please fund me",
                                              Data = "Data")
                  args_ls
