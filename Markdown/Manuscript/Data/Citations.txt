@@ -1,9 +1,16 @@
-﻿@book{RN8,
-   author = {Commission, Productivity},
-   title = {Mental health: Productivity Commission inquiry report},
-   publisher = {Productivity Commission},
-   url = {https://apo.org.au/node/309475},
-   year = {2020},
-   type = {Book}
+﻿@article{RN9,
+   author = {Dunlop, William C. N. and Mason, Nicola and Kenworthy, James and Akehurst, Ron L.},
+   title = {Benefits, Challenges and Potential Strategies of Open Source Health Economic Models},
+   journal = {PharmacoEconomics},
+   volume = {35},
+   number = {1},
+   pages = {125-128},
+   ISSN = {1179-2027
+1170-7690},
+   DOI = {10.1007/s40273-016-0479-8},
+   url = {https://pubmed.ncbi.nlm.nih.gov/27928759
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5209409/},
+   year = {2017},
+   type = {Journal Article}
 }
 
