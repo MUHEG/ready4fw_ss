@@ -1,21 +1,5 @@
-\\textbf{Background: }
-Open source approaches have the scope to improve the transparency, quality and decision utility of health economic models of mental health systems. 
-\\newline
-\\newline
-\\textbf{Objectives: }
-We aimed to develop a conceptual and technical framework for implementing open source mental health systems models and illustrate how it can be applicatied to economic topics in youth mental health.
-\\newline
-\\newline
-\\textbf{Methods: }
-We created a software development kit in R to support standardised implementation of mental health systems models. As a worked example, we applied the toolkit to develop open source youth mental health utility mapping models, which we assessed against five principles using 17 standards.
-\\newline
-\\newline
-\\textbf{Results: }
-Six R packages and a coding style dataset provide a toolkit for implementing mental health models that are TIMELY - Transparent, Iterative, Modular, Epitomised, Licensed and Yielding. The utility mapping models we developed with this toolkit fully met X and partially met Y TIMELY standards.
-\\newline
-\\newline
-\\textbf{Conclusion: }
-Please fund me
+\\textbf{Summary: }
+There is strong in principle support for open source health economic models, but practical barriers limit their availability. We propose a set of principles and standards for the implementation of open source health economic models that are TIMELY - Transparent, Iterative, Modular, Epitomised and Yielding. We then describe a software framework that we have developed for developing TIMELY models in youth mental health and illustrate this framework with an open source utility mapping project. 
 \\newline
 \\newline
 \\textbf{Data: }

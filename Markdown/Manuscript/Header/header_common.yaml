@@ -1,4 +1,4 @@
-title: A framework for implementing open source economic models of the systems shaping mental health outcomes in young people
+title: A framework for developing open source economic models of mental health systems
 author:
   - Matthew P Hamilton:
       email: matthew.hamilton@orygen.org.au
@@ -22,6 +22,9 @@ author:
   - name: Petra  Plencnerova
     email: pplencnerova@headspace.org.au
     institute: [Headspace]
+  - name: David  Baker
+    email: david.baker@orygen.org.au
+    institute: [Orygen, CYMH]
   - name: Patrick D McGorry
     email: pat.mcgorry@orygen.org.au
     institute: [Orygen, CYMH]

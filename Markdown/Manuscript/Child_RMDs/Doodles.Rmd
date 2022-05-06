@@ -5,6 +5,8 @@ date: '2022-04-19'
 output: html_document
 ---
 
+
+
 ISPOR T & V: 
 a multiapplication model, transparency, validation,
 For a multiapplication model, transparency, validation,
@@ -14,3 +16,55 @@ and the descriptions and validations are continuously
 updated as science and the model evolve.26 In addition,
 each instantiation of the model is described, validated,
 and reported as each application is done.27
+
+CLIPPINGS
+It is frequently claimed that better approaches to the organising and financing of mental health service systems can generate significant gains in population health (Saxena, 2007; Chisholm, 2016).  Over the last two decades, policymakers in Australia have acted on these claims by investing in a series of major systemic mental health reforms, with improving the mental health of young people a major focus (McGorry, 2017). The scope and complexity of these reforms has increased over time, with the Victorian Government’s current plan to overhaul mental health service delivery (Victoria, 2021) arguably the most ambitious to-date. 
+
+ Although Australian mental health policy and system design processes has a formally specified role for a robust model-based decision aid, this tool,  the National Mental Health Services Planning Framework, has limited capacity to meet many of the core decision-support requirements of systems planners (Commission, 2020). These requirements are diverse and extensive, but are likely to include models that can:
+
+•	anticipate the distribution and evolution of risk factors and need for mental health care by region and population group;
+
+•	identify the budget, equity and efficiency impacts of alternative resource allocations between mental health programs;
+
+•	provide guidance about how services can be optimally configured to achieve outcomes such as minimising wait times, maximising health gain, meeting patient preferences and improving societal welfare; and
+
+•	predict how the supply, location and behaviour of mental healthcare providers change in response to alternative incentives and conditions.
+
+Although a number of these or similar types of models have been developed for the Australian context, the validity, utility and accessibility of these models vary considerably. 
+
+
+and to anticipate and mitigate risks to the successful implementation of these reforms
+
+
+Developing theories that produce valid and useful predictions about the potential impacts and feasibility of phased, multi-component programs of policy and service system reform is most likely a major and long term challenge. This undertaking might become more tractable if it could be chunked into smaller tasks and progressed by a research community that, even when working independently, routinely test, re-use and extend each other's work. 
+
+However, developing  This leads to computational model issue. This leads to open source.
+
+The absence of common standards and taxonomies make it hard to develop these more extensive models by simply combining existing mental health models.
+
+ which can be used to generate credible predictions about how these systems might respond to phased, multi-component redesign strategies
+
+
+
+Common standards and frameworks for how computational models are developed could address some of these challenges [@RN73]. 
+
+Outputs from discrete projects should be reproducible, generalisable and able to be linked like Lego bricks to progressively assemble more complex and realistic representations of the systems being modelled.
+
+ Similarly,
+
+
+These knowledge gaps may partly explain why debates within the mental health policymaking community extend beyond normative issues (what should policy aim to achieve) to technical questions (which system financing and organising choices are most likely to achieve specified objectives). A more mature mental health systems modelling field might see the technical aspects of re-engineering mental health systems subject to the same stringent scientific standards as those required for the development of therapeutic goods. Yet, 
+ 
+
+If these issues can be successfully addressed, there are potential benefits to both decision makers (who will have access to more relevant and trustworthy model-based decision aids) and modellers (for whom complex models will become more tractable through improved access to relevant code and data).
+
+
+
+
+Access to some model-based decision aids and their constituent algorithms and data is highly restricted. The relevance of models to current and future decision contexts can also be limited as mental health models are rarely routinely updated with new data and improved algorithms. 
+
+In addition to issues relating to improving the quality and usefulness of models that address narrowly defined topics, there are additional challenges concerning the development of models with much broader scope. 
+
+
+
+A number of high income countries have begun to increase public expenditures on mental health services[@RN26], and in some cases have embraced ambitious programs of major structural reforms to mental health service systems[REFSGOHERE]. However
