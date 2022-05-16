@@ -1,0 +1,28 @@
+﻿@article{RN3,
+   author = {Alarid-Escudero, Fernando and Krijkamp, Eline M. and Pechlivanoglou, Petros and Jalal, Hawre and Kao, Szu-Yu Zoe and Yang, Alan and Enns, Eva A.},
+   title = {A Need for Change! A Coding Framework for Improving Transparency in Decision Modeling},
+   journal = {PharmacoEconomics},
+   volume = {37},
+   number = {11},
+   pages = {1329-1339},
+   ISSN = {1179-2027},
+   DOI = {10.1007/s40273-019-00837-x},
+   url = {https://doi.org/10.1007/s40273-019-00837-x},
+   year = {2019},
+   type = {Journal Article}
+}
+
+@article{RN1,
+   author = {Arnold, Renée J. G. and Ekins, Sean},
+   title = {Time for Cooperation in Health Economics among the Modelling Community},
+   journal = {PharmacoEconomics},
+   volume = {28},
+   number = {8},
+   pages = {609-613},
+   ISSN = {1179-2027},
+   DOI = {10.2165/11537580-000000000-00000},
+   url = {https://doi.org/10.2165/11537580-000000000-00000},
+   year = {2010},
+   type = {Journal Article}
+}
+

@@ -12,11 +12,11 @@ output: html_document
 ```{r child="../Child_RMDs/MS_Aims.Rmd", echo=FALSE}
 ```
 
-# Methods
+<!-- # Methods -->
 ```{r child="../Child_RMDs/MS_Method.Rmd", echo=FALSE}
 ```
 
-# Results
+<!-- # Results -->
 ```{r child="../Child_RMDs/MS_Results.Rmd", echo=FALSE}
 ```
 

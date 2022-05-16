@@ -1,16 +1,13 @@
-﻿@article{RN9,
-   author = {Dunlop, William C. N. and Mason, Nicola and Kenworthy, James and Akehurst, Ron L.},
-   title = {Benefits, Challenges and Potential Strategies of Open Source Health Economic Models},
-   journal = {PharmacoEconomics},
-   volume = {35},
-   number = {1},
-   pages = {125-128},
-   ISSN = {1179-2027
-1170-7690},
-   DOI = {10.1007/s40273-016-0479-8},
-   url = {https://pubmed.ncbi.nlm.nih.gov/27928759
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5209409/},
-   year = {2017},
+﻿@article{RN22,
+   author = {McManus, E. and Turner, D. and Gray, E. and Khawar, H. and Okoli, T. and Sach, T.},
+   title = {Barriers and Facilitators to Model Replication Within Health Economics},
+   journal = {Value Health},
+   volume = {22},
+   number = {9},
+   pages = {1018-1025},
+   ISSN = {1098-3015},
+   DOI = {10.1016/j.jval.2019.04.1928},
+   year = {2019},
    type = {Journal Article}
 }
 

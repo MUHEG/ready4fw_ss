@@ -5,15 +5,15 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 <!-- Add child RMDs for methods content -->
-## Sample and setting
+<!-- ## Sample and setting -->
 `r ifelse(is.na(params$X@sample_desc_1L_chr),"",params$X@sample_desc_1L_chr)`  
 
-## Measures
+<!-- ## Measures -->
 
-### Population characteristics
+<!-- ### Population characteristics -->
 
-## Procedures
+<!-- ## Procedures -->
 
-## Statistical analysis
+<!-- ## Statistical analysis -->
 
-### Replicability
+<!-- ### Replicability -->
