@@ -12,6 +12,9 @@ output: html_document
 <!-- Add child RMDs for results content -->
 
 # Motivation
+
+MH systems design is not a pharma led project - less concerns about commercial ownership
+
 Mental disorders impose high health, social and economic burdens worldwide [@RN8;@GBD2019]. Much of this burden is potentially avertable [@RN25], but poorly financed and organised mental health systems are ill-equiped for this challenge[@RN22;@RN23]. The large and widespread additional mental health burdens recently observed during the COVID pandemic[@20211700] and predicted as a potential future consequence of global heating [@page_howard_2010], highlight the need to improve the resilience and adaptability of these systems. To help stem growing demand for mental health services, policymakers have also been encouraged to place greater emphasis on tackling the social determinants of mental disorder[@RN11].
 
 Realising significant improvements in population mental health may in part depend on gaining better understanding of the systems in which mental disorder emerges and is treated [@Fried2020]. Currently, the theoretical basis for understanding these systems is weak [@RN2111]. Strikingly, it remains unclear why increased investments in mental health care have yet to discernably reduce the prevalence and burden of mental disorders[@RN26].  The literature about how the requirements, characteristics and performance of mental health services are shaped by spatiotemporal context is underdeveloped [@RN42]. There is insufficient evidence to identify the social determinants of mental disorders most amenable to preventative interventions, and for which population sub-groups such interventions would be most effective [@RN43].

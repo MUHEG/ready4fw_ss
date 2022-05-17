@@ -6,25 +6,12 @@ output: html_document
 ---
 
 <!-- `r ifelse(is.na(params$X@background_1L_chr),"",params$X@background_1L_chr)`  -->
-Computational models have become an essential tool for healthcare policy development [@Erdemir2020]. Although influential and widely used, these models routinely contain errors [@Radeva2020], are often poorly reproducible [@Jalali2021; @McManus2019] and may be infrequently updated or revised [@Sampson2017]. To address these issues, there is increasing in principle support for open source health economics models (OSHEMs) that grant open access to and liberal permission to re-use model source code [@Pouwels2022]. However, in-practice implementation of OSHEMs remains rare [@Emerson2019]. Some resistence to adoption centers on.... [@Padula2017] . 
+Computational models have become an essential tool for healthcare policy development [@Erdemir2020]. Although influential and widely used, these models routinely contain errors [@Radeva2020], are rarely adequately validated [@Ghabri2019], can be difficult to reproduce [@Jalali2021; @McManus2019; @Bermejo2017] and are likely to be infrequently updated or revised [@Sampson2017]. To help address these issues, there is increasing in principle support for open source health economics models (OSHEMs) that grant open access to and liberal permissions to re-use model source code [@Pouwels2022]. However, in-practice implementation of OSHEMs remains rare [@Emerson2019; @Michalczyk2018; @Feenstra2022]. Barriers to adoption include concerns about intellectual property, confidentiality, model misuse and the resources required to support open source implementations [@Pouwels2022; @Wu2019]. As many health economic models are owned by pharmaceutical companies and consultancies, commercial considerations may also limit adoption of OSHEMs [@Feenstra2022].
 
-A major shift in how health economic models are implemented.....They may also have educational value in developing the health systems modelling field [@Dunlop2017]. However, open source computational models also present a range of conceptual, technical, legal and resourcing issues compared to more traditional approaches to model development.
+There is also a need to develop good practice guidance for implementing OSHEMs [@Sampson2019], which is currently scarce and piecemeal. Current health economist best practice guidelines on model transparency was published ten years ago [@Eddy2012] and contained recommendations on technical and non-technical model documentation but not about how model code and data are to be shared. More recent and more general guidance recommends the sharing of model code and data using repositories such as GitHub and Zenodo as well as the use of version control systems such as Git across the development lifecycle of a modelling project [@Erdemir2020]. A coding framework for OSHEMs developed in the language R includes standardised approaches to directory structure and naming conventions[@Alarid2019].
 
-The health economics field i
 
-copyrights, model misuse, confidential data, software, and time/resources [@Wu2019]
-cooperation [@Arnold2010]
-coding framework / guidance [@Alarid2019]
-10 rules [@Erdemir2020]
-Sys review
-Over the last decade there have been
-the potential to increase the transparency, reproducibility and reuse of health economic analyses. 
 
-Open source frameworks, which have been recommended for the development of mental health modelling field [@RN73], have the potential to help address a number of these challenges. Open source approaches can promote common standards and interoperability, improve model transparency and facilitate routine updates to rectify errors, update data and add features.  
-
-- Our project - readyforwhatsnext : open source model of the systems shaping the mental health of young people
-- Lack of guidance on open source health economic models and in particular on recommended frameworks for implementing the computational model.
-- Focus computational model. Most in need of novel guidance. Also: Of the three components that comprise a mental health computer simulation model - the conceptual model, the mathematical model and the computational model - only the first two are typically developed and reported in a manner that facilitates reuse, refinement and extension by others. This is problematic as the code implementation is where the theory represented by a simulation model is most fully elaborated. 
 
 
 ```{r echo=F}

@@ -6,6 +6,63 @@ output: html_document
 ---
 
 
+10 rules [@Erdemir2020]
+.....DARTH
+
+[@Sampson2019] - 
+development of networks of health economists that are working on a particular disease area. 
+f reference models, open-source modelling, or model registries are to be part of the model development process, then standards need to be developed to guide analysts in achieving best practice. The availability of guidance can help to create confidence in researchers to pursue transparency. Yet, selecting the best standards to use can also be challenging [56]. Wider uptake—and appropriate use—of standards, by both modellers and journals, should be encouraged, and research should evaluate the suitability of guidance relating to transparency.
+However, transparency depends on the code being well structured and clearly commented and a user or reviewer is required to have knowledge of the language in order to validate, use or adapt the model. There is a steep learning curve for analysts unfamiliar with script-based models
+There may also be barriers in the communication of models due to a lack of knowledge for end users. However, this can be substantially mitigated with the use of open access interface packages, like the R package Shiny, which can be used to turn an R model into an interactive web application [58]. This allows a user without any R knowledge to use or, in part, validate the model.
+Collaboration
+----
+@Erdemir2020] - 
+We recommend the use of existing repositories for disseminating code and models. 
+
+there is a need for guidance, frameworks and templates
+Guidance needed for implementation. Current transparency guidance not good enough.
+
+ome resistence to adoption centers on.... [@Padula2017] . 
+HE commercial...[@Feenstra2022],
+   author]
+
+A major shift in how health economic models are implemented.....They may also have educational value in developing the health systems modelling field [@Dunlop2017]. However, open source computational models also present a range of conceptual, technical, legal and resourcing issues compared to more traditional approaches to model development.
+
+The health economics field i
+
+
+cooperation [@Arnold2010]
+coding framework / guidance [@Alarid2019]
+10 rules [@Erdemir2020]
+Sys review??
+
+Maybe [@Feenstra2022] - 
+Model complexity increases validation needs as does multi-purpose modelling
+conceptual model, input data, computational model, operational model
+International collaboration in validation
+Need for documentation
+Commercial ownership of HE models reduce scope for open-source
+finances, accountability, and ownership barriers to OS
+still not very widespread in HE decision model
+would require more resources, could greatly increase transparency
+distinguishing grades of open source
+Model validation should hence become more structured and standardized, as well as more transparent.
+
+Modular validation - Ghabri, Justifies extensive validation
+Citing Dunlop - HE lagging behind other modelling fields
+
+Australian
+poor validation - ghabri
+
+Over the last decade there have been
+the potential to increase the transparency, reproducibility and reuse of health economic analyses. 
+
+Open source frameworks, which have been recommended for the development of mental health modelling field [@RN73], have the potential to help address a number of these challenges. Open source approaches can promote common standards and interoperability, improve model transparency and facilitate routine updates to rectify errors, update data and add features.  
+
+
+- Our project - readyforwhatsnext : open source model of the systems shaping the mental health of young people
+- Lack of guidance on open source health economic models and in particular on recommended frameworks for implementing the computational model.
+- Focus computational model. Most in need of novel guidance. Also: Of the three components that comprise a mental health computer simulation model - the conceptual model, the mathematical model and the computational model - only the first two are typically developed and reported in a manner that facilitates reuse, refinement and extension by others. This is problematic as the code implementation is where the theory represented by a simulation model is most fully elaborated. 
 
 ISPOR T & V: 
 a multiapplication model, transparency, validation,
