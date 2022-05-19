@@ -13,23 +13,44 @@ output: html_document
 
 # Motivation
 
-MH systems design is not a pharma led project - less concerns about commercial ownership
+## Why develop OSHEMs in mental health
 
-Mental disorders impose high health, social and economic burdens worldwide [@RN8;@GBD2019]. Much of this burden is potentially avertable [@RN25], but poorly financed and organised mental health systems are ill-equiped for this challenge[@RN22;@RN23]. The large and widespread additional mental health burdens recently observed during the COVID pandemic[@20211700] and predicted as a potential future consequence of global heating [@page_howard_2010], highlight the need to improve the resilience and adaptability of these systems. To help stem growing demand for mental health services, policymakers have also been encouraged to place greater emphasis on tackling the social determinants of mental disorder[@RN11].
+Mental disorders impose high health, social and economic burdens worldwide [@RN8;@GBD2019]. Much of this burden is potentially avertable [@RN25], but poorly financed and organised mental health systems are ill-equipped for this challenge[@RN22;@RN23]. The large and widespread additional mental health burdens recently observed during the COVID pandemic[@20211700] and predicted as a potential future consequence of global heating [@page_howard_2010], highlight the need to improve the resilience and adaptability of these systems. To help stem growing demand for mental health services, policymakers have also been encouraged to place greater emphasis on tackling the social determinants of mental disorder[@RN11].
 
-Realising significant improvements in population mental health may in part depend on gaining better understanding of the systems in which mental disorder emerges and is treated [@Fried2020]. Currently, the theoretical basis for understanding these systems is weak [@RN2111]. Strikingly, it remains unclear why increased investments in mental health care have yet to discernably reduce the prevalence and burden of mental disorders[@RN26].  The literature about how the requirements, characteristics and performance of mental health services are shaped by spatiotemporal context is underdeveloped [@RN42]. There is insufficient evidence to identify the social determinants of mental disorders most amenable to preventative interventions, and for which population sub-groups such interventions would be most effective [@RN43].
+Realising significant improvements in population mental health may in part depend on gaining better understanding of the systems in which mental disorder emerges and is treated [@Fried2020]. Computational modelling could play an important role in providing these insights, but this may require significant changes in the way mental health modelling projects are funded, conceptualised and implemented. 
 
-Mental health simulation studies rarely explore the features and behaviours of complex systems [@RN73], with mental health economic models predominantly addressing issues relating to the affordability and value for money of individual programs [@RN34]. Single purpose models that assume static systems, even when sufficiently robust to be formally incorporated into Government resource planning processes, may be inadequate for the decision support needs of policymakers and service planners seeking to successfully identify, prioritise, sequence and target multiple elements of complex reform programs [@PC2020]. 
+Currently, mental health simulation studies rarely explore the features and behaviours of complex systems [@RN73], with mental health economic models predominantly addressing issues relating to the affordability and value for money of individual programs [@RN34]. Major mental health reform programs will require the identification, prioritisation, sequencing, targeting and monitoring of multiple interdependent initiatives. Single purpose models that assume static systems, even when sufficiently robust to be formally incorporated into Government resource planning processes, are therefore likely to be inadequate for the decision support needs of policymakers and service planners [@PC2020]. Multi-application or reference models [@Afzali2013] that use dynamic systems modelling approaches can provide insights about inter-dependencies between candidate policies and the evolution of the mental health systems planning context [@Occhipinti2021]. However, as they are intended for multiple-purposes and because propagation errors may be more likely with more complex models [@Saltelli2019] such models require greater investments in model transparency and validation [@Eddy2012; @Feenstra2022].
 
-Multi-application, dynamic systems modelling approaches can provide insights about inter-dependencies between candidate policy settings that static models of isolated scenarios cannot [@Occhipinti2021]. However, greater use of these types of models may require adaptation on the part of funders, modellers and decision-makers. The complexity of multi-application systems models may make them particularly prone to errors [@Saltelli2019], thus requiring greater investments in model transparency and validation [@Eddy2012]. These types of models can be highly resource intensive to develop and may also never be truly "finished", instead requiring ongoing updates to remain relevant to evolving decision contexts [@Jenkins2021] and to meet additional feature requests from end-users. The development, validation and maintenance of these types of models may be simply too onerous and long term a burden to remain the responsibility of a single modelling team and might benefit from collaborations across multiple modelling teams, and perhaps the general mental health modelling field. Similarly, more attention to developing partnerships between modellers and decision-makers across the life-cycle of a modelling project can help ensure multi-purpose models can address priority decision topics and have user-interfaces that meet the needs of non-technical users. 
+The development, validation and maintenance of these more complex models may be simply too onerous a burden to remain the responsibility of a single modelling team. Developing networks of modellers working on common health conditions [@Sampson2019] and collaborations across multiple modelling teams that include the ability to re-use and extend each others work, can make complex modelling projects more tractable [@Arnold2010]. Similarly, more attention to developing partnerships between modellers and decision-makers across the life-cycle of a modelling project can help ensure models are appropriately conceptualised and implemented and improve their practical utility as decision aids [@Zabell2021]. 
 
+Infrastructure and funding is required to support the mental health systems modelling field address some long-term challenges. The theoretical basis for understanding complex mental health systems is currently weak [@RN2111]. Strikingly, it remains unclear why increased investments in mental health care have yet to discernibly reduce the prevalence and burden of mental disorders[@RN26].  The literature about how the requirements, characteristics and performance of mental health services are shaped by spatiotemporal context is underdeveloped [@RN42]. There is insufficient evidence to identify the social determinants of mental disorders most amenable to preventative interventions, and for which population sub-groups such interventions would be most effective [@RN43]. Modelling projects should be resourced to be routinely updated and refined as new evidence emerges and decision contexts change [@Jenkins2021].
 
-# TIMELY principles and standards
-
-# ready4 Framework
-
-# Application
+Open source approaches and common standards, which have been previously recommended for the development of mental health modelling field [@RN73], have the potential to help address the need for a more transparent, collaborative and sustained approach to mental health system model development.
 
 ## readyforwhatsnext
 
-## Worked example
+# Implementation
+
+## Standards
+
+TIMELY
+
+### Transparent Models
+
+### Iterative Models
+
+### Modular Models
+
+### Epitomised Models
+
+### Yielding Models
+
+## Infrastructure
+
+### Technical platforms
+
+### Software Development Kit
+
+## Application
+
+Worked example

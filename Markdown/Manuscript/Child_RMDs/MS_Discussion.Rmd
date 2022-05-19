@@ -5,3 +5,7 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
+MH systems design is not a pharma led project - less concerns about commercial ownership
+
+greater use of these types of models may require adaptation on the part of funders, modellers and decision-makers. T
+

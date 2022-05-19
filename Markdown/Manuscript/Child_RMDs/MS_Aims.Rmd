@@ -6,4 +6,4 @@ output: html_document
 ---
 
 <!-- Add aims text here -->
-As part of a project to develop an open source model of youth mental health, we have developed a framework that consolidates and refines these and other recommended standards for OSHEMs and provides a set of tools to help implement models that conform to these standards. In this paper we describe the rationale for and content of the framework we have developed and illustrate its practical application with a worked example.
+We have consolidated and refined these and other recommended standards for OSHEMs and developed tools to help implement them as part of a framework for developing an open source model of youth mental health. In this paper, we describe our motivation for developing the framework, the rationale for each standard specified in the framework, the toolkits we have developed and a worked example of a modelling project developed with the framework.

@@ -1,14 +1,38 @@
-﻿@article{RN40,
-   author = {Sampson, Christopher James and Arnold, Renée and Bryan, Stirling and Clarke, Philip and Ekins, Sean and Hatswell, Anthony and Hawkins, Neil and Langham, Sue and Marshall, Deborah and Sadatsafavi, Mohsen and Sullivan, Will and Wilson, Edward C. F. and Wrightson, Tim},
-   title = {Transparency in Decision Modelling: What, Why, Who and How?},
-   journal = {PharmacoEconomics},
+﻿@article{RN42,
+   author = {Arnold, R. J. G. and Ekins, S.},
+   title = {Ahead of Our Time: Collaboration in Modeling Then and Now},
+   journal = {Pharmacoeconomics},
+   volume = {35},
+   number = {9},
+   pages = {975-976},
+   ISSN = {1170-7690},
+   DOI = {10.1007/s40273-017-0532-2},
+   year = {2017},
+   type = {Journal Article}
+}
+
+@article{RN41,
+   author = {McManus, E. and Turner, D. and Sach, T.},
+   title = {Can You Repeat That? Exploring the Definition of a Successful Model Replication in Health Economics},
+   journal = {Pharmacoeconomics},
    volume = {37},
    number = {11},
-   pages = {1355-1369},
-   ISSN = {1179-2027},
-   DOI = {10.1007/s40273-019-00819-z},
-   url = {https://doi.org/10.1007/s40273-019-00819-z},
+   pages = {1371-1381},
+   ISSN = {1170-7690},
+   DOI = {10.1007/s40273-019-00836-y},
    year = {2019},
+   type = {Journal Article}
+}
+
+@article{RN43,
+   author = {Zabell, Thea and Long, Katrina M. and Scott, Debbie and Hope, Judy and McLoughlin, Ian and Enticott, Joanne},
+   title = {Engaging Healthcare Staff and Stakeholders in Healthcare Simulation Modeling to Better Translate Research Into Health Impact: A Systematic Review},
+   journal = {Frontiers in Health Services},
+   volume = {1},
+   ISSN = {2813-0146},
+   DOI = {10.3389/frhs.2021.644831},
+   url = {https://www.frontiersin.org/article/10.3389/frhs.2021.644831},
+   year = {2021},
    type = {Journal Article}
 }
 
