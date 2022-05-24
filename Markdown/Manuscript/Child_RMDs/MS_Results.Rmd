@@ -30,38 +30,45 @@ Open source frameworks have been previously recommended for the development of m
 ## readyforwhatsnext
 We are currently developing an open source model of the systems shaping the mental health of young people in Victoria, Australia. The model is called readyforwhatsnext and development progress is reported on a project website [@rfwn2022]. The project aims to produce a reference model that can examine multiple potential population level strategies for prevention (in 0-25 year olds) and treatment (in 12-25 year olds) of mental disorders. 
 
-Our approach to model development is to undertake a number of discrete modelling projects and progressively link them together by means of a common framework. Sub-projects we are currently engaged in include those to develop models of people (synthetic populations of interest describing relevant individual characteristics and their household relationships, choice models for predicting helpseeking behaviour and models to map health psychological measures to health utility), places (synthesising geometry and spatial attribute data to characterise the geographic distribution of relevant demographic, environmental, epidemiological and service infrastructure features) and platforms (representing the processes and operations of a complex primary youth mental health service). We have also previously undertaken scoping work reviewing economic evidence relating to youth mental health programs [@RN33] and plan to integrate this with the model at a future date.
+Our approach to model development is to undertake a number of discrete modelling projects and progressively link them together by means of a common framework. Sub-projects we are currently engaged in include those to develop models of people (synthetic populations of interest describing relevant individual characteristics and their household relationships, choice models for predicting helpseeking behaviour and models to map psychological measures to health utility), places (synthesising geometry and spatial attribute data to characterise the geographic distribution of relevant demographic, environmental, epidemiological and service infrastructure features) and platforms (representing the processes and operations of a complex primary youth mental health service). We have also previously undertaken scoping work reviewing economic evidence relating to youth mental health programs [@RN33] and plan to integrate this with the model at a future date.
 
 # Framework
-The framework we have developed consists of a set of standards and supporting toolkit for implementing open source youth mental health models.
+The framework we have developed consists of a set of standards and supporting toolkit for implementing an open source youth mental health model.
 
 ## Standards
 We have identified 15 standards that we believe are important for quality implementations of OSHEMs, each described under one of following six principles that models are TIMELY:
 
  - Transparent: people can easily see how a model has been implemented and tested;
  - Iterative: a model is routinely updated to fix errors, incorporate new data and improve performance;
- - Modular: multiple models and their components can be combined to explore topics of more extensive scope;
+ - Modular: multiple models and their components can be readily combined to explore topics of more extensive scope;
  - Epitomized: model code is sufficiently generalised to be applied or adapted to other contexts and decision problems;
  - Licensed: a model's constituent parts and derivative works are persistently re-usable by other modellers; and
- - Yielding: a model can be deployed as an easy to use and flexible decision aid.
+ - Yielding: a model can be deployed as a flexible and easy to use decision aid.
 
 ### Transparent Models
+Transparency can be facilitated by making model code and data accessible, citable, clear and complete. The most efficient way to make model code and data widely accessible may be to use existing open science infrastructure [@Erdemir2020]. Repositories such as Zenodo [@Zenodo2013] and Dataverse [@Dataverse2007] provide persistent storage of code and data and generate a Digital Object Identifier (DOI) for each unique item. These repositories are a preferable solution for sharing citable code and data than transitory repositories such as corporate websites or GitHub which can be deleted or relocated at any time [@sseditors2022]. Zenodo includes tools that automate integration with GitHub, which makes ieasy for developers to maintain parallel code repositories - one for disseminating the most up to date in development code and the other for archived code releases.
 
-(a concatenation of the transparency and validity concepts defined in previous guidance [@Eddy2012])
+Model code and data also need to be clearly documented, potentially with different versions for technical and non-technical users [@Eddy2012]. Developers storing data in a Dataverse installation have access to multiple meta-data fields to document both the dataset as a whole and individual files contained by that dataset. In R, code libraries can be documented with the aid of tools such as devtools [@devtools2021], sinew [@sinew2022] and roxygen2 [@roxygen22021] that create manuals that conform to a standardised template, and pkgdown [@pkgdown2022] for creating package websites. 
 
-T1: Permanent, uniquely identified archived copies of model code and data are publicly available in open access online repositories
+Code can be made easier to follow through a number of development choices. For technical users, use of a consistent and explicit house-style can make it easier to review large bodies of code. The high level logic of a program can be made more comprehensible for non-technical users though the use of abstraction, that routinely exposes only simple, top level commands. Polymorphsim, where the same high level command (e.g. "simulate") can implement multiple different lower level algorithms of the same broad category of task, can further simplify code. Literate programming, where computer code is integrated with plain English descriptions of each main step in an analysis workflow, can make code easier for review by both technical and non-technical users. 
+
+Finally, transcription errors - mistakes introduced when transferring data between data sources, models and reports - are very common in health economic models [@Radeva2020]. The risk of these errors might be lower if there was full transparency across all steps in a study workflow. Scientific computing tools make it feasible to author programs that reproducibly execute all steps from raw data ingest through data processing, analysis, rendering of a scientific manuscript and dissemination of study outputs in online repositories.
+
+Standards:
+
+- T1: Permanent, uniquely identified archived copies of model code and data are publicly available in open access online repositories
 
 <!-- T2 MISSING - Merged With T1 -->
 
-T2: Models and their code and data are clearly and consistently documented
+- T2: Models and their code and data are clearly and consistently documented <!-- Was T3 -->
 
-T3: Model logic is easy to follow through use of a simple and consistent syntax [abstraction and polymorphism, house style]
+- T3: Model logic is easy to follow through use of a simple and consistent syntax [abstraction and polymorphism, house style] <!-- Was T4 -->
 
-T4: Model analyses and reporting are implemented using a literate programming approach
+- T4: Model analyses and reporting are implemented using a literate programming approach <!-- Was T5 -->
 
 <!-- T6 MISSING - Deleted -->
 
-T5: All parts of a study workflow from raw data ingest through to data processing, analysis, reporting and dissemination of study outputs can be reproduced and/or replicated by third parties using publicly available materials.
+- T5: All parts of a study workflow from raw data ingest through to dissemination of study outputs can be reproduced and/or replicated by third parties using publicly available materials. <!-- Was T7 -->
 
 ### Iterative Models
 Performance - validity and usefulness
