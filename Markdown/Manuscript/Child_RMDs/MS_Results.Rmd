@@ -33,10 +33,10 @@ We are currently developing an open source model of the systems shaping the ment
 Our approach to model development is to undertake a number of discrete modelling projects and progressively link them together by means of a common framework. Sub-projects we are currently engaged in include those to develop models of people (synthetic populations of interest describing relevant individual characteristics and their household relationships, choice models for predicting helpseeking behaviour and models to map psychological measures to health utility), places (synthesising geometry and spatial attribute data to characterise the geographic distribution of relevant demographic, environmental, epidemiological and service infrastructure features) and platforms (representing the processes and operations of a complex primary youth mental health service). We have also previously undertaken scoping work reviewing economic evidence relating to youth mental health programs [@RN33] and plan to integrate this with the model at a future date.
 
 # Framework
-The framework we have developed consists of a set of standards and supporting toolkit for implementing an open source youth mental health model.
+The framework we have developed consists of a set of standards and tools for implementing those standards.
 
 ## Standards
-We have identified 15 standards that we believe are important for quality implementations of OSHEMs, each described under one of following six principles that models are TIMELY:
+We have identified 15 standards that we believe are important for quality implementations of OSHEMs, each described under one of following six principles for making models TIMELY:
 
  - Transparent: people can easily see how a model has been implemented and tested;
  - Iterative: a model is routinely updated to fix errors, incorporate new data and improve performance;
@@ -71,15 +71,21 @@ Standards:
 - T5: All parts of a study workflow from raw data ingest through to dissemination of study outputs can be reproduced and/or replicated by third parties using publicly available materials. <!-- Was T7 -->
 
 ### Iterative Models
-Performance - validity and usefulness
+To avoid OSHEMs going stale - losing validity and usefulness with time, they should be routinely updated. A number of tools and approaches can make the process of implementing and curating changes to model code and data more coherent and efficient.  Repositories such as Zenodo [@Zenodo2013] and Dataverse [@Dataverse2007] provide persistent access to all published versions of a dataset, each uniquely identifiable. For code, use of version control tools like Git [@git20XX] can ensure that the entire development history of a project is organised so that each version is distinguishable and retrievable by developers. The online platform GitHub [@github2007] can make this version history accessible to anyone.
 
-I2: Model code is version controlled
+GitHub also provides continuous integration [@CI2017] tools that can help make code updates more reliable. OSHEM developed in R can take advantage of templates provided by devtools [@devtools2021] and pkgdown [@pkgdown2022] to run GitHub continuous integration checks that each new version of a code library passes multiple quality tests. These tests can include those of units (do individual functions produce expected output?), documentation (does documentation render correctly?, can all example workflows be executed?) and installation (can the software be successfully deployed on multiple types of operating system?).
 
-I1: Model code and data use semantic versioning
+Adopting semantic versioning [@semver20xx] conventions can be an efficient way to provide users of model code and data with information about the potential importance of an update. For R code, the usethis [@usethis2021] package can be used to partially automate version number increments using the convention Major.Minor.Patch.Development. Datasets stored on the Harvard Dataverse use the simpler Major.Minor convention. Finally, using deprecation conventions that take an informative and staged approach to retiring old code and data can reduce the risk that model revisions have unintended consequences on third party users. The package lifeycle [@lifecycle2021] provides tools for R developers to consistently deprecate their code.
 
-I3: Model code development uses continuous integration (CI) tools and test units to ensure each new version is quality assured
+Standards:
 
-I4: Deprecation conventions are used to retire old code / data in order to minimise the risk of unintended impacts on downstream dependencies
+I2: Model code is version controlled <!-- Was I2 -->
+
+I3: Model code development uses continuous integration (CI) tools and test units to ensure each new version is quality assured <!-- Was I3 -->
+
+I1: Model code and data use semantic versioning <!-- Was I1 -->
+
+I4: Deprecation conventions are used to retire old code / data in order to minimise the risk of unintended impacts on downstream dependencies 
 
 
 ### Modular Models
