@@ -19,11 +19,11 @@ Mental disorders impose high health, social and economic burdens worldwide [@RN8
 
 Computational modelling could play an important role in developing policies to improve population mental health but this may require significant changes in the way mental health modelling projects are funded, conceptualised and implemented. 
 
-Major mental health reform programs will require the identification, prioritisation, sequencing, targeting and monitoring of multiple interdependent initiatives. Single purpose models that assume static systems may be inadequate for the decision support needs of policymakers and service planners [@PC2020]. Currently, mental health economic models predominantly addressing issues relating to the affordability and value for money of individual programs [@RN34] with mental health simulation studies rarely modelling complex systems [@RN73]. Dynamic systems modelling approaches can provide insights about inter-dependencies between candidate policies and the evolution of the mental health systems planning context [@Occhipinti2021]. These types of models could be the basis for developing reference models [@Afzali2013] intended for multiple-applications and re-use by multiple modelling teams. However, as they are intended for multiple-purposes and because propagation errors may be more likely with more complex models [@Saltelli2019] such models require greater investments in model transparency and validation [@Eddy2012; @Feenstra2022].
+Major mental health reform programs will require the identification, prioritisation, sequencing, targeting and monitoring of multiple interdependent initiatives. Single purpose models that assume static systems may be inadequate for the decision support needs of policymakers and service planners [@PC2020]. Currently, mental health economic models predominantly address issues relating to the affordability and value for money of individual programs [@RN34] with mental health simulation studies rarely modelling complex systems [@RN73]. Greater use of dynamic systems modelling approaches could provide new insights about inter-dependencies between candidate policies and the evolution of the mental health systems planning context [@Occhipinti2021]. These types of models might also be the basis for developing reference models [@Afzali2013] of mental health systems that are intended for multiple-applications and re-use by different modelling teams. However, as they are intended for multiple-purposes and because propagation errors may be more likely with more complex models [@Saltelli2019] such models require greater investments in model transparency and validation [@Eddy2012; @Feenstra2022].
 
 The development, validation and maintenance of these more complex models may be simply too onerous a burden for a single modelling team. Developing networks of modellers working on common health conditions [@Sampson2019] and collaborations across multiple modelling teams that include the ability to re-use and extend each others work, can make complex modelling projects more tractable [@Arnold2010]. Similarly, more attention to developing partnerships between modellers and decision-makers across the life-cycle of a modelling project can help ensure models are appropriately conceptualised and implemented and improve their practical utility as decision aids [@Zabell2021]. 
 
-Modelling projects should be resourced to be routinely updated and refined as new evidence emerges and decision contexts change [@Jenkins2021]. Sustained long term funding is required for mental health projects to remain current and to enable the mental health modelling field address a number of key challenges. There are significant gaps in our understanding of the systems in which mental disorder emerges and is treated [@Fried2020] and the theoretical basis for understanding complex mental health systems is weak [@RN2111]. Strikingly, it remains unclear why increased investments in mental health care have yet to discernibly reduce the prevalence and burden of mental disorders[@RN26].  The literature about how the requirements, characteristics and performance of mental health services are shaped by spatiotemporal context is underdeveloped [@RN42]. There is insufficient evidence to identify the social determinants of mental disorders most amenable to preventative interventions, and for which population sub-groups such interventions would be most effective [@RN43]. 
+Modelling projects should be resourced to be routinely updated and refined as new evidence emerges and decision contexts change [@Jenkins2021]. There are significant deficits in our understanding of the systems in which mental disorder emerges and is treated [@Fried2020] and longer term project horizons could allow mental health models to progressively improve validity as these gaps are addressed. Currently, the theoretical basis for understanding complex mental health systems is weak [@RN2111]. Strikingly, it remains unclear why increased investments in mental health care have yet to discernibly reduce the prevalence and burden of mental disorders[@RN26].  The literature about how the requirements, characteristics and performance of mental health services are shaped by spatiotemporal context is underdeveloped [@RN42]. There is insufficient evidence to identify the social determinants of mental disorders most amenable to preventative interventions, and for which population sub-groups such interventions would be most effective [@RN43]. 
 
 Open source frameworks have been previously recommended for the development of mental health modelling field [@RN73] but, as with health economics more generally, OSHEMs remain rare. Currently there is only one mental health related model (in Alcohol Use Disorder [@Basu2018]) that is indexed in the Open Source Models Clearinghouse [@OSMC_20xx;@Emerson2019]. A Major Depressive Disorder reference model for the United States [@IVIMDD2022] is also being developed as part of the Open Value Initiative [@Jansen2019]. We believe greater support for open source approaches have the potential to provide more transparent, collaborative and sustained approaches to mental health system model development. 
 
@@ -33,86 +33,93 @@ We are currently developing an open source model of the systems shaping the ment
 Our approach to model development is to undertake a number of discrete modelling projects and progressively link them together by means of a common framework. Sub-projects we are currently engaged in include those to develop models of people (synthetic populations of interest describing relevant individual characteristics and their household relationships, choice models for predicting helpseeking behaviour and models to map psychological measures to health utility), places (synthesising geometry and spatial attribute data to characterise the geographic distribution of relevant demographic, environmental, epidemiological and service infrastructure features) and platforms (representing the processes and operations of a complex primary youth mental health service). We have also previously undertaken scoping work reviewing economic evidence relating to youth mental health programs [@RN33] and plan to integrate this with the model at a future date.
 
 # Framework
-The framework we have developed consists of a set of standards and tools for implementing those standards.
+The framework we have developed consists of a set of standards for OSHEMs and tools for implementing those standards.
 
 ## Standards
-We have identified 15 standards that we believe are important for quality implementations of OSHEMs, each described under one of following six principles for making models TIMELY:
+We have identified 18 standards that we believe are important for quality implementations of OSHEMs, each described under one of following six principles for making models TIMELY:
 
- - Transparent: people can easily see how a model has been implemented and tested;
- - Iterative: a model is routinely updated to fix errors, incorporate new data and improve performance;
- - Modular: multiple models and their components can be readily combined to explore topics of more extensive scope;
- - Epitomized: model code is sufficiently generalised to be applied or adapted to other contexts and decision problems;
- - Licensed: a model's constituent parts and derivative works are persistently re-usable by other modellers; and
- - Yielding: a model can be deployed as a flexible and easy to use decision aid.
+ - **Transparent**: people can easily see how a model has been implemented and tested;
+ - **Iterative**: a model is routinely updated to fix errors, incorporate new data and improve performance;
+ - **Modular**: multiple models and their components can be readily combined to explore topics of more extensive scope;
+ - **Epitomized**: model code is sufficiently generalised to be applied or adapted to other contexts and decision problems;
+ - **Licensed**: a model's constituent parts and derivative works are persistently re-usable by other modellers; and
+ - **Yielding**: a model can be deployed as a flexible and easy to use decision aid.
 
 ### Transparent Models
-Transparency can be facilitated by making model code and data accessible, citable, clear and complete. The most efficient way to make model code and data widely accessible may be to use existing open science infrastructure [@Erdemir2020]. Repositories such as Zenodo [@Zenodo2013] and Dataverse [@Dataverse2007] provide persistent storage of code and data and generate a Digital Object Identifier (DOI) for each unique item. These repositories are a preferable solution for sharing citable code and data than transitory repositories such as corporate websites or GitHub which can be deleted or relocated at any time [@sseditors2022]. Zenodo includes tools that automate integration with GitHub, which makes ieasy for developers to maintain parallel code repositories - one for disseminating the most up to date in development code and the other for archived code releases.
+A range of tools and practices are available to help make model code and data accessible, citable and comprehensible. The most efficient way to widely disseminate code and data may be to use existing open science infrastructure [@Erdemir2020]. Repositories such as Zenodo [@Zenodo2013] and Dataverse [@Dataverse2007] provide persistent storage solutions that generate a Digital Object Identifier (DOI) for each unique item. These repositories are a preferable solution for sharing citable code and data than transitory repositories such as corporate websites or GitHub where items can be deleted or relocated at any time [@sseditors2022]. Zenodo includes tools that automate integration with GitHub, which makes it easy for developers to maintain parallel code repositories - one for disseminating the most up to date development code and the other for archiving citable code releases.
 
-Model code and data also need to be clearly documented, potentially with different versions for technical and non-technical users [@Eddy2012]. Developers storing data in a Dataverse installation have access to multiple meta-data fields to document both the dataset as a whole and individual files contained by that dataset. In R, code libraries can be documented with the aid of tools such as devtools [@devtools2021], sinew [@sinew2022] and roxygen2 [@roxygen22021] that create manuals that conform to a standardised template, and pkgdown [@pkgdown2022] for creating package websites. 
+Model code and data also need to be clearly documented, potentially with different versions for technical and non-technical users [@Eddy2012]. Developers storing data in a Dataverse installation have access to multiple meta-data fields to document both the dataset as a whole and individual files contained by that dataset. In R, code libraries can be documented with the aid of tools such as devtools [@devtools2021], sinew [@sinew2022] and roxygen2 [@roxygen2021] that create manuals that conform to a standardised template, and pkgdown [@pkgdown2022] for creating package websites. 
 
-Code can be made easier to follow through a number of development choices. For technical users, use of a consistent and explicit house-style can make it easier to review large bodies of code. The high level logic of a program can be made more comprehensible for non-technical users though the use of abstraction, that routinely exposes only simple, top level commands. Polymorphsim, where the same high level command (e.g. "simulate") can implement multiple different lower level algorithms of the same broad category of task, can further simplify code. Literate programming, where computer code is integrated with plain English descriptions of each main step in an analysis workflow, can make code easier for review by both technical and non-technical users. 
+Guidance about how to consistently use of meaningful naming conventions when authoring code is available [@Wilson_2017; @Alarid2019]. The main logic of a program can also be made comprehensible to even non-technical users though the use of the common practices of abstraction [@8717448], where only simple, high level commands are routinely exposed to reviewers, and polymorphsim [@7181447], where the same command (e.g. "simulate") can be reused to implement different algorithms of the same broad type. Literate programming, where tools like RMarkdown [@xie2018r] are used to render documents that integrate computer code with plain English descriptions of each step in an analysis workflow, can make code easier to follow by both technical and non-technical users. 
 
-Finally, transcription errors - mistakes introduced when transferring data between data sources, models and reports - are very common in health economic models [@Radeva2020]. The risk of these errors might be lower if there was full transparency across all steps in a study workflow. Scientific computing tools make it feasible to author programs that reproducibly execute all steps from raw data ingest through data processing, analysis, rendering of a scientific manuscript and dissemination of study outputs in online repositories.
+Finally, transcription errors - mistakes introduced when transferring data between sources, models and reports - are very common in health economic models [@Radeva2020]. The risk of these errors might be lower if there was full transparency across all steps in a study workflow. Scientific computing tools now make it relatively straightforward to author programs that reproducibly execute all steps in data ingest, processing and reporting [@@Wilson_2017].
 
 Standards:
 
-- T1: Permanent, uniquely identified archived copies of model code and data are publicly available in open access online repositories
+- **T1: Permanent, uniquely identified archived copies of model code and data are publicly available in open access online repositories**
 
 <!-- T2 MISSING - Merged With T1 -->
 
-- T2: Models and their code and data are clearly and consistently documented <!-- Was T3 -->
+- **T2: Models code and data are consistently documented **<!-- Was T3 -->
 
-- T3: Model logic is easy to follow through use of a simple and consistent syntax [abstraction and polymorphism, house style] <!-- Was T4 -->
+- **T3: Model code is easy to follow through use of a simple and consistent syntax**<!-- Was T4 -->
 
-- T4: Model analyses and reporting are implemented using a literate programming approach <!-- Was T5 -->
+- **T4: Model analyses and reporting are implemented using a literate programming approach** <!-- Was T5 -->
 
 <!-- T6 MISSING - Deleted -->
 
-- T5: All parts of a study workflow from raw data ingest through to dissemination of study outputs can be reproduced and/or replicated by third parties using publicly available materials. <!-- Was T7 -->
+- **T5: All parts of a study analysis and reporting workflow can be reproduced and/or replicated by third parties using publicly available materials** <!-- Was T7 -->
 
 ### Iterative Models
-To avoid OSHEMs going stale - losing validity and usefulness with time, they should be routinely updated. A number of tools and approaches can make the process of implementing and curating changes to model code and data more coherent and efficient.  Repositories such as Zenodo [@Zenodo2013] and Dataverse [@Dataverse2007] provide persistent access to all published versions of a dataset, each uniquely identifiable. For code, use of version control tools like Git [@git20XX] can ensure that the entire development history of a project is organised so that each version is distinguishable and retrievable by developers. The online platform GitHub [@github2007] can make this version history accessible to anyone.
+To avoid OSHEMs going stale - losing validity and usefulness with time - they should be routinely updated. A number of tools and approaches can make the process of implementing and curating changes to model code and data more coherent and efficient.  Repositories such as Zenodo [@Zenodo2013] and Dataverse [@Dataverse2007] provide persistent access to all published versions of a dataset, each uniquely identifiable. For code, use of version control tools like Git [@git20XX] can ensure that the entire development history of a project is organised so that each version is distinguishable and retrievable by developers. The online platform GitHub [@github2007] can make this version history accessible to anyone.
 
-GitHub also provides continuous integration [@CI2017] tools that can help make code updates more reliable. OSHEM developed in R can take advantage of templates provided by devtools [@devtools2021] and pkgdown [@pkgdown2022] to run GitHub continuous integration checks that each new version of a code library passes multiple quality tests. These tests can include those of units (do individual functions produce expected output?), documentation (does documentation render correctly?, can all example workflows be executed?) and installation (can the software be successfully deployed on multiple types of operating system?).
+GitHub also provides continuous integration [@CI2017] tools that can help make code updates more reliable. OSHEM developed in R can take advantage of templates provided by devtools [@devtools2021] and pkgdown [@pkgdown2022] to run GitHub continuous integration checks to verify that each new version of a code library passes multiple quality tests. These tests can include those of units (do individual functions produce expected output?), documentation (does documentation render correctly?, can all example workflows be executed?) and installation (can the software be successfully deployed on multiple types of operating system?).
 
-Adopting semantic versioning [@semver20xx] conventions can be an efficient way to provide users of model code and data with information about the potential importance of an update. For R code, the usethis [@usethis2021] package can be used to partially automate version number increments using the convention Major.Minor.Patch.Development. Datasets stored on the Harvard Dataverse use the simpler Major.Minor convention. Finally, using deprecation conventions that take an informative and staged approach to retiring old code and data can reduce the risk that model revisions have unintended consequences on third party users. The package lifeycle [@lifecycle2021] provides tools for R developers to consistently deprecate their code.
+Adopting semantic versioning [@semver20xx] conventions can be an efficient way to provide users of model code and data with information about the potential importance of an update. For R code, the usethis [@usethis2021] package can be used to partially automate version number increments using the convention Major.Minor.Patch.Development. Datasets stored on the Harvard Dataverse use the simpler Major.Minor convention. 
+
+Finally, using deprecation conventions that take an informative and staged approach to retiring old code and data can reduce the risk that model revisions have unintended consequences on third party users. The package lifeycle [@lifecycle2021] provides tools for R developers to consistently deprecate their code.
 
 Standards:
 
-I2: Model code is version controlled <!-- Was I2 -->
+- **I2: Model code is version controlled** <!-- Was I2 -->
 
-I3: Model code development uses continuous integration (CI) tools and test units to ensure each new version is quality assured <!-- Was I3 -->
+- **I3: Model code development uses continuous integration (CI) tools and test units to ensure each new version is quality assured**<!-- Was I3 -->
 
-I1: Model code and data use semantic versioning <!-- Was I1 -->
+- **I1: Model code and data use semantic versioning** <!-- Was I1 -->
 
-I4: Deprecation conventions are used to retire old code / data in order to minimise the risk of unintended impacts on downstream dependencies 
+- **I4: Deprecation conventions are used to retire old code / data in order to minimise the risk of unintended impacts on downstream dependencies**
 
 
 ### Modular Models
 
-M1: Model code and data are decoupled – each is stored, managed, licensed, disseminated and cited independently
+- **M1: Model code and data are decoupled – each is stored, managed and disseminated independently** <!-- Modified (lost ref to licensed and cited) -->
 
-<!-- T2 MISSING - Moved to E -->
+- **M2: Model code and data are distributed with explicit citation guidance**<!--Replacement - Old version now merged with E1 -->
 
-M3: Model code defines encapsulating data structures [that can be safely combined]. 
+- **M3: Model code defines encapsulating data structures** 
 
 
 
 ### Epitomised Models
-M2: Model code is distributed as code-libraries [compare to analysis and reporting]
 
-E2: Model code defines inheriting data-structures. 
+- **E1: Model code is distributed as libraries of functions** [compare to analysis and reporting] <!-- Modified (lost ref to OOP and merged with M2) -->
 
-E1: Model code deploys a combination of object oriented and functional programming.
+- **E2: Model code defines inheriting data-structures**
+
+- **E3: Demonstration data is available to demonstrate generalised applications of model code**
 
 ### Licensed Models
 copyleft licensing [@copyleft2022] is used to ensure that 
-L1: Model code and data are available for viewing and re-use in open access online repositories under copyleft licensing arrangements.
+
+- **L1: Model code is made available for re-use under either copyleft or more permissive licensing arrangements**
+
+- **L2: Terms of use permit liberal re-use of non-confidential model data, subject to adherence to clearly specified ethical standards**
 
 
 ### Yielding Models
 Shiny tutorial [@SmithR2020]
-Y1: Non- technical users can configure and run models via simple user-interfaces
+
+- **Y1: Non- technical users can configure and run models via simple user-interfaces**
 
 
 ## Toolkits
