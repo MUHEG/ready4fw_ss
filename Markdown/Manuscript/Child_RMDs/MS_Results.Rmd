@@ -28,12 +28,14 @@ Modelling projects should be resourced to be routinely updated and refined as ne
 Open source frameworks have been previously recommended for the development of mental health modelling field [@RN73] but, as with health economics more generally, OSHEMs remain rare. Currently there is only one mental health related model (in Alcohol Use Disorder [@Basu2018]) that is indexed in the Open Source Models Clearinghouse [@OSMC_20xx;@Emerson2019]. A Major Depressive Disorder reference model for the United States [@IVIMDD2022] is also being developed as part of the Open Value Initiative [@Jansen2019]. We believe greater support for open source approaches have the potential to provide more transparent, collaborative and sustained approaches to mental health system model development. 
 
 ## readyforwhatsnext
-We are currently developing an open source model of the systems shaping the mental health of young people in Victoria, Australia. The model is called readyforwhatsnext and development progress is reported on a project website [@rfwn2022]. The project aims to produce a reference model that can examine multiple potential population level strategies for prevention (in 0-25 year olds) and treatment (in 12-25 year olds) of mental disorders. 
+We are currently developing readyforwhatsnext, a reference OSHEM that aims to examine multiple potential population level strategies for promoting mental wellbeing and preventing and treating mental disorders in young people.
 
-Our approach to model development is to undertake a number of discrete modelling projects and progressively link them together by means of a common framework. Sub-projects we are currently engaged in include those to develop models of people (synthetic populations of interest describing relevant individual characteristics and their household relationships, choice models for predicting helpseeking behaviour and models to map psychological measures to health utility), places (synthesising geometry and spatial attribute data to characterise the geographic distribution of relevant demographic, environmental, epidemiological and service infrastructure features) and platforms (representing the processes and operations of a complex primary youth mental health service). We have also previously undertaken scoping work reviewing economic evidence relating to youth mental health programs [@RN33] and plan to integrate this with the model at a future date.
+Our approach to model development is to undertake a number of discrete modelling projects of the people, places, platforms and programs that shape the mental health and wellbeing of young people and to progressively link them together by means of a common framework. To model people we are developing synthetic representations of populations of interest [@DVN/HJXYKQ_2021] that describe relevant individual characteristics and their household relationships, algorithms that map psychological measures to health utility [@Hamilton2021.07.07.21260129] and choice models for predicting the helpseeking behaviour of young people. Our in development model of places [@DVN/V3OKZV_2022] aims to synthesise geometry and spatial attribute data to characterise the geographic distribution of relevant demographic, environmental, epidemiological and service infrastructure features and our first model of a service platform will represent the processes and operations of a complex primary youth mental health service. We also plan to extend our prior work reviewing economic evidence relating to youth mental health programs [@RN33] so that it can be integrated with the model.
+
+Our initial work on readyforwhatsnext is focused on Victoria, Australia but the framework we are using to develop it is designed to facilitate extension by ourselves and others to different decision contexts. Progress is reported on a project website [@rfwn2022].
 
 # Framework
-The framework we have developed consists of a set of standards for OSHEMs and tools for implementing those standards.
+The framework we have developed to implement readyforwhatsnext consists of specified standards for OSHEMs and tools for meeting those standards.
 
 ## Standards
 We have identified 20 standards that we believe are important for quality implementations of OSHEMs, each described under one of following six principles for making models TIMELY:
@@ -43,7 +45,7 @@ We have identified 20 standards that we believe are important for quality implem
  - **Modular**: models and their components can be combined to extend their scope;
  - **Epitomized**: models can be used in multiple decision contexts;
  - **Licensed**: a model and its derivatives are persistently re-usable by other modellers; and
- - **Yielding**: a model can be deployed as a simple, flexible and reliable decision aid.
+ - **Yielding**: a model can be reliably deployed as a simple and flexible decision aid.
 
 ### Transparent Models
 A range of tools and practices are available to help make model code and data accessible, citable and comprehensible. The most efficient way to widely disseminate code and data may be to use existing open science infrastructure [@Erdemir2020]. Repositories such as Zenodo [@Zenodo2013] and Dataverse [@Dataverse2007] provide persistent storage solutions that generate a Digital Object Identifier (DOI) for each unique item. These repositories are a preferable solution for sharing citable code and data than transitory repositories such as corporate websites or GitHub where items can be deleted or relocated at any time [@sseditors2022]. Zenodo includes tools that automate integration with GitHub, which makes it easy for developers to maintain parallel code repositories - one for disseminating the most up to date development code and the other for archiving citable code releases.
@@ -71,8 +73,6 @@ Standards:
 - **T5: Code coverage is reported** <!-- New, replaces version now moved to T4 -->
 
 - **T6: All parts of a study analysis and reporting workflow can be reproduced and/or replicated** <!-- Was T7, Replaces Deleted T6 -->
-
-
 
 ### Iterative Models
 To avoid OSHEMs going stale - losing validity and usefulness with time - they should be routinely updated. A number of tools and approaches can make the process of implementing and curating changes to model code and data more coherent and efficient.  Repositories such as Zenodo [@Zenodo2013] and Dataverse [@Dataverse2007] provide persistent access to all published versions of a dataset, each uniquely identifiable. For code, use of version control tools like Git [@git20XX] can ensure that the entire development history of a project is organised so that each version is distinguishable and retrievable by developers. The online platform GitHub [@github2007] can make this version history accessible to anyone.
@@ -107,12 +107,12 @@ Standards:
 
 - **M2: Model code defines encapsulating data structures** <!--Replacement - Old version now merged with E1 -->
 
-
 ### Epitomised Models
-A key challenge to generalising health economic models is that they are typically developed to inform a decision problem with a highly specific jurisdictional context. However, 
-Modular code is also recommended as good practice for scientific computing more generally [@Wilson_2017]. 
+A key challenge to generalising health economic models is that they are typically developed to inform a decision problem with a highly specific jurisdictional context. However, a number of choices about how these models are implemented can significantly increase the re-usability of model code in other contexts. 
 
-[model functions - compare to analysis and reporting]
+Writing code as collections of functions (short, self-contained and reusable algorithms that each perform a discrete task) is recommended as good practice for scientific computing [@Wilson_2017]. When distributed as libraries (for example, as R packages), functions have the potential to be widely re-used, often in contexts very different than those they were originally developed for. A special type of function called a method can only be applied to a pre-defined data structure. Due to the coding concept of inheritance [@8717448], the more restricted nature of methods can be used to enhance the re-usability of model code in different decision contexts [ready4oop2022]. For example, when generalising a model developed for the Australian context to a UK context, we could create a data structure that initially inherits all of the methods defined for the Australian model and then write new or replacement methods as needed for the UK model.
+
+Whatever type of functions are written for a modelling project, it is good practice to make available test or toy data to demonstrate their use [@Wilson_2017].
 
 Standards:
 
@@ -124,27 +124,58 @@ Standards:
 
 
 ### Licensed Models
-copyleft licensing [@copyleft2022] is used to ensure that 
+```{r}
+# Adapted fom: https://seankross.com/2016/08/02/How-R-Packages-are-Licensed.html
+sorting_hat <- function(student, houses){
+  choice <- purrr::map_lgl(houses, grepl, x = student)
+  if(!any(choice)){
+    return("Other")
+  } else {
+    return((houses[choice])[1])
+  }
+}
+license_table <- table(utils::available.packages()[,"License"])
+names(license_table) %<>%
+  purrr::map_chr(function(x){
+    sorting_hat(x, c("Apache", "Artistic", "CC", "BSD", "MIT", "GPL"))
+  })  
+license_tbl <- as.data.frame(license_table) %>%
+  dplyr::rename(License = Var1) %>%
+  dplyr::group_by(License) %>%
+  dplyr::summarize(Freq = sum(Freq)) %>%
+  dplyr::ungroup() %>%
+  dplyr::arrange(dplyr::desc(Freq))
+licenses <- license_tbl$Freq
+gpl_pc_dbl<- round(license_tbl$Freq[license_tbl$License=="GPL"]/sum(license_tbl$Freq)*100,2) 
+```
+
+To make model code and data widely re-usable by others, it is important to provide users with appropriate and explicit permissions. In the context of open source models, there are two broad categories of licensing options. Some guidance strongly recommends the use of permissive licensing [@Wilson_2017] that provides users with great flexibility as to the purposes (including commercial) for which the content could be re-used. An alternative approach is to use copyleft licenses [@copyleft2022] that can require content users to distribute any derivative works they create under similar open source arrangements.
+
+For code, it may be appropriate to adopt the prevailing open source licensing practice within the programming language being used. Applying a previously published algorithm [@kross2016] to analyse the most comprehensive archive of released R packages [@CRAN2022] finds that `$gpl_pc_dbl`% are distributed under various forms of General Public License (GPL) [@GNUGPL2022], a copyleft license.
+
+For data, it may not be sufficient to simply choose a license that is either permissive, for example Public Domain Dedication (CC0) [@cc02022], or copyleft like the Attribution-Share Alike (CC-BY-SA) [@bysa2022]. Responsible custodianship of some de-identified mental health data may involve using or adapting template terms of use [@sampleterms2022] which have a number of ethical clauses (for example, prohibiting their use in efforts to re-identify research participants). 
 
 Standards:
 
 - **L1: Model code is made available for re-use under copyleft licenses**
 
-- **L2: Non-confidential model data is available for liberal re-use, subject to adherence clearly specified ethical standards**
+- **L2: Non-confidential model data is available for liberal re-use (subject to additional terms for de-identified human data)**
 
 - **L3: Model code and data are distributed with citation tools** <!-- New -->
 
 ### Yielding Models
-Shiny tutorial [@SmithR2020]
+OSHEMs can be time and skills intensive for modellers to develop - but they should be easy for others to use. 
 
-- **Y1: Non- technical users can configure and run models via simple user-interfaces**
+Statistical models are a common output of health economic evaluations, but they are often not reported in a format that enables others to confidently and reliably re-use [@Kearns2013]. Open source approaches can help address this, by disseminating code artefacts that enable easy and appropriate use of a statistical model to make predictions with new data. However, great care must be exercised when disseminating such artefacts if they describe models estimated from data on human subjects. In the R language, model objects by default typically contain a copy of the source dataset. Such dataset copies must therefore be replaced (for example, with fake data) and the amended artefact's predictive performance then retested before any public release of model code artefacts.
 
-- **Y2: Statistical models can be safely, consistently and flexibly deployed using standardised tools**
+Another was to make OSHEMs easier to use is to develop simple user-interfaces for non-technical users. In R, such user-interfaces are typically developed with the Shiny package, for which a tutorial aimed at health economists is available [@SmithR2020].
 
+- **Y2: Statistical models can be safely and appropriately reused using standardised toolkits** <!-- New, Replaces Old Y1 (now Y2) -->
+- **Y2: Non-technical users can configure and run models via simple user-interfaces** <!-- Was Y1 -->
 
 ## Toolkits
 
-### Technical platforms
+### Online Repositories
 
 ### Software Development Kit
 
