@@ -17,11 +17,11 @@ output: html_document
 
 Mental disorders impose high health, social and economic burdens worldwide [@RN8;@GBD2019]. Much of this burden is potentially avertable [@RN25], but poorly financed and organised mental health systems are ill-equipped for this challenge[@RN22;@RN23]. The large and widespread additional mental health burdens recently observed during the COVID pandemic[@20211700] and predicted as a potential future consequence of global heating [@page_howard_2010], highlight the need to improve the resilience and adaptability of these systems. To help stem growing demand for mental health services, policymakers have also been encouraged to place greater emphasis on tackling the social determinants of mental disorder[@RN11]. 
 
-Computational modelling could play an important role in developing policies to improve population mental health but this may require significant changes in the way mental health modelling projects are funded, conceptualised and implemented. 
+<!-- Computational modelling could play an important role in developing policies to improve population mental health but this may require significant changes in the way mental health modelling projects are funded, conceptualised and implemented.  -->
 
-Major mental health reform programs will require the identification, prioritisation, sequencing, targeting and monitoring of multiple interdependent initiatives. Single purpose models that assume static systems may be inadequate for the decision support needs of policymakers and service planners [@PC2020]. Currently, mental health economic models predominantly address issues relating to the affordability and value for money of individual programs [@RN34] with mental health simulation studies rarely modelling complex systems [@RN73]. Greater use of dynamic systems modelling approaches could provide new insights about inter-dependencies between candidate policies and the evolution of the mental health systems planning context [@Occhipinti2021]. These types of models might also be the basis for developing reference models [@Afzali2013] of mental health systems that are intended for multiple-applications and re-use by different modelling teams. However, as they are intended for multiple-purposes and because propagation errors may be more likely with more complex models [@Saltelli2019] such models require greater investments in model transparency and validation [@Eddy2012; @Feenstra2022].
+Major mental health reform programs will require the identification, prioritisation, sequencing, targeting and monitoring of multiple interdependent initiatives. Single purpose models that assume static systems may be inadequate for the decision support needs of policymakers and service planners [@PC2020]. Currently, mental health economic models predominantly address issues relating to the affordability and value for money of individual programs [@RN34] with mental health simulation studies rarely modelling complex systems [@RN73]. Greater use of dynamic systems modelling approaches could provide new insights about inter-dependencies between candidate policies and the evolution of the mental health systems planning context [@Occhipinti2021]. These types of models might also be the basis for developing reference models [@Afzali2013] of mental health systems that are intended for multiple-applications and re-use by different modelling teams. 
 
-The development, validation and maintenance of these more complex models may be simply too onerous a burden for a single modelling team. Developing networks of modellers working on common health conditions [@Sampson2019] and collaborations across multiple modelling teams that include the ability to re-use and extend each others work, can make complex modelling projects more tractable [@Arnold2010]. Similarly, more attention to developing partnerships between modellers and decision-makers across the life-cycle of a modelling project can help ensure models are appropriately conceptualised and implemented and improve their practical utility as decision aids [@Zabell2021]. 
+However, as they are intended for multiple-purposes and because propagation errors may be more likely with more complex models [@Saltelli2019] such models require greater investments in model transparency and validation [@Eddy2012; @Feenstra2022]. The development, validation and maintenance of these more complex models may be simply too onerous a burden for a single modelling team. Developing networks of modellers working on common health conditions [@Sampson2019] and collaborations across multiple modelling teams that include the ability to re-use and extend each others work, can make complex modelling projects more tractable [@Arnold2010]. Similarly, more attention to developing partnerships between modellers and decision-makers across the life-cycle of a modelling project can help ensure models are appropriately conceptualised and implemented and improve their practical utility as decision aids [@Zabell2021]. 
 
 Modelling projects should be resourced to be routinely updated and refined as new evidence emerges and decision contexts change [@Jenkins2021]. There are significant deficits in our understanding of the systems in which mental disorder emerges and is treated [@Fried2020] and longer term project horizons could allow mental health models to progressively improve validity as these gaps are addressed. Currently, the theoretical basis for understanding complex mental health systems is weak [@RN2111]. Strikingly, it remains unclear why increased investments in mental health care have yet to discernibly reduce the prevalence and burden of mental disorders[@RN26].  The literature about how the requirements, characteristics and performance of mental health services are shaped by spatiotemporal context is underdeveloped [@RN42]. There is insufficient evidence to identify the social determinants of mental disorders most amenable to preventative interventions, and for which population sub-groups such interventions would be most effective [@RN43]. 
 
@@ -61,7 +61,6 @@ Finally, transcription errors - mistakes introduced when transferring data betwe
 Standards:
 
 - **T1: Uniquely identified copies of model code and data are permanently archived in open online repositories**
-
 <!-- T2 MISSING - Merged With T1 -->
 
 - **T2: Model code and data are documented **<!-- Was T3 -->
@@ -93,13 +92,12 @@ Standards:
 
 - **I4: Deprecation conventions are used to retire model code and data**
 
-
 ### Modular Models
 Modular health economic models link multiple self-contained components that can be independently reused and extended by other projects [@Trauer2017;@Urach2013]. 
 
 Many types of mental health data are highly sensitive with strict confidentiality requirements. For this reason, not all data included in some mental health models can be made widely available for others to re-use. A modular approach that ensures that model code and data are decoupled (stored in different files) can help model developers to restrict access to confidential model data, while providing open access to all other model components. 
 
-An important consideration when combining model components (or modules) is to ensure that interactions between two modules do not compromise the validity of either. Using the coding practice of encapsulation [@8717448] can help ensure that model modules can be safely combined [ready4oop2022].
+An important consideration when combining model components (or modules) is to ensure that interactions between two modules do not compromise the validity of either. Using the coding practice of encapsulation [@8717448] can help ensure that model modules can be safely combined [@ready4oop2022].
 
 Standards:
 
@@ -110,7 +108,7 @@ Standards:
 ### Epitomised Models
 A key challenge to generalising health economic models is that they are typically developed to inform a decision problem with a highly specific jurisdictional context. However, a number of choices about how these models are implemented can significantly increase the re-usability of model code in other contexts. 
 
-Writing code as collections of functions (short, self-contained and reusable algorithms that each perform a discrete task) is recommended as good practice for scientific computing [@Wilson_2017]. When distributed as libraries (for example, as R packages), functions have the potential to be widely re-used, often in contexts very different than those they were originally developed for. A special type of function called a method can only be applied to a pre-defined data structure. Due to the coding concept of inheritance [@8717448], the more restricted nature of methods can be used to enhance the re-usability of model code in different decision contexts [ready4oop2022]. For example, when generalising a model developed for the Australian context to a UK context, we could create a data structure that initially inherits all of the methods defined for the Australian model and then write new or replacement methods as needed for the UK model.
+Writing code as collections of functions (short, self-contained and reusable algorithms that each perform a discrete task) is recommended as good practice for scientific computing [@Wilson_2017]. When distributed as libraries (for example, as R packages), functions have the potential to be widely re-used, often in contexts very different than those they were originally developed for. A special type of function called a method can only be applied to a pre-defined data structure. Due to the coding concept of inheritance [@8717448], the more restricted nature of methods can be used to enhance the re-usability of model code in different decision contexts [@ready4oop2022]. For example, when generalising a model developed for the Australian context to a UK context, one could create a class (data structure) that initially inherits all of the methods defined for the Australian model and then write new or replacement methods as needed for the UK model.
 
 Whatever type of functions are written for a modelling project, it is good practice to make available test or toy data to demonstrate their use [@Wilson_2017].
 
@@ -151,9 +149,11 @@ gpl_pc_dbl<- round(license_tbl$Freq[license_tbl$License=="GPL"]/sum(license_tbl$
 
 To make model code and data widely re-usable by others, it is important to provide users with appropriate and explicit permissions. In the context of open source models, there are two broad categories of licensing options. Some guidance strongly recommends the use of permissive licensing [@Wilson_2017] that provides users with great flexibility as to the purposes (including commercial) for which the content could be re-used. An alternative approach is to use copyleft licenses [@copyleft2022] that can require content users to distribute any derivative works they create under similar open source arrangements.
 
-For code, it may be appropriate to adopt the prevailing open source licensing practice within the programming language being used. Applying a previously published algorithm [@kross2016] to analyse the most comprehensive archive of released R packages [@CRAN2022] finds that `$gpl_pc_dbl`% are distributed under various forms of General Public License (GPL) [@GNUGPL2022], a copyleft license.
+For code, it may be appropriate to adopt the prevailing open source licensing practice within the programming language being used. Applying a previously published algorithm [@kross2016] to analyse the most comprehensive archive of released R packages [@CRAN2022] finds that `r `gpl_pc_dbl`% are distributed under various forms of General Public License (GPL) [@GNUGPL2022], a copyleft license.
 
-For data, it may not be sufficient to simply choose a license that is either permissive, for example Public Domain Dedication (CC0) [@cc02022], or copyleft like the Attribution-Share Alike (CC-BY-SA) [@bysa2022]. Responsible custodianship of some de-identified mental health data may involve using or adapting template terms of use [@sampleterms2022] which have a number of ethical clauses (for example, prohibiting their use in efforts to re-identify research participants). 
+For data, it may not be sufficient to simply choose between a permissive license like the Public Domain Dedication (CC0) [@cc02022] or a copyleft option such as the Attribution-Share Alike (CC-BY-SA) [@bysa2022]. Responsible custodianship of some de-identified mental health data may involve using or adapting template terms of use [@sampleterms2022] which have a number of ethical clauses (for example, prohibiting efforts to re-identify research participants). 
+
+Licenses may or may not specify that model re-users must give appropriate acknowledgement to model authors. Citation tools can be distributed with each cite individual code or data items to inform re-users of the desired attribution. In R, including a CITATION file in the `inst` directory of a package will enable users of that package to retrieve citation information by running a command of the format `citation("Package Name")` in the R console. More generally, including a CITATION.cff file at the top level of any software item (including those written in R), will enable GitHub and Zenodo repositories hosting that item to include the relevant information in their citation tools. Datasets hosted on Dataverse installations have metadata fields that, once completed by authors, generate citation files for dataset viewers.
 
 Standards:
 
@@ -161,23 +161,81 @@ Standards:
 
 - **L2: Non-confidential model data is available for liberal re-use (subject to additional terms for de-identified human data)**
 
-- **L3: Model code and data are distributed with citation tools** <!-- New -->
+- **L3: Model code and data are distributed with tools to support appropriate citation** <!-- New -->
 
 ### Yielding Models
 OSHEMs can be time and skills intensive for modellers to develop - but they should be easy for others to use. 
 
-Statistical models are a common output of health economic evaluations, but they are often not reported in a format that enables others to confidently and reliably re-use [@Kearns2013]. Open source approaches can help address this, by disseminating code artefacts that enable easy and appropriate use of a statistical model to make predictions with new data. However, great care must be exercised when disseminating such artefacts if they describe models estimated from data on human subjects. In the R language, model objects by default typically contain a copy of the source dataset. Such dataset copies must therefore be replaced (for example, with fake data) and the amended artefact's predictive performance then retested before any public release of model code artefacts.
+Statistical models are a common output of health economic evaluations, but they are often not reported in a format that enables others to confidently and reliably re-use them [@Kearns2013]. Open source approaches can help address this by disseminating code artefacts that enable easy and appropriate use of a statistical model to make predictions with new data. However, great care must be exercised when doing so if models are derived from data on human subjects. In the R language, model objects by default typically contain a copy of the source dataset. Such dataset copies must therefore be replaced (for example, with fake data) and the amended artefact's predictive performance then retested before any public release.
 
-Another was to make OSHEMs easier to use is to develop simple user-interfaces for non-technical users. In R, such user-interfaces are typically developed with the Shiny package, for which a tutorial aimed at health economists is available [@SmithR2020].
+Another way to make OSHEMs easier to use is to develop simple user-interfaces for non-technical users. In R, such user-interfaces are typically developed with the Shiny package, for which a tutorial aimed at health economists is available [@SmithR2020].
+
+Standards:
 
 - **Y2: Statistical models can be safely and appropriately reused using standardised toolkits** <!-- New, Replaces Old Y1 (now Y2) -->
 - **Y2: Non-technical users can configure and run models via simple user-interfaces** <!-- Was Y1 -->
 
 ## Toolkits
+We have developed a toolkit to help streamline the process of developing OSHEMs that meet the TIMELY standards. The toolkit is comprised of online repositories and software.
 
 ### Online Repositories
+We have created a GitHub organisation (https://github.com/ready4-dev) for in development model code, a Zenodo community (https://zenodo.org/communities/ready4) for citable archived code and a Dataverse on the Harvard Dataverse for model data (https://dataverse.harvard.edu/dataverse/ready4).
 
-### Software Development Kit
+### Software
+We have written six R packages to support the development and curation of model code and data. The purpose of each package, the TIMELY standards they support and the existing R packages they depend on are summarised in Table 1.
+
+```{r cpkgs, tab.cap='Software', tab.id = 'cpkgs', echo = F, results = 'asis'}
+      tb <- tibble::tibble(Package = c("ready4","ready4fun"),
+                                                    Version = Package %>%
+                        purrr::map_chr(~utils::packageDescription(.x) %>%
+                                         purrr::pluck("Version")),
+                           Depends = Package %>%
+                         purrr::map(~ {
+                           utils::packageDescription(.x) %>%
+                             `[`(c("Depends", "Imports")) %>%
+                             purrr::map(~{
+                               if(is.null(.x)){
+                                 character(0)
+                               }else{
+                                 .x %>%
+                                   strsplit(",\\n") %>%
+                                   purrr::flatten_chr() %>%
+                                   purrr::map(~strsplit(.x,", ") %>%
+                                                purrr::flatten_chr()) %>%
+                                   purrr::flatten_chr() %>% sort() %>%
+                                   purrr::discard(~startsWith(.x,"R "))
+                               }
+                             }) %>%
+                             purrr::flatten_chr() %>%
+                             unique() %>%
+                             sort() %>%
+                         purrr::map_chr(~{
+                           updated_1L_chr <- stringr::str_replace_all(.x,"\\n"," ")
+                           problem_idx_1L_chr <- stringr::str_locate(updated_1L_chr," ")[1,1] %>%
+                             unname()
+                           if(!is.na(problem_idx_1L_chr))
+                             updated_1L_chr <- updated_1L_chr %>%
+                             stringr::str_sub(end = problem_idx_1L_chr-1)
+                           updated_1L_chr %>% trimws(which = "left")
+                         })
+                         })
+
+                       ) 
+# packages_df <- data.frame(Name = c("ready4", "ready4fun"),
+#                           Purpose = c("Provide framework modules and syntax",
+#                                       "Standardise and partially automate the authoring and documenting of functions."),
+#                           `Supports standard` = c("AAAA","BBB"),
+#                           Depends = c("A","B")) 
+params_ls<-list(output_type_1L_chr="PDF")
+tb  %>%
+    ready4show::print_table(output_type_1L_chr = params_ls$output_type_1L_chr,
+                            caption_1L_chr = knitr::opts_current$get("tab.cap"),
+                            mkdn_tbl_ref_1L_chr = paste0("tab:",knitr::opts_current$get("tab.id")),
+                            use_rdocx_1L_lgl = ifelse(params_ls$output_type_1L_chr=="Word",T,F),
+                            add_to_row_ls = NULL,
+                            sanitize_fn = NULL)
+```
+
 
 # Application
 
