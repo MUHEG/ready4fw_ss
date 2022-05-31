@@ -5,6 +5,32 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 ```{r echo=FALSE}
-# Fns go here
+library(magrittr)
+# Adapted fom: https://seankross.com/2016/08/02/How-R-Packages-are-Licensed.html
+sorting_hat <- function(student, houses){
+  choice <- purrr::map_lgl(houses, grepl, x = student)
+  if(!any(choice)){
+    return("Other")
+  } else {
+    return((houses[choice])[1])
+  }
+}
+get_license_share <- function(license_1L_chr = "GPL"){
+  license_table <- table(utils::available.packages()[,"License"])
+names(license_table) %<>%
+  purrr::map_chr(function(x){
+    sorting_hat(x, c("Apache", "Artistic", "CC", "BSD", "MIT", "GPL"))
+  })  
+license_tbl <- as.data.frame(license_table) %>%
+  dplyr::rename(License = Var1) %>%
+  dplyr::group_by(License) %>%
+  dplyr::summarize(Freq = sum(Freq)) %>%
+  dplyr::ungroup() %>%
+  dplyr::arrange(dplyr::desc(Freq))
+#licenses <- license_tbl$Freq
+ share_1L_dbl <- round(license_tbl$Freq[license_tbl$License==license_1L_chr]/sum(license_tbl$Freq)*100,2) 
+ return(share_1L_dbl)
+}
+
 ```
 

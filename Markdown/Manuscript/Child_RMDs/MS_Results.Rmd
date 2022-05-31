@@ -5,6 +5,8 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
+```{r child="../Child_RMDs/XX_Funs.Rmd", echo=FALSE}
+```
 ```{r child="../Child_RMDs/MS_Tables.Rmd", echo=FALSE}
 ```
 ```{r child="../Child_RMDs/MS_Figures.Rmd", echo=FALSE}
@@ -24,20 +26,20 @@ Major mental health reform programs, such as those currently being implemented i
 
 To retain and improve their utility as decision aids, health economic models require updating and refinement as new evidence emerges and decision contexts change [@Jenkins2021]. There are significant deficits in our understanding of the systems in which mental disorder emerges and is treated [@Fried2020] and longer term project horizons could allow mental health economic models to progressively improve validity as these gaps are addressed. Currently, the theoretical basis for understanding complex mental health systems is weak [@RN2111]. Strikingly, it remains unclear why increased investments in mental health care have yet to discernibly reduce the prevalence and burden of mental disorders[@RN26].  The literature about how the requirements, characteristics and performance of mental health services are shaped by spatiotemporal context is underdeveloped [@RN42]. There is insufficient evidence to identify the social determinants of mental disorders most amenable to preventative interventions, and for which population sub-groups such interventions would be most effective [@RN43]. 
 
-The development, validation and updating of more complex mental health economic models implemented over longer time frames may be too onerous a burden for a single modelling team. Developing networks of modellers working on common health conditions has been recommended as a strategy for improving model validity [@Sampson2019] and a some of us are part of a nascent initiate of this type in mental health [@nmhsmn2022]. Furthermore, collaborations across multiple modelling teams that include the ability to re-use and extend each others work can make complex modelling projects more tractable [@Arnold2010]. <!-- Add ref to NMHSMN in Australia --> Similarly, developing partnerships between modellers and decision-makers across the life-cycle of a modelling project can help ensure models are appropriately conceptualised and implemented and improve their practical utility as decision aids [@Zabell2021; @SQUIRES2016588].
+The development, validation and updating of more complex mental health economic models implemented over longer time frames may be too onerous a burden for a single modelling team. Developing networks of modellers working on common health conditions has been recommended as a strategy for improving model validity [@Sampson2019] and some of us are part of a nascent initiate of this type in mental health [@nmhsmn2022]. Furthermore, collaborations across multiple modelling teams that include the ability to re-use and extend each others work can make complex modelling projects more tractable [@Arnold2010]. <!-- Add ref to NMHSMN in Australia --> Similarly, developing partnerships between modellers and decision-makers across the life-cycle of a modelling project can help ensure models are appropriately conceptualised and implemented and improve their practical utility as decision aids [@Zabell2021; @SQUIRES2016588].
 
 
 ## readyforwhatsnext
 We are currently developing readyforwhatsnext, a reference OSHEM that aims to examine multiple potential population level strategies for promoting mental wellbeing and preventing and treating mental disorders in young people.
 
-Our approach to model development is to undertake a number of discrete modelling projects of the people, places, platforms and programs that shape the mental health and wellbeing of young people and to progressively link them together by means of a common framework. To model people we are developing synthetic representations of populations of interest [@DVN/HJXYKQ_2021] that describe relevant individual characteristics and their household relationships, algorithms that map psychological measures to health utility [@Hamilton2021.07.07.21260129] and choice models for predicting the helpseeking behaviour of young people. Our in development model of places [@DVN/V3OKZV_2022] aims to synthesise geometry and spatial attribute data to characterise the geographic distribution of relevant demographic, environmental, epidemiological and service infrastructure features and our first model of a service platform will represent the processes and operations of a complex primary youth mental health service. We also plan to extend our prior work reviewing economic evidence relating to youth mental health programs [@RN33] so that it can be integrated with the model.
+Our approach to model development is to undertake a number of discrete modelling projects of the people, places, platforms and programs that shape the mental health and wellbeing of young people and to progressively link them together by means of a common framework. To model people we are developing synthetic representations of populations of interest [@DVN/HJXYKQ_2021] that describe relevant individual characteristics and their relationships, algorithms that map psychological measures to health utility [@Hamilton2021.07.07.21260129] and choice models for predicting the helpseeking behaviour of young people. Our in development model of places [@DVN/V3OKZV_2022] aims to synthesise geometry and spatial attribute data to characterise the geographic distribution of relevant demographic, environmental, epidemiological and service infrastructure features. We are in the early stages of a multi-annual project to develop a service platform model that will represent the processes and operations of a complex primary youth mental health service. We also plan to extend and update our prior work reviewing economic evidence relating to youth mental health programs [@RN33] so that it can be integrated with the model.
 
 Our initial work on readyforwhatsnext is focused on Victoria, Australia but the framework we are using to develop it is designed to facilitate extension by ourselves and others to different decision contexts. Progress is reported on a project website [@rfwn2022].
 
 # Framework
 The framework we have developed to implement readyforwhatsnext specifies standards for OSHEMs and provides tools for meeting those standards.
 
-## Standards
+## Framework standards
 We have identified 20 standards that we believe are important for quality implementations of OSHEMs, each described under one of following six principles for making models TIMELY:
 
  - **Transparent**: people can easily see how a model has been implemented and tested;
@@ -50,7 +52,7 @@ We have identified 20 standards that we believe are important for quality implem
 ### Transparent Models
 A range of tools and practices are available to help make model code and data accessible, comprehensible and citable. The most efficient way to widely disseminate code and data may be to use existing open science infrastructure [@Erdemir2020]. Repositories such as Zenodo [@Zenodo2013] and Dataverse [@Dataverse2007] provide persistent storage solutions that generate a Digital Object Identifier (DOI) for each unique item. These repositories are a preferable solution for sharing citable code and data than transitory repositories such as corporate websites or GitHub where items can be deleted or relocated at any time [@sseditors2022]. Zenodo includes tools that automate integration with GitHub, which makes it easy for developers to maintain parallel code repositories - one for disseminating the most up to date development code and the other for archiving citable code releases.
 
-Model code and data also need to be clearly documented, potentially with different versions for technical and non-technical users [@Eddy2012]. Developers storing data in a Dataverse installation have access to multiple meta-data fields to document both a data collection and its constituent individual files. In R, code manuals and websites can be created with the aid of tools such as devtools [@devtools2021], sinew [@sinew2022], roxygen2 [@roxygen2021] and pkgdown [@pkgdown2022]. 
+Model code and data also need to be clearly documented, potentially with different versions for technical and non-technical users [@Eddy2012]. Developers storing data in a Dataverse installation have access to multiple meta-data fields to document both a data collection and its individual constituent files. In R, code manuals and websites can be created with the aid of tools such as devtools [@devtools2021], sinew [@sinew2022], roxygen2 [@roxygen2021] and pkgdown [@pkgdown2022]. 
 
 Consistent use of meaningful naming conventions when authoring code is recommended [@Wilson_2017; @Alarid2019]. Code can be made easier to follow by using the practices of abstraction [@8717448], where only simple, high level commands are routinely exposed to reviewers, and polymorphsim [@7181447], where the same command (e.g. "simulate") can be reused to implement different algorithms of the same type. Programs to implement model analyses can be made comprehensible to even non-technical users though the use of literate programming techniques that use tools like RMarkdown [@xie2018r] to render documents that integrate computer code with plain English descriptions. 
 
@@ -121,38 +123,17 @@ Standards:
 
 
 ### Licensed Models
-```{r}
-# Adapted fom: https://seankross.com/2016/08/02/How-R-Packages-are-Licensed.html
-sorting_hat <- function(student, houses){
-  choice <- purrr::map_lgl(houses, grepl, x = student)
-  if(!any(choice)){
-    return("Other")
-  } else {
-    return((houses[choice])[1])
-  }
-}
-license_table <- table(utils::available.packages()[,"License"])
-names(license_table) %<>%
-  purrr::map_chr(function(x){
-    sorting_hat(x, c("Apache", "Artistic", "CC", "BSD", "MIT", "GPL"))
-  })  
-license_tbl <- as.data.frame(license_table) %>%
-  dplyr::rename(License = Var1) %>%
-  dplyr::group_by(License) %>%
-  dplyr::summarize(Freq = sum(Freq)) %>%
-  dplyr::ungroup() %>%
-  dplyr::arrange(dplyr::desc(Freq))
-#licenses <- license_tbl$Freq
-gpl_pc_dbl <- round(license_tbl$Freq[license_tbl$License=="GPL"]/sum(license_tbl$Freq)*100,2) 
+```{r echo = F}
+gpl_pc_dbl <- get_license_share("GPL")
 ```
 
 To make model code and data widely re-usable by others, it is important to provide users with appropriate and explicit permissions. In the context of open source models, there are two broad categories of licensing options. Some guidance strongly recommends the use of permissive licensing [@Wilson_2017] that provides users with great flexibility as to the purposes (including commercial) for which the content could be re-used. An alternative approach is to use copyleft licenses [@copyleft2022] that can require content users to distribute any derivative works they create under similar open source arrangements.
 
-For code, it may be appropriate to adopt the prevailing open source licensing practice within the programming language being used. Applying a previously published algorithm [@kross2016] to analyse the most comprehensive archive of released R packages [@CRAN2022] finds that `r `gpl_pc_dbl`% are distributed under various forms of General Public License (GPL) [@GNUGPL2022], a copyleft license.
+For code, it may be appropriate to adopt the prevailing open source licensing practice within the programming language being used. Applying a previously published algorithm [@kross2016] to analyse the most comprehensive archive of released R packages [@CRAN2022] finds that `r gpl_pc_dbl`% are distributed under various forms of General Public License (GPL) [@GNUGPL2022], a copyleft license.
 
 For data, it may not be sufficient to simply choose between a permissive license like the Public Domain Dedication (CC0) [@cc02022] or a copyleft option such as the Attribution-Share Alike (CC-BY-SA) [@bysa2022]. Responsible custodianship of some de-identified mental health data may involve using or adapting template terms of use [@sampleterms2022] which have a number of ethical clauses (for example, prohibiting efforts to re-identify research participants). 
 
-Licenses may or may not specify that model re-users must give appropriate acknowledgement to model authors. Citation tools can be distributed with each cite individual code or data items to inform re-users of the desired attribution. In R, including a CITATION file in the `inst` directory of a package will enable users of that package to retrieve citation information by running a command of the format `citation("Package Name")` in the R console [@Salmon2021]. More generally, including a CITATION.cff file at the top level of your code repository will enable GitHub and Zenodo repositories hosting that item to include the relevant information in their citation tools [@Druskat_Citation_File_Format_2021]. Datasets hosted on Dataverse installations have metadata fields that, once completed by authors, generate citation files for dataset viewers.
+Licenses may or may not specify that model re-users must give appropriate acknowledgement to model authors. Citation tools can be distributed with each individual code or data item to inform re-users of the desired attribution. In R, including a CITATION file in the `inst` directory of a package will enable users of that package to retrieve citation information by running a command of the format `citation("Package Name")` in the R console [@Salmon2021]. More generally, including a CITATION.cff file at the top level of your code repository will enable GitHub and Zenodo repositories hosting that item to include the relevant information in their citation tools [@Druskat_Citation_File_Format_2021]. Datasets hosted on Dataverse installations have metadata fields that, once completed by authors, generate citation files for dataset viewers.
 
 Standards:
 
@@ -174,7 +155,7 @@ Standards:
 - **Y1: Statistical models are distributed with validated tools to support their safe and appropriate re-use** <!-- New, Replaces Old Y1 (now Y2) -->
 - **Y2: Simple user-interfaces allow non-technical users to configure and run models ** <!-- Was Y1 -->
 
-## Modelling tools
+## Framework toolkits
 We have developed a toolkit to help streamline the process of developing OSHEMs that meet the TIMELY standards. The toolkit is comprised of online repositories and software.
 
 ### Framework repositories <!-- Existing ref -->
@@ -184,9 +165,9 @@ We created a GitHub organisation where all framework software source code is sto
 ### Framework software <!-- Novel ref -->
 As a foundation for implementing the framework, we authored a development version R package that defines a novel syntax and a template class for model modules [@ready42022]. To enable the syntax and module template be applied to modelling projects, we then created five additional development version R packages that provide tools for authoring:
 
-- self-documenting model modules [@ready4class2022];
+- documented model modules [@ready4class2022];
 
-- self-documenting functions (including methods), written in a consistent house style [@ready4fun2022];
+- documented functions (including methods), written in a consistent house style [@ready4fun2022];
 
 - citable, quality assured R packages [@ready4pack2022];
 
@@ -194,109 +175,18 @@ As a foundation for implementing the framework, we authored a development versio
 
 - model analyses and reports [@ready4show2022]. 
 
-The six R packages, their primary focus, the TIMELY standards they support and the third party packages they depend on are summarised in Table \@ref(tab:cpkgs). When used in conjunction with framework repositories, the six packages currently provide strong support for implementing 17 of the TIMELY standards, weak support for implementing the standards relating to disseminating statistical models (Y1) and user-interface development (Y2) and no support for implementing standard T5 (reporting code coverage). Our future development priorities for these packages include adding functionality so that all 20 TIMELY standards are well supported and to then submit production versions of each package for review by and archiving on the Comprehensive R Archive Network (CRAN) [@CRAN2022].
+The six R packages, their primary focus, the TIMELY standards they support and the third party packages they depend on are summarised in Table \@ref(tab:cpkgs). When used in conjunction with framework repositories, the six packages extending existing R packages to provide strong support for implementing 16 of the TIMELY standards. However, the software only weakly supports implementing the standards relating to disseminating statistical models (Y1) and user-interface development (Y2) and does not yet provide any workflow tools to help implement the standards for code coverage (T5) and deprecation conventions (I4). Standards not supported or weakly supported by our software can be met with existing developer tools in R and we plan to progressively integrate these third party tools with our own in future releases of our software. Another future priority is to submit production versions of each R package for review by and archiving on the Comprehensive R Archive Network (CRAN) [@CRAN2022].
 
 ```{r, child = child_docs_ls$one, echo=FALSE}
 ```
 
-
-# Application
-
-Worked example
-
 \blandscape
 
-```{r tab.cap='TIMELY Checklist applied to utility mapping study', tab.id = 'checklisttb', echo = F, results = 'asis'}
-    #  a <- c("TEST1","TEST2")
-    # b <- c("\\cite{ready4show2022}", "hjhjhj")
-    # tmp <- data.frame(a,b)   
-#     kableExtra::kbl(tmp, booktabs = T, escape = F) %>%
-#  kableExtra::kable_styling(
-#    latex_options = c("striped", "hold_position", "repeat_header")
-#    ) %>%  
-#   kableExtra::column_spec(2, width = "50em") %>%
-# kableExtra::landscape()
-
-checklist_df <- data.frame(Ref = c(paste0("T",1:6),
-                                        paste0("I",1:4),
-                                        paste0("M",1:2),
-                                        paste0("E",1:3),
-                                        paste0("L",1:3),
-                                        paste0("Y",1:2)),
-                           Standard = c("Publicly archived",
-                                        "Documented",
-                                        "Consistent syntax",
-                                        "Literately programmed",
-                                        "Code coverage",
-                                        "Reproducible",
-                                        "Version controlled",
-                                        "Semanticly versioned",
-                                        "Continuously integrated",
-                                        "Deprecation",
-                                        "Separate code and data",
-                                        "Encapsulated",
-                                        "Libraries",
-                                        "Inheriting",
-                                        "Test data",
-                                        "Copyleft code",
-                                        "Liberal, safe data terms",
-                                        "Citation tools",
-                                        "Prediction tools",
-                                        "User interface"),
-                           Assessment = rep("F",20),
-                           Description = c("5 libraries (youthvars, scorz, specific, TTU and youthu) [@hamilton_matthew_2022_6084467; @hamilton_matthew_2022_6084824; @hamilton_matthew_2022_6116701; @gao_caroline_2022_6130155; @matthew_p_hamilton_2021_5646669], <br> 3 programs [@hamilton_matthew_2022_6129906; @hamilton_matthew_2022_6416330; @hamilton_matthew_p_2022_6321821], 2 sub-routines [@hamilton_matthew_2022_6116385; @matthew_p_hamilton_2022_5976988] and 2 datasets [@DVN/DKDIB0_2021; @DVN/HJXYKQ_2021] are permanently archived with unique identifiers.",
-                                           "All code libraries have documenting websites with URLs that concatenate 'https://ready4-dev.github.io/' and the package name (e.g. https://ready4-dev.github.io/youthvars). All three Markdown programs are self-documenting, with one [@hamilton_matthew_2022_6129906] including additional instructions in a README file. Only one sub-routine [@matthew_p_hamilton_2022_5976988] is documented with a meaningful README file. All datasets have meaningful metadata descriptors.",
-                                           "All libraries, programs and sub-routines use the same house style. All libraries except [@matthew_p_hamilton_2021_5646669] use framework syntax, as does one program [@hamilton_matthew_2022_6129906].",
-                                           "All programs use literate programming.",
-                                           "No current reporting of code coverage.",
-                                           "All parts of the study workflow from raw data ingest through to data processing, analysis, reporting and dissemination of study outputs can be reproduced (if granted access to source data) or replicated (using supplied synthetic data) with one program [@hamilton_matthew_2022_6129906].",
-                                           "All code is version controlled using Git and GitHub. All source code is available in one of two GitHub organisations [@ready4gh2022; @orygengh2022].",
-                                           "Semantic version is used in all code. As no code library has yet been submitted to CRAN, only the development version extensions of each version number have been incremented to date.",
-                                           "All six libraries use continuous integration (CI). CI results for each library can be viewed at URL that concatenates 'https://github.com/ready4-dev/' the package name and '/actions' (e.g. https://github.com/ready4-dev/youthvars/actions)",
-                                           "Retired code is deprecated using lifecycle package tools (e.g. review everything after “## DEPRECATED FNS” in https://github.com/ready4-dev/youthvars/blob/main/data-raw/fns/add.R . Package vignettes and datasets are also deprecated e.g. https://ready4-dev.github.io/youthvars/articles/Replication_DS.html )",
-                                           "All development code is stored on repos in two GitHub organisations [@ready4gh2022; @orygengh2022] and all archived releases are available in aZenodo community [@ready4zen2022]. All non-confidential data is stored in repositories within a Harvard Dataverse collection [@ready4dv2022]. ",
-                                           "Four [@hamilton_matthew_2022_6084467; @hamilton_matthew_2022_6084824; @hamilton_matthew_2022_6116701; @gao_caroline_2022_6130155] out of five libraries include encapsulated  modules. Examples are the items beginning with Scorz, Specific and Youthvars that are listed in this table: https://ready4-dev.github.io/ready4/articles/V_01.html#current-ready4-framework-modules as well as the S4 classess from the TTU package listed here: https://ready4-dev.github.io/TTU/reference/index.html ",
-                                           "All code libraries include functions. The most complete list of functions for each library is available by clicking the 'Manual - Developer (PDF)' link on each package's documentation homepage (see item T2 above).",
-                                           "All modules (see item M2) inherit from the Ready4Module class.",
-                                           "Two synthetic datasets and their data dictionaries are publicly available in a data repository [@DVN/HJXYKQ_2021]. One (ymh_clinical_tb.RDS) closely resembles the study dataset and was released so that the main study algorithm [@hamilton_matthew_2022_6129906] can be rerun by those without access to the confidential data. The other (eq5d_ds_dict.RDS) is deliberately different to the source dataset in both variable naming convention and the concepts used for predictors and outcome measures and was created to demonstrate generalised applications of study algorithms.",
-                                           "All code libraries, programs and sub-routines use GPL-3 licenses. ",
-                                           "Datasets use amended version of template provided by Harvard Dataverse [@sampleterms2022].",
-                                           "All libraries have CITATION file in inst directory. All code repositories have CITATION.cff file. All datasets have citation generating metadata.",
-                                           "Model catalogues (PDF files beginning with 'AAA_TTU_MDL_CTG') describe the predictive performance of all models under a variety of usage regimes and are available in the study results dataset [@DVN/DKDIB0_2021]. The youthu library [@matthew_p_hamilton_2021_5646669] includes tools for searching for and applyihg models compatible with different types of input data. An example program to demonstrate this functionality is available in RMarkdown [@hamilton_matthew_2022_6416330] and rendered PDF formats (the 'Application.pdf' file in the study results dataset [@DVN/DKDIB0_2021]).  ",
-                                           "No Shiny app user interface has yet been developed."))
-
-tb2_nms_chr<-colnames(checklist_df)
-checklist_df <- data.frame(checklist_df[,1],
-                 rep("&nbsp; ",nrow(checklist_df)),
-                 checklist_df[,2],
-                 rep("&nbsp; &nbsp; &nbsp; &nbsp; ",nrow(checklist_df)),
-                 checklist_df[,3],
-                 rep("&nbsp; ",nrow(checklist_df)),
-                 checklist_df[,4])
-colnames(checklist_df) <- c(" "," ","Standard",#
-                             "   ","Met?","   ",
-                            tb2_nms_chr[4])
-if(params$X@outp_formats_chr[1] == "Word") {
-  checklist_df %>%
-    ready4show::print_table(output_type_1L_chr = params$X@outp_formats_chr[1],
-                            caption_1L_chr = knitr::opts_current$get("tab.cap"),
-                            mkdn_tbl_ref_1L_chr = paste0("tab:",knitr::opts_current$get("tab.id")),
-                            use_rdocx_1L_lgl = ifelse(params$X@outp_formats_chr[1]=="Word",T,F),
-                            add_to_row_ls = NULL,
-                            sanitize_fn = NULL)
-  }else{
-    checklist_df %>%
-    kableExtra::kbl(format = "markdown",
-                    booktabs = T,
-                    #escape = T,
-                    caption = knitr::opts_current$get("tab.cap")) 
-    # df %>%
-    #   kableExtra::kbl(booktabs = T,
-    #                   caption = knitr::opts_current$get("tab.cap")) %>%
-    #   kableExtra::kable_styling(full_width = F) %>%
-    #   kableExtra::column_spec(9, width = "17em") %>%
-    #   kableExtra::add_header_above(c(" " = 2, "Supports standard" = 6, " "))
-    }
+```{r, child = child_docs_ls$two, echo=FALSE}
 ```
 
 \elandscape
+
+# Application
+We used framework toolkits to develop model code and datasets for implementing a utility mapping study [@Hamilton2021.07.07.21260129]. Table \@ref(tab:checktb) assesses that study against each TIMELY standard, 18 of which the study was able to meet. The two current standards where the study falls short are in reporting code coverage and including a user-interface. Both these items are current development priorities for our team.
+

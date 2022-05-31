@@ -34,9 +34,9 @@ if(!params$X@figures_in_body_lgl){
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
-# Appendix
+<!-- # Appendix -->
 
-```{r child="../Child_RMDs/TA_Body.Rmd", echo=FALSE}
-```
+<!--  ```{r child="../Child_RMDs/TA_Body.Rmd", echo=FALSE}
+# ``` -->
 
 <!-- NOTE TO SELF: INCORPORATE TA_CODE.RMD -->
