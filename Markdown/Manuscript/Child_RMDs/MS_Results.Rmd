@@ -204,7 +204,9 @@ The six R packages, their primary focus, the TIMELY standards they support and t
 
 Worked example
 
-```{r tab.cap='TIMELY Checklist with utility mapping study worked example', tab.id = 'checklisttb', echo = F, results = 'asis'}
+\blandscape
+
+```{r tab.cap='TIMELY Checklist applied to utility mapping study', tab.id = 'checklisttb', echo = F, results = 'asis'}
     #  a <- c("TEST1","TEST2")
     # b <- c("\\cite{ready4show2022}", "hjhjhj")
     # tmp <- data.frame(a,b)   
@@ -215,64 +217,65 @@ Worked example
 #   kableExtra::column_spec(2, width = "50em") %>%
 # kableExtra::landscape()
 
-checklist_df <- data.frame(Standard = c(paste0("T",1:6, c(" (Publicly archived)",
-                                                          " (Documented)",
-                                                          " (Simple Syntax)",
-                                                          " (Literate programming)",
-                                                          " (Code coverage)",
-                                                          " (Reproducibility")),
-                                        paste0("I",1:4, c(" (Version controlled)",
-                                                          " (Semantic versioning)",
-                                                          " (Continuous integration)",
-                                                          " (Deprecation)")),
-                                        paste0("M",1:2, c(" (Decouple code and data)",
-                                                          " (Encapsulation)")),
-                                        paste0("E",1:3, c(" (Code libraries)",
-                                                          " (Inheritance)",
-                                                          " (Test data)")),
-                                        paste0("L",1:3, c(" (Copyleft for code)",
-                                                          " (Liberal, safe data terms)",
-                                                          " (Citation tools)")),
-                                        paste0("Y",1:2, c(" (Statistical model tools)",
-                                                          " (User-interfaces"))),
-                           Assessment = rep("Met so well it hurts",20),
-                           Description = c("5 libraries [@hamilton_matthew_2022_6084467;@hamilton_matthew_2022_6084824;@hamilton_matthew_2022_6116701;@gao_caroline_2022_6130155;@matthew_p_hamilton_2021_5646669], 3 programs [@hamilton_matthew_2022_6129906;@hamilton_matthew_2022_6416330;@hamilton_matthew_p_2022_6321821], 2 sub-routines [@hamilton_matthew_2022_6116385;@matthew_p_hamilton_2022_5976988] and 2 datasets [@DVN/DKDIB0_2021;@DVN/HJXYKQ_2021]",
-# @hamilton_matthew_2022_6084467;@hamilton_matthew_2022_6084824;@hamilton_matthew_2022_6116701;@gao_caroline_2022_6130155;@matthew_p_hamilton_2021_5646669
-# Programs:
-
-# 
-# Sub-routines:
-
-
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX",
-                                           "XX"))
+checklist_df <- data.frame(Ref = c(paste0("T",1:6),
+                                        paste0("I",1:4),
+                                        paste0("M",1:2),
+                                        paste0("E",1:3),
+                                        paste0("L",1:3),
+                                        paste0("Y",1:2)),
+                           Standard = c("Publicly archived",
+                                        "Documented",
+                                        "Consistent syntax",
+                                        "Literately programmed",
+                                        "Code coverage",
+                                        "Reproducible",
+                                        "Version controlled",
+                                        "Semanticly versioned",
+                                        "Continuously integrated",
+                                        "Deprecation",
+                                        "Separate code and data",
+                                        "Encapsulated",
+                                        "Libraries",
+                                        "Inheriting",
+                                        "Test data",
+                                        "Copyleft code",
+                                        "Liberal, safe data terms",
+                                        "Citation tools",
+                                        "Prediction tools",
+                                        "User interface"),
+                           Assessment = rep("F",20),
+                           Description = c("5 libraries (youthvars, scorz, specific, TTU and youthu) [@hamilton_matthew_2022_6084467; @hamilton_matthew_2022_6084824; @hamilton_matthew_2022_6116701; @gao_caroline_2022_6130155; @matthew_p_hamilton_2021_5646669], <br> 3 programs [@hamilton_matthew_2022_6129906; @hamilton_matthew_2022_6416330; @hamilton_matthew_p_2022_6321821], 2 sub-routines [@hamilton_matthew_2022_6116385; @matthew_p_hamilton_2022_5976988] and 2 datasets [@DVN/DKDIB0_2021; @DVN/HJXYKQ_2021] are permanently archived with unique identifiers.",
+                                           "All code libraries have documenting websites with URLs that concatenate 'https://ready4-dev.github.io/' and the package name (e.g. https://ready4-dev.github.io/youthvars). All three Markdown programs are self-documenting, with one [@hamilton_matthew_2022_6129906] including additional instructions in a README file. Only one sub-routine [@matthew_p_hamilton_2022_5976988] is documented with a meaningful README file. All datasets have meaningful metadata descriptors.",
+                                           "All libraries, programs and sub-routines use the same house style. All libraries except [@matthew_p_hamilton_2021_5646669] use framework syntax, as does one program [@hamilton_matthew_2022_6129906].",
+                                           "All programs use literate programming.",
+                                           "No current reporting of code coverage.",
+                                           "All parts of the study workflow from raw data ingest through to data processing, analysis, reporting and dissemination of study outputs can be reproduced (if granted access to source data) or replicated (using supplied synthetic data) with one program [@hamilton_matthew_2022_6129906].",
+                                           "All code is version controlled using Git and GitHub. All source code is available in one of two GitHub organisations [@ready4gh2022; @orygengh2022].",
+                                           "Semantic version is used in all code. As no code library has yet been submitted to CRAN, only the development version extensions of each version number have been incremented to date.",
+                                           "All six libraries use continuous integration (CI). CI results for each library can be viewed at URL that concatenates 'https://github.com/ready4-dev/' the package name and '/actions' (e.g. https://github.com/ready4-dev/youthvars/actions)",
+                                           "Retired code is deprecated using lifecycle package tools (e.g. review everything after “## DEPRECATED FNS” in https://github.com/ready4-dev/youthvars/blob/main/data-raw/fns/add.R . Package vignettes and datasets are also deprecated e.g. https://ready4-dev.github.io/youthvars/articles/Replication_DS.html )",
+                                           "All development code is stored on repos in two GitHub organisations [@ready4gh2022; @orygengh2022] and all archived releases are available in aZenodo community [@ready4zen2022]. All non-confidential data is stored in repositories within a Harvard Dataverse collection [@ready4dv2022]. ",
+                                           "Four [@hamilton_matthew_2022_6084467; @hamilton_matthew_2022_6084824; @hamilton_matthew_2022_6116701; @gao_caroline_2022_6130155] out of five libraries include encapsulated  modules. Examples are the items beginning with Scorz, Specific and Youthvars that are listed in this table: https://ready4-dev.github.io/ready4/articles/V_01.html#current-ready4-framework-modules as well as the S4 classess from the TTU package listed here: https://ready4-dev.github.io/TTU/reference/index.html ",
+                                           "All code libraries include functions. The most complete list of functions for each library is available by clicking the 'Manual - Developer (PDF)' link on each package's documentation homepage (see item T2 above).",
+                                           "All modules (see item M2) inherit from the Ready4Module class.",
+                                           "Two synthetic datasets and their data dictionaries are publicly available in a data repository [@DVN/HJXYKQ_2021]. One (ymh_clinical_tb.RDS) closely resembles the study dataset and was released so that the main study algorithm [@hamilton_matthew_2022_6129906] can be rerun by those without access to the confidential data. The other (eq5d_ds_dict.RDS) is deliberately different to the source dataset in both variable naming convention and the concepts used for predictors and outcome measures and was created to demonstrate generalised applications of study algorithms.",
+                                           "All code libraries, programs and sub-routines use GPL-3 licenses. ",
+                                           "Datasets use amended version of template provided by Harvard Dataverse [@sampleterms2022].",
+                                           "All libraries have CITATION file in inst directory. All code repositories have CITATION.cff file. All datasets have citation generating metadata.",
+                                           "Model catalogues (PDF files beginning with 'AAA_TTU_MDL_CTG') describe the predictive performance of all models under a variety of usage regimes and are available in the study results dataset [@DVN/DKDIB0_2021]. The youthu library [@matthew_p_hamilton_2021_5646669] includes tools for searching for and applyihg models compatible with different types of input data. An example program to demonstrate this functionality is available in RMarkdown [@hamilton_matthew_2022_6416330] and rendered PDF formats (the 'Application.pdf' file in the study results dataset [@DVN/DKDIB0_2021]).  ",
+                                           "No Shiny app user interface has yet been developed."))
 
 tb2_nms_chr<-colnames(checklist_df)
 checklist_df <- data.frame(checklist_df[,1],
-                 rep("&nbsp; &nbsp; &nbsp;",nrow(checklist_df)),
+                 rep("&nbsp; ",nrow(checklist_df)),
                  checklist_df[,2],
-                 rep("&nbsp; &nbsp; &nbsp;",nrow(checklist_df)),
-                 checklist_df[,3])
-colnames(checklist_df) <- c("","Standard",
-                            "Met?", " ",
-                            tb2_nms_chr[3])
+                 rep("&nbsp; &nbsp; &nbsp; &nbsp; ",nrow(checklist_df)),
+                 checklist_df[,3],
+                 rep("&nbsp; ",nrow(checklist_df)),
+                 checklist_df[,4])
+colnames(checklist_df) <- c(" "," ","Standard",#
+                             "   ","Met?","   ",
+                            tb2_nms_chr[4])
 if(params$X@outp_formats_chr[1] == "Word") {
   checklist_df %>%
     ready4show::print_table(output_type_1L_chr = params$X@outp_formats_chr[1],
@@ -284,8 +287,9 @@ if(params$X@outp_formats_chr[1] == "Word") {
   }else{
     checklist_df %>%
     kableExtra::kbl(format = "markdown",
-                      #escape = F,
-                    caption = knitr::opts_current$get("tab.cap"))
+                    booktabs = T,
+                    #escape = T,
+                    caption = knitr::opts_current$get("tab.cap")) 
     # df %>%
     #   kableExtra::kbl(booktabs = T,
     #                   caption = knitr::opts_current$get("tab.cap")) %>%
@@ -295,5 +299,4 @@ if(params$X@outp_formats_chr[1] == "Word") {
     }
 ```
 
-
-
+\elandscape
