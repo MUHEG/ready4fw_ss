@@ -20,7 +20,7 @@ output:
 ## CUSTOM_AUTHORS_PLACEHOLDER ##
 params:
   X: NULL
-abstract: "There is strong in principle support for open source health economic models, but practical barriers limit their availability. We propose a set of principles and standards for the implementation of open source health economic models that are TIMELY - Transparent, Iterative, Modular, Epitomised and Yielding. We then describe a software framework that we have developed for developing TIMELY models in youth mental health and illustrate this framework with an open source utility mapping project."
+abstract: "There is strong in principle support for open source health economic models, but practical barriers limit their availability. We propose a set of principles and standards for the implementation of open source health economic models that are TIMELY - Transparent, Iterative, Modular, Epitomising and Yielding. We then describe a software framework that we have developed for developing TIMELY models in youth mental health and illustrate this framework with an open source utility mapping project."
 # abstract: "`r paste0(readLines('../Header/abstract.txt'),collapse=' ')`"
 graphics: yes
 csl: plos.csl
