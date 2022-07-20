@@ -16,8 +16,8 @@ output: html_document
                            #   purrr::map_chr(~utils::packageDescription(.x) %>%
                            #                    purrr::pluck("Version")),
                            Focus = c("Syntax",
-                                     "Modules",
                                      "Functions",
+                                     "Modules",
                                      "Libraries",
                                      "Data",
                                      "Reporting"),
