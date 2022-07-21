@@ -1,0 +1,48 @@
+---
+title: "MS_Imp_Guidelines"
+output: html_document
+date: '2022-07-21'
+---
+<!-- # Framework -->
+<!-- The framework we have developed to implement **readyforwhatsnext** specifies standards for OSHEMs and provides tools for meeting those standards. -->
+
+## readyforwhatsnext
+Our approach to model development is to undertake a number of discrete modelling projects of the people, places, platforms and programs that shape the mental health and wellbeing of young people and to progressively link them together by means of a common framework. To model people we are developing synthetic representations of populations of interest [@DVN/HJXYKQ_2021] that describe relevant individual characteristics and their relationships, algorithms that map psychological measures to health utility [@Hamilton2021.07.07.21260129] and choice models for predicting the helpseeking behaviour of young people [@hamilton_matthew_2022_6627995]. Our in-development model of places [@DVN/V3OKZV_2022] has the aim of synthesising geometry and spatial attribute data to characterise the geographic distribution of relevant demographic, environmental, epidemiological and service infrastructure features. We are in the early stages of a multi-annual project to develop a service platform model that will represent the processes and operations of a complex primary youth mental health service. We also plan to extend and update our prior work reviewing economic evidence relating to youth mental health programs [@RN33] so that it can be integrated with this model.
+
+Our initial work on **readyforwhatsnext** is focused on Victoria, Australia but the framework we are using to develop it is designed to facilitate extension by ourselves and others to different jurisdictional decision contexts. Progress is reported on a project website [@rfwn2022].
+
+## Framework toolkits
+We have developed a toolkit to help streamline the process of developing OSHEMs that meet the TIMELY standards. The toolkit is comprised of online repositories and software.
+
+### Framework repositories <!-- Existing ref -->
+We created a GitHub organisation where all framework software source code is stored, documented, version controlled and continuously integrated [@ready4gh2022]. To store citable archived copies of release copies of our software, we created a Zenodo community [@ready4zen2022]. Finally, to manage datasets for use in models developed with the framework, we created a dedicated collection within the Harvard Dataverse  [@ready4dv2022].
+
+
+### Framework software <!-- Novel ref -->
+
+A coding framework for OSHEMs developed in the language R includes standardised approaches to directory structure and naming conventions [@Alarid2019].
+
+
+As a foundation for implementing the framework, we authored a development version R package that defines a novel syntax and a template class for model modules [@ready42022]. To enable the syntax and module template be applied to modelling projects, we then created five additional development version R packages that provide tools for authoring:
+
+- documented model modules [@ready4class2022];
+
+- documented functions (including methods), written in a consistent house style [@ready4fun2022];
+
+- citable, quality assured R packages [@ready4pack2022];
+
+- model datasets [@ready4use2022];
+
+- model analyses and reports [@ready4show2022]. 
+
+The six R packages, their primary focus, the TIMELY standards they support and the third-party packages they depend on are summarised in Table \@ref(tab:cpkgs). When used in conjunction with framework repositories, the six packages extend existing R packages provide strong support for implementing 16 of the TIMELY standards. However, the software only weakly supports implementing the standards relating to disseminating statistical models (Y1) and user-interface development (Y2) and does not yet provide any workflow tools to help implement the standards for code coverage (T5) and deprecation conventions (I4). Standards not supported or weakly supported by our software can be met with existing developer tools in R and we plan to progressively integrate these third-party tools with our own in future releases of our software. Another future priority is to submit production versions of each R package for review by and archiving on the Comprehensive R Archive Network (CRAN) [@CRAN2022].
+
+```{r, child = child_docs_ls$one, echo=FALSE}
+```
+
+\blandscape
+
+```{r, child = child_docs_ls$two, echo=FALSE}
+```
+
+\elandscape

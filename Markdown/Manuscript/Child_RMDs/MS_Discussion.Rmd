@@ -9,3 +9,17 @@ output: html_document
 
 <!-- greater use of these types of models may require adaptation on the part of funders, modellers and decision-makers. T -->
 
+# Motivation
+
+## Why develop OSHEMs in mental health
+
+Mental disorders impose high health, social and economic burdens worldwide [@RN8;@GBD2019]. Much of this burden is potentially avertable [@RN25], but poorly financed and organised mental health systems are ill-equipped for this challenge[@RN22;@RN23]. The large and widespread additional mental health burdens recently observed during the COVID-19 pandemic[@20211700] and predicted as a potential future consequence of climate change [@page_howard_2010], highlight the need to improve the resilience and adaptability of these systems. To help stem growing demand for mental health services, policymakers have also been encouraged to place greater emphasis on tackling the social determinants of mental disorders [@RN11]. 
+
+Major mental health reform programs, <!-- such as those currently being implemented in Victoria, Australia [@VicRC2021],  -->can involve the identification, prioritisation, sequencing, targeting and monitoring of multiple interdependent initiatives. 
+
+The significant deficits in our understanding of the systems in which mental disorders emerge and are treated [@Fried2020] suggest that there is ample scope for mental health systems models to progressively improve their validity over time. Prospective work could address the weak theoretical underpinnings for understanding complex mental health systems [@RN2111]. For example, it remains unclear why increased investments in mental health care have yet to discernibly reduce the prevalence and burden of mental disorders[@RN26].  The  literature, and evidence base, regarding how the requirements, characteristics and performance of mental health services are shaped by spatiotemporal context needs to be further developed [@RN42]. There is also a need for better evidence to identify the social determinants of mental disorders most amenable to preventative interventions, and for which population sub-groups such interventions would be most effective [@RN43]. 
+
+The development, validation and updating of more complex mental health economic models implemented over longer time frames may be too onerous a burden for a single modelling team. 
+
+Developing networks of modellers working on common health conditions has been recommended as a strategy for improving model validity [@Sampson2019] and some of us are part of a nascent initiate of this type in mental health [@nmhsmn2022]. 
+<!-- Add ref to NMHSMN in Australia --> Similarly, developing partnerships between modellers and decision-makers across the life-cycle of a modelling project can help ensure models are appropriately conceptualised, implemented and have practical utility as decision aids [@Zabell2021; @SQUIRES2016588].
