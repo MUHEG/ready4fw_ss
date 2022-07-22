@@ -9,9 +9,9 @@ output: html_document
 
 <!-- greater use of these types of models may require adaptation on the part of funders, modellers and decision-makers. T -->
 
-# Motivation
+<!-- # Motivation -->
 
-## Why develop OSHEMs in mental health
+<!-- ## Why develop OSHEMs in mental health -->
 
 Mental disorders impose high health, social and economic burdens worldwide [@RN8;@GBD2019]. Much of this burden is potentially avertable [@RN25], but poorly financed and organised mental health systems are ill-equipped for this challenge[@RN22;@RN23]. The large and widespread additional mental health burdens recently observed during the COVID-19 pandemic[@20211700] and predicted as a potential future consequence of climate change [@page_howard_2010], highlight the need to improve the resilience and adaptability of these systems. To help stem growing demand for mental health services, policymakers have also been encouraged to place greater emphasis on tackling the social determinants of mental disorders [@RN11]. 
 

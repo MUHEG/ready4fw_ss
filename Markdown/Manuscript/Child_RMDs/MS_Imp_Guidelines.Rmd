@@ -4,7 +4,6 @@ output: html_document
 date: '2022-07-21'
 ---
 
-## Guidelines for OSHEMs
 Adherence to explicit guidelines is an essential requirement for modelling in healthcare [@Erdemir2020]. Guidance for implementing OSHEMs remains scarce and piecemeal and needs to be improved [@Sampson2019].  Guidelines on health economic model transparency were published ten years ago [@Eddy2012] and made recommendations on documenting models; however, notably missing were recommendations on the sharing of model code and data. More recent and more general modelling guidance [@Erdemir2020] recommends the sharing of code and data through digital repository services <!-- such as GitHub [@github2007] and Zenodo [@Zenodo2013] --> and the use of version control systems <!-- such as Git [@git20XX].  -->
 
 Based on existing open science guidance and our own experience, we have identified 20 guidelines for implementations of OSHEMs that are **TIMELY**:
@@ -16,7 +15,7 @@ Based on existing open science guidance and our own experience, we have identifi
  - **Licensed**: a model, its components and derivatives are persistently re-usable by other modellers; and
  - **Yielding**: a model can be simply, flexibly and reliably used as a decision aid.
 
-### Transparent Models
+## Transparent Models
 A range of tools and practices are available to help make model code and data accessible, comprehensible and citable. The most efficient way to widely disseminate code and data may be to use existing open science infrastructure [@Erdemir2020] to make permanently accessible and uniquely identfied digital artefacts. <!-- Repositories such as Zenodo [@Zenodo2013] and Dataverse [@Dataverse2007] provide persistent storage solutions that generate a Digital Object Identifier (DOI) for each unique item. These repositories are a preferable solution for sharing citable code and data than transitory repositories such as corporate websites or GitHub where items can be deleted or relocated at any time [@sseditors2022]. Zenodo includes tools that automate integration with GitHub, which makes it easy for developers to maintain parallel code repositories - one for disseminating the most up to date development code and the other for archiving citable code releases. -->Model code and data also need to be clearly documented, potentially with different versions for technical and non-technical users [@Eddy2012]. <!-- Developers storing data in a Dataverse installation have access to multiple meta-data fields to document both a data collection and its individual constituent files.  --><!-- In R, code manuals and websites can be created with the aid of tools such as devtools [@devtools2021], sinew [@sinew2022], roxygen2 [@roxygen2021] and pkgdown [@pkgdown2022].  -->Consistent use of meaningful naming conventions when authoring code is recommended [@Wilson_2017; @Alarid2019]. Code can be made easier to follow by using the practices of abstraction [@8717448], where only simple, high level commands are routinely exposed to reviewers, and polymorphism [@7181447], where the same command (e.g. "simulate") can be reused to implement different algorithms of the same type. Programs to implement model analyses can be made comprehensible to even non-technical users through the use of literate programming techniques <!-- that use tools like RMarkdown [@xie2018r]  -->to render documents that integrate computer code with plain English descriptions. 
 
 An essential component of quality assuring health economic models is verification - ensuring that calculations are correct and consistent with model specifications [@techver2019]. One useful concept for informing model users about the extensiveness of verification checks is code coverage [@ERICWONG2010188] - the proportion of model code that has been explicitly tested. <!-- In R, the testthat [@testthat2011] and covr [@covr2020] tools can be used in conjunction with GitHub to define tests and report coverage metrics. -->Finally, transcription errors - mistakes introduced when transferring data between sources, models and reports - are very common in health economic models [@Radeva2020]. The risk of these errors might be lower if there was full transparency across all steps in a study workflow. Scientific computing tools now make it relatively straightforward to author programs that reproducibly execute all steps in data ingest, processing and reporting [@Wilson_2017].
@@ -36,7 +35,7 @@ Guidelines:
 
 - **T6: All parts of a study analysis and reporting workflow can be reproduced and/or replicated** <!-- Was T7, Replaces Deleted T6 -->
 
-### Iterative Models
+## Iterative Models
 To avoid OSHEMs going stale - losing validity and usefulness with time - they should be routinely updated.  Each update of code and data should be uniquely identifiable and retrievable, a goal that can be facilitated by use of version control tools [@Erdemir2020].<!-- A number of tools and approaches can make the process of implementing and curating changes to model code and data more coherent and efficient.   <!-- Repositories such as Zenodo [@Zenodo2013] and Dataverse [@Dataverse2007] provide persistent access to all published versions of a dataset, each uniquely identifiable. For code, use of version control tools like Git [@git20XX] can ensure that the entire development history of a project is organised so that each version is distinguishable and retrievable by developers. The online platform GitHub [@github2007] can make this version history accessible to anyone. -->Labeling each change using semantic versioning [@semver20xx] conventions can signal the potential importance of an update to users of model code and data. <!-- For R code, the usethis [@usethis2021] package can be used to partially automate version number increments using the convention Major.Minor.Patch.Development (e.g. ExampleSoftware v1.1.1.1). Datasets stored on the Harvard Dataverse use the simpler Major.Minor convention.  -->Continuous integration [@CI2017] tools can help verify that each code update passes multiple quality tests. <!-- OSHEMs developed in R can take advantage of templates provided by devtools [@devtools2021] and pkgdown [@pkgdown2022] to run continuous integration checks on GitHub.  --><!-- These tests can include those of units (do individual functions produce expected output?), documentation (does documentation render correctly?; can all example workflows be executed?) and installation (can the software be successfully deployed on multiple types of operating system?).  -->
 Finally, using deprecation conventions that take an informative and staged approach to retiring old code and data reduces the risk that model revisions have unintended consequences on third party users.  -->
 <!-- The package lifeycle [@lifecycle2021] provides tools for R developers to consistently deprecate their code. -->
@@ -51,7 +50,7 @@ Guidelines:
 
 - **I4: Deprecation conventions are used to retire model code and data**
 
-### Modular Models
+## Modular Models
 Modular health economic models link multiple self-contained components that can be independently reused and extended by other projects [@Trauer2017;@Urach2013]. Many types of mental health data are highly sensitive with strict confidentiality requirements. For this reason, not all data included in some mental health models can be made widely available for others to re-use. A modular approach that ensures that model code and data are decoupled (stored in different files) can help model developers to restrict access to confidential model data, while providing open access to all other model components. An important consideration when combining model components (or modules) is to ensure that interactions between two modules do not compromise the validity of either. Using the coding practice of encapsulation [@8717448] can help ensure that model modules can be safely combined [@ready4oop2022].
 
 Guidelines:
@@ -60,7 +59,7 @@ Guidelines:
 
 - **M2: Model code defines encapsulating data structures** <!--Replacement - Old version now merged with E1 -->
 
-### Epitomising Models
+## Epitomising Models
 A key challenge to generalising health economic models is that they are typically developed to inform a decision problem with a highly specific jurisdictional context. However, a number of choices about how these models are implemented can significantly increase the re-usability of model code in other contexts. 
 
 Writing code as collections of functions (short, self-contained and reusable algorithms that each perform a discrete task) is recommended as good practice for scientific computing [@Wilson_2017]. When bundled for distribution as libraries<!-- (for example, as R packages) -->, functions have the potential to be widely re-used, often in contexts very different than those they were originally developed for. A special type of function, called a method, can only be applied to a pre-defined class of data structure. Due to the coding concept of inheritance [@8717448], the more restricted nature of methods can be used to enhance the re-usability of model code in different decision contexts [@ready4oop2022]. For example, when generalising a model developed for the Australian context to a UK context, one could create a class that initially inherits all of the methods defined for the Australian model and then write new or replacement methods as needed for the UK model.Whatever type of functions are written for a modelling project, it is good practice to make available test or toy data to demonstrate their use [@Wilson_2017].
@@ -74,7 +73,7 @@ Guidelines:
 - **E3: Test data is available to demonstrate generalised applications of model code**
 
 
-### Licensed Models
+## Licensed Models
 ```{r echo = F}
 gpl_pc_dbl <- get_license_share("GPL")
 ```
@@ -92,7 +91,7 @@ Guidelines:
 
 - **L3: Model code and data are distributed with tools to support appropriate citation** <!-- New -->
 
-### Yielding Models
+## Yielding Models
 OSHEMs can be time and skills intensive for modellers to develop - but they should be easy for others to use. Statistical models are a common output of health economic evaluations, but they are often not reported in a format that enables others to confidently and reliably re-use them [@Kearns2013]. Open source approaches can help address this by disseminating code artefacts that enable easy and appropriate use of a statistical model to make predictions with new data. However, great care must be exercised when doing so if models are derived from data on human subjects as some software artefacts by default contain a copy of the source dataset. Such dataset copies must therefore be replaced (for example, with synthetic data) and the amended artefact's predictive performance then retested before any public release. Another way to make OSHEMs easier to use is to develop simple user-interfaces for non-technical users. 
 <!-- In R, such user-interfaces are typically developed with the Shiny package, for which a tutorial aimed at health economists is available [@SmithR2020]. -->
 

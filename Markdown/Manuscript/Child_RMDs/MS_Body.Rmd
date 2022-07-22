@@ -20,10 +20,12 @@ output: html_document
 ```{r child="../Child_RMDs/MS_Results.Rmd", echo=FALSE}
 ```
 
-# Conclusion
+# Discussion
 
 ```{r child="../Child_RMDs/MS_Discussion.Rmd", echo=FALSE}
 ```
+
+# Conclusion
 
 ```{r child="../Child_RMDs/MS_Conclusion.Rmd", echo=FALSE}
 ```

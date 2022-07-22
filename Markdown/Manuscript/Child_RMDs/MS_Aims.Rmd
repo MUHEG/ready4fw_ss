@@ -8,6 +8,6 @@ output: html_document
 <!-- Add aims text here -->
 We are currently developing **readyforwhatsnext**, a reference OSHEM that aims to examine multiple potential population level strategies for promoting mental wellbeing and preventing and treating mental disorders in young people. <!-- We have consolidated and refined these and other recommended guidelines for OSHEMs as part of a framework for developing an open source model of youth mental health.  -->In this paper, we describe:
 
-- guidelines for quality implementation of OSHEMS;
-- a framework for standardised and reproducible approaches to apply these guidelines to each component of the  **readyforwhatsnext** model; 
-- a worked example of the first **readyforwhatsnext** model component developed using this framework.
+- a proposed set of guidelines for quality implementation of OSHEMS;
+- a framework for standardised and reproducible application of these guidelines to the development of the  **readyforwhatsnext** model; 
+- a worked example of the first **readyforwhatsnext** model component developed using the framework.

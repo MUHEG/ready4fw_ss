@@ -13,7 +13,7 @@ X <- Ready4showSynopsis(#background_1L_chr = "Our study is entirely fictional.",
                         keywords_chr = c("open source models","health economics","mental disorders"),
                         outp_formats_chr = "PDF",
                         #sample_desc_1L_chr = "The study sample is fake data that pretends to be young people aged 12 to 25 years who attended Australian primary care services for mental health related needs between November 2019 to August 2020.",
-                        title_1L_chr = "A framework for an open source economic model of the systems shaping the mental health of young people")
+                        title_1L_chr = "Proposed guidelines for open source health economic models and a framework for applying them in youth mental health")
 X <- renewSlot(X,
                "authors_r3", 
                {

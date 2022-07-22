@@ -12,10 +12,13 @@ output: html_document
 ```{r child="../Child_RMDs/MS_Figures.Rmd", echo=FALSE}
 ```
 <!-- Add child RMDs for results content -->
+# Guidelines
 ```{r child="../Child_RMDs/MS_Imp_Guidelines.Rmd", echo=FALSE}
 ```
+# Framework
 ```{r child="../Child_RMDs/MS_Imp_Toolkit.Rmd", echo=FALSE}
 ```
+# Application
 ```{r child="../Child_RMDs/MS_Imp_Example.Rmd", echo=FALSE}
 ```
 

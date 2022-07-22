@@ -4,5 +4,4 @@ output: html_document
 date: '2022-07-21'
 ---
 
-# Application
 We used framework toolkits to develop model code and datasets for implementing a utility mapping study that has previously been described [@Hamilton2021.07.07.21260129]. Table \@ref(tab:checktb) assesses that study against each TIMELY standard, 18 of which the study was able to meet. The two current standards where the study falls short are in reporting code coverage and including a user-interface. Both these items are current development priorities for our team.
