@@ -4,14 +4,12 @@ output: html_document
 date: '2022-07-21'
 ---
 
-Adherence to explicit guidelines is an essential requirement for modelling in healthcare [@Erdemir2020]. Guidance for implementing OSHEMs remains scarce and piecemeal and needs to be improved [@Sampson2019].  Guidelines on health economic model transparency were published ten years ago [@Eddy2012] and made recommendations on documenting models; however, notably missing were recommendations on the sharing of model code and data. More recent and more general modelling guidance [@Erdemir2020] recommends the sharing of code and data through digital repository services <!-- such as GitHub [@github2007] and Zenodo [@Zenodo2013] --> and the use of version control systems <!-- such as Git [@git20XX].  -->
-
-Based on existing open science guidance and our own experience, we have identified 20 guidelines for implementations of OSHEMs that are **TIMELY**:
+Guidelines on health economic model transparency were published ten years ago [@Eddy2012] and made recommendations on documenting models; however, notably missing were recommendations on the sharing of model code and data. More recent and more general modelling guidance [@Erdemir2020] recommends the sharing of code and data through digital repository services <!-- such as GitHub [@github2007] and Zenodo [@Zenodo2013] --> and the use of version control systems. <!-- such as Git [@git20XX].  --> Based on these and other existing sources of guidance and our own experience, we propose 20 guidelines for implementing OSHEMs that are **TIMELY**:
 
  - **Transparent**: people can easily see how a model has been implemented and tested;
  - **Iterative**: a model is routinely updated to maintain and improve validity;
  - **Modular**: models and their components can be combined to extend their scope;
- - **Epitomising**: a model code is sufficiently general to be be re-used in multiple decision contexts;
+ - **Epitomising**: model code is sufficiently general to be be re-used in multiple decision contexts;
  - **Licensed**: a model, its components and derivatives are persistently re-usable by other modellers; and
  - **Yielding**: a model can be simply, flexibly and reliably used as a decision aid.
 
