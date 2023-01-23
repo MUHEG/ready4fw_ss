@@ -13,7 +13,7 @@ X <- Ready4showSynopsis(#background_1L_chr = "Our study is entirely fictional.",
                         keywords_chr = c("open source models","health economics","mental disorders"),
                         outp_formats_chr = "PDF",
                         #sample_desc_1L_chr = "The study sample is fake data that pretends to be young people aged 12 to 25 years who attended Australian primary care services for mental health related needs between November 2019 to August 2020.",
-                        title_1L_chr = "Proposed guidelines for open source health economic models and a framework for applying them in youth mental health")
+                        title_1L_chr = "A framework for implementing an open source and modular economic model of youth mental health that is accountable, reusable and updatable")
 X <- renewSlot(X,
                "authors_r3", 
                {
@@ -37,18 +37,19 @@ X <- renewSlot(X,
                "abstract_args_ls",
                {
                  args_ls <- X@abstract_args_ls
-                 args_ls$abstract_ls <- list(Summary = "Despite growing support for open source health economic models (OSHEMs), uptake remains limited and better guidance about how to implement them is required. One potential benefit of high quality OSHEMS is the development of more valid, useful and extensive models to inform the design of population mental health strategies. 
-                                             In this article, we describe a framework that we have developed for an OSHEM in youth mental health. 
-                                             The framework includes a set of 20 good practice standards and toolkits for developing models that meet those standards. 
-                                             Framework standards are intended to support the development of OSHEMS that are TIMELY - Transparent (6 standards), Iterative (4 standards), Modular (2 standards), Epitomising (3 standards), Licensed (3 standards) and Yielding (2 standards). 
-                                             Framework toolkits include repositories for model data and code as well as six novel R packages. The R packages provide a novel syntax, template modules and modelling tools for authoring model modules, function libraries, datasets and reports. 
-                                             We discuss the rationale for each standard included in our framework and provide a worked example of the application of the framework to implement a utility mapping study. ",
+                 args_ls$abstract_ls <- list(Summary = "Despite growing support for open source health economic models (OSHEMs), uptake remains limited. 
+                                             The deployment of modular approaches to model development is also relatively underdeveloped compared to other disciplines.
+                                             In this article, we propose a framework for developing a modular OSHEM in youth mental health and describe our preliminary efforts to apply this framework to develop youth specific utility mapping models.
+                                             The framework includes a set of X1 good practice standards and software for implementing a model that is accountable (X2 standards), reusable (X3 standards) and upatable (X4 standards). 
+                                             We provide a rationale for each standard.
+                                             The framework also includes a software toolkit comprised of six novel R packages for authoring models, supplying those models with data and using those models to implement reproducible analyses. 
+                                             We describe an early application of this toolkit to developing utility mapping models that meet X5 framework standards. 
+                                             We discuss the potential benefits and challenges of extending this initial work to develop a more extensive model for undertaking economic evaluations in youth mental health.",
                                              # Objectives = "We aimed to develop a conceptual and technical framework for implementing open source mental health systems models and illustrate how it can be applicatied to economic topics in youth mental health.",
                                              # Methods = "We created a software development kit in R to support standardised implementation of mental health systems models. As a worked example, we applied the toolkit to develop open source youth mental health utility mapping models, which we assessed against five principles using 17 standards.",
                                              # Results = "Six R packages and a coding style dataset provide a toolkit for implementing mental health models that are TIMELY - Transparent, Iterative, Modular, Epitomising, Licensed and Yielding. The utility mapping models we developed with this toolkit fully met X and partially met Y TIMELY standards.", 
                                              # Conclusion = "Please fund me",
-                                             Code = "Development versions of all code repositories referenced in this article are available in https://github.com/ready4-dev/ . Archived code releases are available in https://zenodo.org/communities/ready4 .",
-                                             Data = "All data repositories referenced in this article are available in https://dataverse.harvard.edu/dataverse/ready4 .")
+                                             Code = "Visit https://www.ready4-dev.com for more information about how to find, install and apply the framework and model.")
                  args_ls
                  }
                )
@@ -56,6 +57,8 @@ X <- renewSlot(X,
 # Pause for interactivity
 # Make manual edits of Markdown files
 authorReport(X)
+##
+##
 Y <- X
 Y@outp_formats_chr <- "Word"
 authorReport(Y)

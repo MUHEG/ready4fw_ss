@@ -4,135 +4,55 @@ author: "Author"
 date: "`r Sys.Date()`"
 output: html_document
 ---
-```{r cpkgs, tab.cap='Framework software to enable the readyforwhatsnext model to meet TIMELY guidelines', tab.id = 'cpkgs', echo = F, results = 'asis'}
+```{r timelygls, tab.cap='TIMELY Guidelines for OSHEMs', tab.id = 'timelygls', echo = F, results = 'asis'}
 library(kableExtra)  
-df <- tibble::tibble(Package = c("ready4",
-                                       "ready4fun",
-                                       "ready4class",
-                                       "ready4pack",
-                                       "ready4use",
-                                       "ready4show"),
-                           # Version = Package %>%
-                           #   purrr::map_chr(~utils::packageDescription(.x) %>%
-                           #                    purrr::pluck("Version")),
-                           Focus = c("Syntax",
-                                     "Functions",
-                                     "Modules",
-                                     "Libraries",
-                                     "Data",
-                                     "Reporting"),
-                           `T` = c("3","2-3","2-3","1","1-2","2,4,6"), 
-                           I = c("","","","1-3","",""),
-                           M = c("3","","2","1-2","1",""),
-                           E = c("", "1","1-2","1","3",""),
-                           L = c("","","","1,3","2-3",""),
-                           Y = c("","","","","","1-2"),
-                           `Depends on` = Package %>%
-                             purrr::map(~ {
-                               utils::packageDescription(.x) %>%
-                                 `[`(c("Depends", "Imports")) %>%
-                                 purrr::map(~{
-                                   if(is.null(.x)){
-                                     character(0)
-                                     }else{
-                                       .x %>%
-                                         strsplit(",\\n") %>%
-                                         purrr::flatten_chr() %>%
-                                         purrr::map(~strsplit(.x,", ") %>%
-                                                      purrr::flatten_chr()) %>%
-                                         purrr::flatten_chr() %>% sort() %>%
-                                         purrr::discard(~startsWith(.x,"R "))
-                                       }
-                                   }) %>%
-                                 purrr::flatten_chr() %>%
-                                 unique() %>%
-                                 sort() %>%
-                                 purrr::map_chr(~{
-                                   updated_1L_chr <- stringr::str_replace_all(.x,"\\n"," ")
-                                   problem_idx_1L_chr <- stringr::str_locate(updated_1L_chr," ")[1,1] %>%
-                                     unname()
-                                   if(!is.na(problem_idx_1L_chr))
-                                     updated_1L_chr <- updated_1L_chr %>%
-                                     stringr::str_sub(end = problem_idx_1L_chr-1)
-                                   updated_1L_chr %>% 
-                                     trimws(which = "left") 
-                                   })
-                               }) %>% 
-                             purrr::map_chr (~ .x %>% paste0(collapse = " "))) %>% 
-  as.data.frame() 
-    df$Ref <- c("@ready42022",
-                    "@ready4fun2022",
-                    "@ready4class2022",
-                    "@ready4pack2022",
-                    "@ready4use2022",
-                    "@ready4show2022")
-df <- df %>%
-  dplyr::mutate(Guideline = purrr::pmap_chr(df,
-                                           ~paste0("T",
-                                                  ..3,
-                                                  paste0(rep("&nbsp;",
-                                                      2+max(nchar(df[,3]))-nchar(..3)),
-                                                      collapse = ""#
-                                                      ),
-                                                  ifelse(..4=="","","I"),
-                                                  ..4,
-                                                  paste0(rep("&nbsp;",
-                                                      2+max(nchar(df[,4]))-nchar(..4)),
-                                                      collapse = ""#
-                                                      ),
-                                                  ifelse(..5=="","","M"),
-                                                  ..5,
-                                                  paste0(rep("&nbsp;",
-                                                      1+max(nchar(df[,5]))-nchar(..5)),
-                                                      collapse = ""#
-                                                      ),
-                                                  ifelse(..6=="","","E"),
-                                                  ..6,
-                                                  paste0(rep("&nbsp;",
-                                                      1+max(nchar(df[,6]))-nchar(..6)),
-                                                      collapse = ""#
-                                                      ),
-                                                  ifelse(..7=="","","L"),
-                                                  ..7,
-                                                  paste0(rep("&nbsp;",
-                                                      1+max(nchar(df[,7]))-nchar(..7)),
-                                                      collapse = ""#
-                                                      ),
-                                                  ifelse(..8=="","","&nbsp; &nbsp; &nbsp; &nbsp; Y"),
-                                                  ..8,
-                                                  paste0(rep("&nbsp;",
-                                                      1+max(nchar(df[,8]))-nchar(..8)),
-                                                      collapse = ""#
-                                                      )))) %>%
-  
-  dplyr::select(Package,
-                Ref,
-                Focus,
-                Guideline,
-                `Depends on`) 
-
-names_chr <- names(df)
-df <- data.frame(df[,1],
-                 rep(ifelse(params$X@outp_formats_chr[1] == "Word"," ","&nbsp; &nbsp; &nbsp;"),
-                     nrow(df)),
-                 df[,2:3],
-                 rep(ifelse(params$X@outp_formats_chr[1] == "Word"," ","&nbsp; &nbsp; &nbsp;")
-                     ,nrow(df)),
-                 df[,4],
-                 #rep("&nbsp; &nbsp; &nbsp;",nrow(df)),
-                 df[,5])
-colnames(df) <- c("Package",
-                  ifelse(params$X@outp_formats_chr[1] == "Word","XXX"," "),
-                  "Ref", "Focus", 
-                  ifelse(params$X@outp_formats_chr[1] == "Word","YYY"," "),
-                  "Guideline     ",# " ",
-                  "Depends on these R packages")
-#df$Package <- "![](../Data/images/ready4.png){ width=10% }"#"\\includegraphics[valign=T,scale=2.5,raise=2mm]{../Data/images/ready4.png}"
-df$`Guideline     `  <- df$`Guideline     ` %>% stringr::str_replace_all("&nbsp;"," ")
+df <- data.frame(`Characteristic` = rep("",20),
+  # `Models are` = c(rep("Transparent",6),
+  #                                 rep("Iterative",4),
+  #                                 rep("Modular",2),
+  #                                 rep("Epitomising",3),
+  #                                 rep("Licensed",3),
+  #                                 rep("Yielding",2)),
+  #                Goal = c(rep("people can easily see how a model has been implemented and tested",6),
+  #                         rep("a model is routinely updated to maintain and improve validity",4),
+  #                         rep("models and their components can be combined to extend their scope",2),
+  #                         rep("model code is sufficiently general to be be re-used in multiple decision contexts",3),
+  #                         rep("a model, its components and derivatives are persistently re-usable by other modeller",3),
+  #                         rep("a model can be simply, flexibly and reliably used as a decision aid",2)),
+                 Guideline = c(paste0("T",1:6),
+                               paste0("I",1:4),
+                               paste0("M",1:2),
+                               paste0("E",1:3),
+                               paste0("L",1:3),
+                               paste0("Y",1:2)),
+                 Meaning = c(
+                   "Uniquely identified copies of model code and data are permanently archived in open online repositories",#T1
+                   # T2 MISSING - Merged With T1
+                   "Model code and data are documented",#<T2, Was T3
+                   "Model code uses a simple and consistent syntax",# T3, Was T4 -->
+                   "Model analyses and reporting are implemented using literate programming",#T4,Was T5
+                   "Code coverage is reported", #T5, New, replaces version now moved to T4 
+                   "All parts of a study analysis and reporting workflow can be reproduced and/or replicated", #T6, was T7, Replaces Deleted T6 
+                   "Model code and data are version controlled",#*I1, Was I2 
+                   "Model code and data use semantic versioning",#I2, Was I1 
+                   "Continuous integration is used to verify model code updates",#I3 
+                   "Deprecation conventions are used to retire model code and data",#**I4 
+                   "Model code and data are stored and managed separately",#*M1: Modified (lost ref to licensed and cited) 
+                   "Model code defines encapsulating data structures",#*M2: Replacement - Old version now merged with E1
+                   "Model code is distributed as libraries of classes and functions",#E1: Modified (lost ref to OOP and merged with M2) -->
+                   "Model code defines inheriting data-structures",#E2
+                   "Test data is available to demonstrate generalised applications of model code",#E3: **
+                   "Model code is made available for re-use under copyleft or permissive licenses",#L1: **
+                   "Non-confidential model data is licensed for liberal re-use (subject to additional terms for de-identified human data)",#L2
+                   "Model code and data are distributed with tools to support appropriate citation",#*L3: New 
+                   "Models are distributed with validated tools to support their safe and appropriate re-use",#*Y1: New, Replaces Old Y1 (now Y2)
+                   "Simple user-interfaces allow non-technical users to configure and run models"#Y2: Was Y1                   
+                 ),
+                 check.names = F)
 if(params$X@outp_formats_chr[1] == "Word") {
   library("flextable")
   library("ftExtra")
-  df[,c(1,3:4,6:7)] %>%
+  df %>%
     ready4show::print_table(output_type_1L_chr = params$X@outp_formats_chr[1],
                             caption_1L_chr = knitr::opts_current$get("tab.cap"),
                             mkdn_tbl_ref_1L_chr = paste0("tab:",knitr::opts_current$get("tab.id")),
@@ -141,23 +61,20 @@ if(params$X@outp_formats_chr[1] == "Word") {
                             sanitize_fn = NULL) %>%
     ftExtra::colformat_md()
   }else{
-    df$Ref<-NULL
-    #df$Package <- ""
-    df$Package  <- df$Package %>% 
-                      purrr::map_chr(~paste0("\\includegraphics[valign=M,width=1.9cm,raise=4mm]{../Data/images/",.x,"_logo.png}"))#scale=0.4,raise=3mm]
-    # df$Package <- "\\includegraphics[valign=M,scale=0.08,raise=3mm]{../Data/images/ready4.png}"
-    df[,c(1,3,5:6)]   %>%
-    # kableExtra::kbl(format = "markdown",
-    #                   escape = F,
-    #                 caption = knitr::opts_current$get("tab.cap"))
+    df %>%
       kableExtra::kbl(booktabs = T, 
                       escape = F,
                       caption = knitr::opts_current$get("tab.cap")) %>%
       kableExtra::kable_paper(full_width = F) %>%
-      kableExtra::column_spec(3,latex_valign = "m") %>%
-      # kableExtra::column_spec(1, 
-      #                         image = kableExtra::spec_image(rep("../Data/images/ready4.png",nrow(df)), 
-      #                                                           150, 150)) %>%
-      kableExtra::column_spec(4, width = "24em",latex_valign = "m")
+      kableExtra::column_spec(1, bold=T) %>%
+      # kableExtra::collapse_rows(columns = 1) %>%
+      kableExtra::column_spec(3, width = "35em") %>%
+      kableExtra::pack_rows("Transparent - people can easily see how a model has been implemented and tested",1,6) %>%
+      kableExtra::pack_rows("Iterative - a model is routinely updated to maintain and improve validity",7,10) %>%
+      kableExtra::pack_rows("Modular - models and their components can be combined to extend their scope",11,12) %>%
+      kableExtra::pack_rows("Epitomising - model code can be re-used in other decision contexts",13,15) %>%
+      kableExtra::pack_rows("Licensed - a model and its components are persistently re-usable by other modellers",16,18) %>%
+      kableExtra::pack_rows("Yielding - a model can be simply, flexibly and reliably used as a decision aid",19,20)
+
     }
 ```

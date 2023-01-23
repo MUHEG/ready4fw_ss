@@ -6,11 +6,12 @@ output: html_document
 ---
 
 <!-- Add aims text here -->
-In this paper, we describe:
+In this paper, we introduce a framework for developing youth mental health OSHEMs. Specifically we describe:
 
-- a proposed set of guidelines for implementing OSHEMS;
-- a framework for applying these guidelines to the development of a reference OSHEM in youth mental health; 
-- a worked example of a modelling project developed with the framework.
+- a set of guidelines for implementing OSHEMs;
 
-<!-- We are currently developing **readyforwhatsnext**, a reference OSHEM that aims to examine multiple potential population level strategies for promoting mental wellbeing and preventing and treating mental disorders in young people. -->
+- a toolkit for applying these guidelines in youth mental health; and
+
+- a worked example of a modelling project developed with the toolkit.
+
 <!-- We have consolidated and refined these and other recommended guidelines for OSHEMs as part of a framework for developing an open source model of youth mental health.  --> 

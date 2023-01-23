@@ -1,8 +1,8 @@
-title: Proposed guidelines for open source health economic models and a framework for applying them in youth mental health
+title: A framework for implementing an open source and modular economic model of youth mental health that is accountable, reusable and updatable
 author:
   - Matthew P Hamilton:
       email: matthew.hamilton@orygen.org.au
-      institute: [Orygen]
+      institute: [Orygen, Monash]
       correspondence: true
   - name: Caroline X Gao
     email: caroline.gao@orygen.org.au
@@ -10,9 +10,6 @@ author:
   - name: Glen  Wiesner
     email: glen.wiesner@heartfoundation.org.au
     institute: [HF]
-  - name: John  Gillam
-    email: john.gillam@unimelb.edu.au
-    institute: [CYMH]
   - name: Kate M Filia
     email: kate.filia@orygen.org.au
     institute: [Orygen, CYMH]
@@ -42,8 +39,8 @@ author:
     institute: [Monash]
 institute:
   - Orygen: Orygen, Parkville, Australia
-  - CYMH: Centre for Youth Mental Health; The University of Melbourne, Parkville, Australia
   - Monash: School of Public Health and Preventive Medicine, Monash University, Clayton, Australia
+  - CYMH: Centre for Youth Mental Health; The University of Melbourne, Parkville, Australia
   - HF: Heart Foundation, Melbourne, Australia
   - Headspace: headspace National Youth Mental Health Foundation, Melbourne, Australia
   - VU: Victoria University, Footscray, Australia

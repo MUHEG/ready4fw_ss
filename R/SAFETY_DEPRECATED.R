@@ -1,0 +1,70 @@
+df <- tibble::tibble(Package = c("ready4",
+                                 "ready4fun",
+                                 "ready4class",
+                                 "ready4pack",
+                                 "ready4use",
+                                 "ready4show"),
+                     # Version = Package %>%
+                     #   purrr::map_chr(~utils::packageDescription(.x) %>%
+                     #                    purrr::pluck("Version")),
+                     Focus = c("Syntax and template",
+                               "Modules",
+                               "Functions",
+                               "Libraries",
+                               "Data",
+                               "Analysis and reporting"),
+                     `T` = c("3","2-3","2-3","1","1-2","2,4,6"), 
+                     I = c("","4","","1-3","",""),
+                     M = c("3","","2","1-2","1",""),
+                     E = c("", "1","1-2","1","3",""),
+                     L = c("","","","1,3","2-3",""),
+                     Y = c("","","","","","1-2"),
+                     `Depends on` = Package %>%
+                       purrr::map(~ {
+                         utils::packageDescription(.x) %>%
+                           `[`(c("Depends", "Imports")) %>%
+                           purrr::map(~{
+                             if(is.null(.x)){
+                               character(0)
+                             }else{
+                               .x %>%
+                                 strsplit(",\\n") %>%
+                                 purrr::flatten_chr() %>%
+                                 purrr::map(~strsplit(.x,", ") %>%
+                                              purrr::flatten_chr()) %>%
+                                 purrr::flatten_chr() %>% sort() %>%
+                                 purrr::discard(~startsWith(.x,"R "))
+                             }
+                           }) %>%
+                           purrr::flatten_chr() %>%
+                           unique() %>%
+                           sort() %>%
+                           purrr::map_chr(~{
+                             updated_1L_chr <- stringr::str_replace_all(.x,"\\n"," ")
+                             problem_idx_1L_chr <- stringr::str_locate(updated_1L_chr," ")[1,1] %>%
+                               unname()
+                             if(!is.na(problem_idx_1L_chr))
+                               updated_1L_chr <- updated_1L_chr %>%
+                               stringr::str_sub(end = problem_idx_1L_chr-1)
+                             updated_1L_chr %>% 
+                               trimws(which = "left") 
+                           })
+                       }) %>% 
+                       purrr::map_chr (~ .x %>% paste0(collapse = " "))) %>% 
+  as.data.frame() 
+if(params$X@outp_formats_chr[1] == "Word") {
+  df %>%
+    ready4show::print_table(output_type_1L_chr = params$X@outp_formats_chr[1],
+                            caption_1L_chr = knitr::opts_current$get("tab.cap"),
+                            mkdn_tbl_ref_1L_chr = paste0("tab:",knitr::opts_current$get("tab.id")),
+                            use_rdocx_1L_lgl = ifelse(params$X@outp_formats_chr[1]=="Word",T,F),
+                            add_to_row_ls = NULL,
+                            sanitize_fn = NULL)
+}else{
+  df %>%
+    kableExtra::kbl(booktabs = T,
+                    caption = knitr::opts_current$get("tab.cap")) %>%
+    kableExtra::kable_styling(full_width = F) %>%
+    kableExtra::column_spec(9, width = "17em") %>%
+    kableExtra::add_header_above(c(" " = 2, "Supports standard" = 6, " "))
+}

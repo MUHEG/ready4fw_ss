@@ -1,8 +1,7 @@
 first_nm_chr,middle_nm_chr,last_nm_chr,title_chr,qualifications_chr,institute_chr,sequence_int,is_corresponding_lgl,email_chr,is_equal_first_lgl
-Matthew,Phillip,Hamilton,Mr,"""BBS, MSC""","""Orygen""",1,TRUE,matthew.hamilton@orygen.org.au,FALSE
+Matthew,Phillip,Hamilton,Mr,"""BBS, MSC""","""Orygen, Monash""",1,TRUE,matthew.hamilton@orygen.org.au,FALSE
 Caroline,X,Gao,Dr,"""BEng, MBiostatistics, PhD""","""Orygen, CYMH, Monash""",2,FALSE,caroline.gao@orygen.org.au,FALSE
 Glen,,Wiesner,Dr,"""PhD""","""HF""",3,FALSE,glen.wiesner@heartfoundation.org.au,FALSE
-John,,Gillam,Dr,"""BSC, PhD""","""CYMH""",4,FALSE,john.gillam@unimelb.edu.au,FALSE
 Kate,Maree,Filia,Dr,"""BAppSci, PGradDip, PhD""","""Orygen, CYMH""",5,FALSE,kate.filia@orygen.org.au,FALSE
 Jana,Marcelle,Menssink,Dr,"""BA, PGDipPsych, Dpsych""","""Orygen, CYMH""",6,FALSE,jana.menssink@orygen.org.au,FALSE
 Petra,,Plencnerova,Dr,"""BSc, MSc, PhD""","""Headspace""",7,FALSE,pplencnerova@headspace.org.au,FALSE
