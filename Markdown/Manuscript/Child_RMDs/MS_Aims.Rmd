@@ -6,12 +6,12 @@ output: html_document
 ---
 
 <!-- Add aims text here -->
-In this paper, we introduce a framework for developing youth mental health OSHEMs. Specifically we describe:
+In this paper, we introduce a framework for developing a modular youth mental health OSHEM. Specifically we describe the framework's:
 
-- a set of guidelines for implementing OSHEMs;
+- good practice standards for implementing a modular OSHEM;
 
-- a toolkit for applying these guidelines in youth mental health; and
+- software toolkit for developing a modular OSHEM consistent with those good practice standards; and
 
-- a worked example of a modelling project developed with the toolkit.
+- application to implementing model modules to support the development and use of utility mapping models.
 
 <!-- We have consolidated and refined these and other recommended guidelines for OSHEMs as part of a framework for developing an open source model of youth mental health.  --> 

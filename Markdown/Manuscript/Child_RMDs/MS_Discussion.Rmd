@@ -9,6 +9,8 @@ output: html_document
 
 <!-- greater use of these types of models may require adaptation on the part of funders, modellers and decision-makers. T -->
 
+<!-- Link to Wagstaff - Demand forecasting, valuation of health and healthcare, economic evaluation, utility mapping?? -->
+
 <!-- # Motivation -->
 
 <!-- ## Why develop OSHEMs in mental health -->

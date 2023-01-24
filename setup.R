@@ -37,14 +37,14 @@ X <- renewSlot(X,
                "abstract_args_ls",
                {
                  args_ls <- X@abstract_args_ls
-                 args_ls$abstract_ls <- list(Summary = "Despite growing support for open source health economic models (OSHEMs), uptake remains limited. 
-                                             The deployment of modular approaches to model development is also relatively underdeveloped compared to other disciplines.
-                                             In this article, we propose a framework for developing a modular OSHEM in youth mental health and describe our preliminary efforts to apply this framework to develop youth specific utility mapping models.
-                                             The framework includes a set of X1 good practice standards and software for implementing a model that is accountable (X2 standards), reusable (X3 standards) and upatable (X4 standards). 
+                 args_ls$abstract_ls <- list(Summary = "Compared to other disciplines, health economics rarely uses modular approaches to model development that facilitate re-use of model components. 
+                                             Although interest in open source health economic models (OSHEMs) is growing, uptake remains limited.
+                                             We propose a framework for a modular OSHEM in youth mental health.
+                                             The framework includes of set of X1 good practice standards for implementing a model that is accountable (X2 standards), reusable (X3 standards) and upatable (X4 standards). 
                                              We provide a rationale for each standard.
-                                             The framework also includes a software toolkit comprised of six novel R packages for authoring models, supplying those models with data and using those models to implement reproducible analyses. 
-                                             We describe an early application of this toolkit to developing utility mapping models that meet X5 framework standards. 
-                                             We discuss the potential benefits and challenges of extending this initial work to develop a more extensive model for undertaking economic evaluations in youth mental health.",
+                                             The framework also includes software toolkit of six R packages for authoring model modules (data structures and algorithms), supplying those modules with data and using the modules to implement reproducible modelling analyses. 
+                                             We describe an early application of the framework to developing utility mapping models that meet X5 standards. 
+                                             We discuss the potential benefits and challenges of extending this initial work to develop a more extensive model for undertaking economic analyses in youth mental health.",
                                              # Objectives = "We aimed to develop a conceptual and technical framework for implementing open source mental health systems models and illustrate how it can be applicatied to economic topics in youth mental health.",
                                              # Methods = "We created a software development kit in R to support standardised implementation of mental health systems models. As a worked example, we applied the toolkit to develop open source youth mental health utility mapping models, which we assessed against five principles using 17 standards.",
                                              # Results = "Six R packages and a coding style dataset provide a toolkit for implementing mental health models that are TIMELY - Transparent, Iterative, Modular, Epitomising, Licensed and Yielding. The utility mapping models we developed with this toolkit fully met X and partially met Y TIMELY standards.", 
