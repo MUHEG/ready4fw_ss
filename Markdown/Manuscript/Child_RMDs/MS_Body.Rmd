@@ -30,7 +30,7 @@ output: html_document
 ```{r child="../Child_RMDs/MS_Conclusion.Rmd", echo=FALSE}
 ```
 
-## Acknowledgement
+## Acknowledgement {-}
 The authors would like to acknowledge the contribution of John Gillam who provided advisory input to this research.
 
 ## Availability of data and materials {-#availability-of-data-and-materials}

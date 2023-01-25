@@ -12,12 +12,19 @@ output: html_document
 ```{r child="../Child_RMDs/MS_Figures.Rmd", echo=FALSE}
 ```
 <!-- Add child RMDs for results content -->
+# Framework
+<!-- Modular and open source models from other disciplines are enabled by standardisation and software.  -->
+To help us implement a MOSHEM in youth mental health, we have developed a framework that:
 
-# Guidelines for OSHEMs
+- specifies a set of standards for MOSHEM development and use; and
+
+- provides a modelling toolkit (repositories and software) for authoring model modules, managing data and implementing reproducible analyses consistent with those standards.
+
+## Standards
 ```{r child="../Child_RMDs/MS_Imp_Guidelines.Rmd", echo=FALSE}
 ```
 
-# Modelling Toolkit
+## Modelling toolkit
 ```{r child="../Child_RMDs/MS_Imp_Toolkit.Rmd", echo=FALSE}
 ```
 

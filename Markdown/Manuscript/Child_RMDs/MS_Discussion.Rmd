@@ -25,3 +25,5 @@ The development, validation and updating of more complex mental health economic 
 
 Developing networks of modellers working on common health conditions has been recommended as a strategy for improving model validity [@Sampson2019] and some of us are part of a nascent initiate of this type in mental health [@nmhsmn2022]. 
 <!-- Add ref to NMHSMN in Australia --> Similarly, developing partnerships between modellers and decision-makers across the life-cycle of a modelling project can help ensure models are appropriately conceptualised, implemented and have practical utility as decision aids [@Zabell2021; @SQUIRES2016588].
+
+Output by health economists [@pitt2016economic; @wagstaff2012four; @munoz2020health]
