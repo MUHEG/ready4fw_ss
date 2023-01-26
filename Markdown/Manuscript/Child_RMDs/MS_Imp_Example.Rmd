@@ -4,11 +4,18 @@ output: html_document
 date: '2022-07-21'
 ---
 
-## readyforwhatsnext
-Our approach to model development is to undertake a number of discrete modelling projects of the people, places, platforms and programs that shape the mental health and wellbeing of young people and to progressively link them together by means of a common framework. To model people we are developing synthetic representations of populations of interest [@DVN/HJXYKQ_2021] that describe relevant individual characteristics and their relationships, algorithms that map psychological measures to health utility [@Hamilton2021.07.07.21260129] and choice models for predicting the helpseeking behaviour of young people [@hamilton_matthew_2022_6627995]. Our in-development model of places [@DVN/V3OKZV_2022] has the aim of synthesising geometry and spatial attribute data to characterise the geographic distribution of relevant demographic, environmental, epidemiological and service infrastructure features. We are in the early stages of a multi-annual project to develop a service platform model that will represent the processes and operations of a complex primary youth mental health service. We also plan to extend and update our prior work reviewing economic evidence relating to youth mental health programs [@RN33] so that it can be integrated with this model.
 
-Our initial work on **readyforwhatsnext** is focused on Victoria, Australia but the framework we are using to develop it is designed to facilitate extension by ourselves and others to different jurisdictional decision contexts. Progress is reported on a project website [@rfwn2022].
+We applied the framework to develop modules for developing utility mapping models, supplying those modules with data and implementing utility mapping analyses. The study for which these tools were developed and which applied them to developing utility mapping models for a clinical mental health sample of young people has been previously described [@Hamilton2021.07.07.21260129]. The outputs we authored using the framework's modelling toolkit include:
 
-## Utility mapping
+ - development version module libraries for describing and validating youth mental health human record datasets [@hamilton_matthew_2022_6084467], scoring health utility [@hamilton_matthew_2022_6084824], specifying utility mapping models [@hamilton_matthew_2022_6116701] and implementing reproducible utility mapping studies [@gao_caroline_2022_6130155];
+ 
+ - a development version library of functions for finding and using utility mapping models developed with these tools [@matthew_p_hamilton_2021_5646669];
+ 
+ - data collections of synthetic populations for testing model modules [@DVN/HJXYKQ_2021] and study input and results data [@DVN/DKDIB0_2021]; 
+ 
+ - programs for replicating all steps from data ingest to manuscript reporting [@hamilton_matthew_2022_6129906], applying utility mapping models to new data [@hamilton_matthew_2022_6416330] and generating a synthetic representation of the study dataset [@hamilton_matthew_p_2022_6321821];
+ 
+ - subroutines for creating a catalogue of utility mapping models [@hamilton_matthew_2022_6116385] and generating a draft scientific manuscript [@matthew_p_hamilton_2022_5976988] for studies implemented with these modules.
+ 
+When we assesses these study outputs against each framework standard, we conclude that 18 standards were wholly or mostly met (see Table \@ref(tab:checktb)). The two standards where the study outputs currently fall short are in reporting code coverage and including a user-interface. Both these items are scheduled to be addressed when we release production versions of the code libraries.
 
-We used framework toolkits to develop model code and datasets for implementing a utility mapping study that has previously been described [@Hamilton2021.07.07.21260129]. Table \@ref(tab:checktb) assesses that study against each TIMELY standard, 18 of which the study was able to meet. The two current standards where the study falls short are in reporting code coverage and including a user-interface. Both these items are current development priorities for our team.

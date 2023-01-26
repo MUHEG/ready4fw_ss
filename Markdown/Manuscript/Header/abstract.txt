@@ -1,9 +1,9 @@
 \\textbf{Summary: }
-Health economists make limited use of the modular and open source approaches to model building that other disciplines use to make modelling projects more transparent, efficient and sustainable. 
+Health economists make limited use of the modular and open source approaches to model building that other disciplines use to make large modelling projects more transparent, efficient and sustainable. 
                                              We propose a framework for a modular open source health economic model (MOSHEM) in youth mental health.
                                              The framework includes of set of 20 standards for implementing a MOSHEM that is accountable (seven standards), reusable (nine standards) and updatable (four standards). 
                                              We provide a rationale for each standard.
-                                             The framework also includes software toolkit of six R packages for authoring MOSHEM modules (data structures and algorithms), supplying those modules with data and using the modules to implement reproducible modelling analyses. 
+                                             The framework also includes a modelling toolkit of open access repositories and six R packages for authoring MOSHEM modules (data structures and algorithms), supplying those modules with data and using the modules to implement reproducible modelling analyses. 
                                              We describe an early application of the framework to developing utility mapping models that currently meet 18 framework standards. 
                                              We discuss the potential benefits and challenges of extending this initial work to develop a more extensive MOSHEM for undertaking a range of economic analyses in youth mental health.
 \\newline

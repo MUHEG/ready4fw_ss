@@ -5,7 +5,6 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-<!-- Add aims text here -->
 In this paper, we introduce a framework for developing a modular youth mental health MOSHEM. Specifically we:
 
 (i) describe a framework that is comprised of:
@@ -13,5 +12,3 @@ In this paper, we introduce a framework for developing a modular youth mental he
   - a modelling toolkit (repositories and software) to author MOSHEM modules, supply them with data and undertake reproducible analyses consistent with those standards.
 
 (ii) provide a worked example of how we used the framework to develop and apply MOSHEM modules for utility mapping.
-
-<!-- We have consolidated and refined these and other recommended guidelines for OSHEMs as part of a framework for developing an open source model of youth mental health.  --> 

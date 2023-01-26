@@ -5,10 +5,10 @@ library(bookdown)
 library(rticles)
 X <- Ready4showSynopsis(#background_1L_chr = "Our study is entirely fictional.",
                         coi_1L_chr = "None declared.",
-                        conclusion_1L_chr = "We have identified a number of standards that we believe are appropriate to implementing quality OSHEMs in youth mental health. Most of these standards are probably relevant to OSHEMs in other health conditions, though some such as the copyleft licensing may be less relevant to modellers using different tools. Our framework toolkits can help support standardised approaches to dynamic systems model development that are important for collaborative and interdependent projects. ",
+                        #conclusion_1L_chr = "We have identified a number of standards that we believe are appropriate to implementing quality OSHEMs in youth mental health. Most of these standards are probably relevant to OSHEMs in other health conditions, though some such as the copyleft licensing may be less relevant to modellers using different tools. Our framework toolkits can help support standardised approaches to dynamic systems model development that are important for collaborative and interdependent projects. ",
                         digits_int = 3L,
-                        ethics_1L_chr = "Framework development did not involve human subject research and was not ethically reviewed. The worked example of framework application is a previously reported study that was reviewed and granted approval by the University of Melbourne’s Human Research Ethics Committee, and the local Human Ethics and Advisory Group (1645367.1).",
-                        funding_1L_chr = "Framework development was funded by Orygen, VicHealth and Victoria University. The previously reported study used as a worked example was funded by the National Health and Medical Research Council (NHMRC, APP1076940), Orygen and headspace.",
+                        ethics_1L_chr = "Framework development did not involve human subject research and was not ethically reviewed. The utility mapping worked example is a previously reported study that was reviewed and granted approval by the University of Melbourne’s Human Research Ethics Committee, and the local Human Ethics and Advisory Group (1645367.1).",
+                        funding_1L_chr = "Framework development was funded by Orygen, VicHealth and Victoria University. The utility mapping study used as a worked example was funded by the National Health and Medical Research Council (NHMRC, APP1076940), Orygen and headspace.",
                         #interval_chr = "three months",
                         keywords_chr = c("open source models","health economics","mental disorders"),
                         outp_formats_chr = "PDF",
@@ -37,11 +37,11 @@ X <- renewSlot(X,
                "abstract_args_ls",
                {
                  args_ls <- X@abstract_args_ls
-                 args_ls$abstract_ls <- list(Summary = "Health economists make limited use of the modular and open source approaches to model building that other disciplines use to make modelling projects more transparent, efficient and sustainable. 
+                 args_ls$abstract_ls <- list(Summary = "Health economists make limited use of the modular and open source approaches to model building that other disciplines use to make large modelling projects more transparent, efficient and sustainable. 
                                              We propose a framework for a modular open source health economic model (MOSHEM) in youth mental health.
                                              The framework includes of set of 20 standards for implementing a MOSHEM that is accountable (seven standards), reusable (nine standards) and updatable (four standards). 
                                              We provide a rationale for each standard.
-                                             The framework also includes software toolkit of six R packages for authoring MOSHEM modules (data structures and algorithms), supplying those modules with data and using the modules to implement reproducible modelling analyses. 
+                                             The framework also includes a modelling toolkit of open access repositories and six R packages for authoring MOSHEM modules (data structures and algorithms), supplying those modules with data and using the modules to implement reproducible modelling analyses. 
                                              We describe an early application of the framework to developing utility mapping models that currently meet 18 framework standards. 
                                              We discuss the potential benefits and challenges of extending this initial work to develop a more extensive MOSHEM for undertaking a range of economic analyses in youth mental health.",
                                              # Objectives = "We aimed to develop a conceptual and technical framework for implementing open source mental health systems models and illustrate how it can be applicatied to economic topics in youth mental health.",
