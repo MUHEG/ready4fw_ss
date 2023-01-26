@@ -5,53 +5,39 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-In this article we introduced a framework that we developed to help us implement a MOSHEM in youth mental health. We outlined the standards for accountable, reusable and updatable models specified by that framework and the modelling toolkit we created to help the youth mental health MOSHEM we are developing to meet those standards. We also provided an overview of the initial set of model modules we developed with the framework to implement a utility mapping study and summarised the extent to which the outputs of that study adheres to framework standards. 
+In this article we introduced a framework that we developed to help us implement a MOSHEM in youth mental health that is accountable, reusable and updatable. We outlined the standards for MOSHEMs specified by that framework and described the modelling toolkit we for applying those standards to model development and use. We also provided an overview of an initial set of MOSHEM modules we developed with the framework an applied to implement a utility mapping study and reviewed the modules, datasets and analyses from that study against framework standards. 
 
 The work we have described raises a number of issues relating to the future development of a youth mental health MOSHEM, for health economists interested in undertaking other MOSHEMS and for health research funders.
 
 ## Implications for the development of a youth mental helath MOSHEM
-<!-- ### Implications for our modelling team -->
-Mental disorders impose high health, social and economic burdens worldwide [@RN8;@GBD2019]. Much of this burden is potentially avertable [@RN25], but poorly financed and organised mental health systems are ill-equipped for this challenge[@RN22;@RN23]. There is therefore an opportunity for economic research to help identify mental health reforms of significant potential public benefit. To date, economic studies in mental health have predominantly examined the affordability and value for money of individual programs [@RN34]. This economic evaluation work is an essential prerequisite for developing economically sustainable mental health reform plans, but it needs to be accompanied by and integrated with a broader program of economic research. The classification system developed by Wagstaff and Culyer [@wagstaff2012four] identified twelve categories of health economic research. In addition to the economic evaluation category, we have prioritised the following areas for the future development of modules for our MOSHEM:
+Mental disorders impose high health, social and economic burdens worldwide [@RN8;@GBD2019]. Much of this burden is potentially avertable [@RN25], but poorly financed and organised mental health systems are ill-equipped for this challenge[@RN22;@RN23]. There is therefore an opportunity for health economists to undertake work in mental health of significant potential public benefit. To date, economic studies in mental health have predominantly examined the affordability and value for money of individual programs [@RN34]. This economic evaluation work is an essential prerequisite for developing economically sustainable mental health reform plans, but needs to be accompanied by and integrated with a broader program of economic research. 
 
-- health and its value [utility and choice], 
+We hope that the MOSHEM we are developing will facilitate a synthesis of multiple strands of economic research in youth mental health.  Initially, we aim to undertake modelling research in four of the twelve domains of health economics from the classification system developed by Wagstaff and Culyer [@wagstaff2012four] :
 
-- demand for health and health care, 
+- health and its value (utility mapping models); 
 
-- determinants of health and ill-health, 
+- determinants of health and ill-health (models for creating rich and representative synthetic household populations from survey data);
 
-- supply of health services, 
+- demand for health and health care (spatial epidemiology and help-seeking choice models); and
 
-- efficiency and equity, 
+- supply of health services (a model of primary mental health care services). 
 
-In economic evaluation, 
-<!-- Yet single purpose models that assume static systems may be inadequate for the decision support needs of policymakers and service planners [@PC2020; @Occhipinti2021].  -->
+We then want to be able to flexibly combine these models to answer questions in two other domains:
 
-<!-- The large and widespread additional mental health burdens recently observed during the COVID-19 pandemic[@20211700] and predicted as a potential future consequence of climate change [@page_howard_2010], highlight the need to improve the resilience and adaptability of these systems. To help stem growing demand for mental health services, policymakers have also been encouraged to place greater emphasis on tackling the social determinants of mental disorders [@RN11].  -->
+- efficiency and equity (optimising targeting of care and assessing the distributional impacts of candidate policies); and
 
- - Aims of our model (multi-purpose, focused on systems reform)
- - Addressing wagstaff areas ()
- - Adequacy of current methods / our capacity (errors / impact)
- - One shot at big changes
- - Opportunities for others to leverage and enhance
- - Our analysis - do it in stages, be transparent, continually improve, get help, be flexible (modelling toolkit / monolithic model), have a framework
+- economic evaluation (assessing cost-utility of competing policy options).
+
+When planning how to undertake and synthesise this program of work, we became concerned with issues relating to validity and granularity. We know that mistakes are easy to make in individual health economic modelling projects [@Radeva2020], an issue that is likely to be compounded when combining multiple projects. Similarly, the likelihood of certain types of error can increase if a model is too simple or too complex [@Saltelli2019], so the level of granularity appropriate for one model application may be ill-suited to another. These concerns led us to seeking an approach that was both open source (to provide the transparency that makes it easier for errors to be uncovered) and modular (to facilitate interchangeability between representations of different levels of granularity). However, because MOSHEMs are not common in health economics, we were unable to identify one up to date and consolidated source of guidance about how to undertake this work. We developed the framework's standards to fill this gap, choosing the framing of standards rather than guidelines because standardisation is an essential enabler of the interoperable and collaborative features of MOSHEMS. The framework's standards make explicit our goal to implement an accountable, reusable and updatable MOSHEM and provide a mechanism to assess how well this goal is being met. We have partially automated many of the steps for meeting those standards through the tools we developed for the framework's modelling toolkit and have been able to demonstrate the practical application of this toolkit through its use in implementing a utility mapping study [@Hamilton2021.07.07.21260129]. This toolkit is expected to be a source of significant efficiency savings as we implement other projects in the current phase of development of our youth mental health MOSHEM.
+
+ <!-- - One shot at big changes -->
+ <!-- - Our analysis - do it in stages, be transparent, continually improve, get help, be flexible (modelling toolkit / monolithic model), have a framework -->
+ <!-- A coding framework for MOSHEMs developed in the language R includes standardised approaches to directory structure and naming conventions [@Alarid2019]. -->
+
+However, the framework represents a technical capacity and is not a behavioural outcome. Having features to facilitate accountability, reuse and updating does not guarantee being that our OSHEM will be meaningfully held accountable, reused and updated. Making code and data publicly available may make limited impact on error detection unless third parties begin to use these artefacts in their own projects. Currently all the framework and module libraries we have developed are available only as "development" releases. Further development, testing and documenting before we submit production versions of each library to the Comprehensive R Archive Network (CRAN) [@CRAN2022]. Having these libraries available on CRAN is a likely prerequisite of significant levels of reuse. 
+
+Estimating the potential uptake of these tools is difficult. Mental health topics accounted for about 268 of 2829 (10%) economic evaluations undertaken during 26 month period in 2012-2014 identified in a previous review [@pitt2016economic].
  
-
-
- - Strengths (comparisons to existing work, benefits to ourselves and others)
-
- - Limitations (technical, not behavioural / institutional solution)
- 
-<!-- A coding framework for MOSHEMs developed in the language R includes standardised approaches to directory structure and naming conventions [@Alarid2019]. -->
-<!-- Our approach to model development is to undertake a number of discrete modelling projects of the people, places, platforms and programs that shape the mental health and wellbeing of young people and to progressively link them together by means of a common framework. To model people we are developing synthetic representations of populations of interest [@DVN/HJXYKQ_2021] that describe relevant individual characteristics and their relationships, algorithms that map psychological measures to health utility [@Hamilton2021.07.07.21260129] and choice models for predicting the helpseeking behaviour of young people [@hamilton_matthew_2022_6627995]. Our in-development model of places [@DVN/V3OKZV_2022] has the aim of synthesising geometry and spatial attribute data to characterise the geographic distribution of relevant demographic, environmental, epidemiological and service infrastructure features. We are in the early stages of a multi-annual project to develop a service platform model that will represent the processes and operations of a complex primary youth mental health service. We also plan to extend and update our prior work reviewing economic evidence relating to youth mental health programs [@RN33] so that it can be integrated with this model. Our initial work on **readyforwhatsnext** is focused on Victoria, Australia but the framework we are using to develop it is designed to facilitate extension by ourselves and others to different jurisdictional decision contexts. Progress is reported on a project website [@rfwn2022]. -->
-Major mental health reform programs, <!-- such as those currently being implemented in Victoria, Australia [@VicRC2021],  -->can involve the identification, prioritisation, sequencing, targeting and monitoring of multiple interdependent initiatives. 
-
-The significant deficits in our understanding of the systems in which mental disorders emerge and are treated [@Fried2020] suggest that there is ample scope for mental health systems models to progressively improve their validity over time. Prospective work could address the weak theoretical underpinnings for understanding complex mental health systems [@RN2111]. For example, it remains unclear why increased investments in mental health care have yet to discernibly reduce the prevalence and burden of mental disorders[@RN26].  The  literature, and evidence base, regarding how the requirements, characteristics and performance of mental health services are shaped by spatiotemporal context needs to be further developed [@RN42]. There is also a need for better evidence to identify the social determinants of mental disorders most amenable to preventative interventions, and for which population sub-groups such interventions would be most effective [@RN43]. 
-
-The development, validation and updating of more complex mental health economic models implemented over longer time frames may be too onerous a burden for a single modelling team. 
-  
-<!-- ### Implications for potential users of and contributors to our model -->
-
-Another future priority is to submit production versions of each R package for review by and archiving on the Comprehensive R Archive Network (CRAN) [@CRAN2022].
 Developing networks of modellers working on common health conditions has been recommended as a strategy for improving model validity [@Sampson2019] and some of us are part of a nascent initiate of this type in mental health [@nmhsmn2022].
 
 <!-- Add ref to NMHSMN in Australia --> Similarly, developing partnerships between modellers and decision-makers across the life-cycle of a modelling project can help ensure models are appropriately conceptualised, implemented and have practical utility as decision aids [@Zabell2021; @SQUIRES2016588].
@@ -85,7 +71,11 @@ Output by health economists [@pitt2016economic; @wagstaff2012four; @munoz2020hea
 <!-- ## Why develop OSHEMs in mental health -->
 
 
+Major mental health reform programs, <!-- such as those currently being implemented in Victoria, Australia [@VicRC2021],  -->can involve the identification, prioritisation, sequencing, targeting and monitoring of multiple interdependent initiatives. 
 
+The significant deficits in our understanding of the systems in which mental disorders emerge and are treated [@Fried2020] suggest that there is ample scope for mental health systems models to progressively improve their validity over time. Prospective work could address the weak theoretical underpinnings for understanding complex mental health systems [@RN2111]. For example, it remains unclear why increased investments in mental health care have yet to discernibly reduce the prevalence and burden of mental disorders[@RN26].  The  literature, and evidence base, regarding how the requirements, characteristics and performance of mental health services are shaped by spatiotemporal context needs to be further developed [@RN42]. There is also a need for better evidence to identify the social determinants of mental disorders most amenable to preventative interventions, and for which population sub-groups such interventions would be most effective [@RN43]. 
+
+The development, validation and updating of more complex mental health economic models implemented over longer time frames may be too onerous a burden for a single modelling team. 
 
 
 <!-- Decision makers are frequently left to rely on economic analyses that become less valid and relevant each year. A model can grow stale when changes in the real world, whether sudden (e.g. new pandemics) or gradual (e.g. demographic), is not represented by corresponding updates to relevant model features. Even when the system being modelled remains relatively stable, new research findings may potentially invalidate aspects of a model's original conceptualisation and implementation.  -->
@@ -118,3 +108,7 @@ Output by health economists [@pitt2016economic; @wagstaff2012four; @munoz2020hea
 
  <!-- as part of the Open Value Initiative [@Jansen2019].  -->
  
+ <!-- Yet single purpose models that assume static systems may be inadequate for the decision support needs of policymakers and service planners [@PC2020; @Occhipinti2021].  -->
+<!-- The large and widespread additional mental health burdens recently observed during the COVID-19 pandemic[@20211700] and predicted as a potential future consequence of climate change [@page_howard_2010], highlight the need to improve the resilience and adaptability of these systems. To help stem growing demand for mental health services, policymakers have also been encouraged to place greater emphasis on tackling the social determinants of mental disorders [@RN11].  -->
+
+<!-- Our approach to model development is to undertake a number of discrete modelling projects of the people, places, platforms and programs that shape the mental health and wellbeing of young people and to progressively link them together by means of a common framework. To model people we are developing synthetic representations of populations of interest [@DVN/HJXYKQ_2021] that describe relevant individual characteristics and their relationships, algorithms that map psychological measures to health utility [@Hamilton2021.07.07.21260129] and choice models for predicting the helpseeking behaviour of young people [@hamilton_matthew_2022_6627995]. Our in-development model of places [@DVN/V3OKZV_2022] has the aim of synthesising geometry and spatial attribute data to characterise the geographic distribution of relevant demographic, environmental, epidemiological and service infrastructure features. We are in the early stages of a multi-annual project to develop a service platform model that will represent the processes and operations of a complex primary youth mental health service. We also plan to extend and update our prior work reviewing economic evidence relating to youth mental health programs [@RN33] so that it can be integrated with this model. Our initial work on **readyforwhatsnext** is focused on Victoria, Australia but the framework we are using to develop it is designed to facilitate extension by ourselves and others to different jurisdictional decision contexts. Progress is reported on a project website [@rfwn2022]. -->
