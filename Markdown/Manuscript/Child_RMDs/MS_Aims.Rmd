@@ -5,10 +5,10 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-In this paper, we introduce a framework for developing a modular youth mental health MOSHEM. Specifically we:
+In this paper, we introduce a framework for developing the ready4 MOSHEM. Specifically we:
 
 (i) describe a framework that is comprised of:
   - a set of standards for implementing a MOSHEM; and
   - a modelling toolkit (repositories and software) to author MOSHEM modules, supply them with data and undertake reproducible analyses consistent with those standards.
 
-(ii) provide a worked example of how we used the framework to develop and apply MOSHEM modules for utility mapping.
+(ii) provide a worked example of how we used the framework to develop and apply ready4 modules for utility mapping.

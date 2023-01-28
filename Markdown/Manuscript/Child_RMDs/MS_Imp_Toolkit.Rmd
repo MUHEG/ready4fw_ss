@@ -4,19 +4,19 @@ output: html_document
 date: '2022-07-21'
 ---
 
-We developed a toolkit to help us develop and use a MOSHEM that meets the standards listed in Table \@ref(tab:timelygls). The toolkit is comprised of online repositories and software.
+We developed a toolkit to help us develop and use ready4 modules, datasets and analyses that meet the standards listed in Table \@ref(tab:timelygls). The toolkit is comprised of online repositories and software.
 
 ## Repositories <!-- Existing ref -->
 We created a GitHub organisation (a collection of code repositories) where all our development code is stored and version controlled [@ready4gh2022]. We linked our GitHub organisation to an account we established at codecov [@codecov_2022] to track our code coverage. We configured the repositories in our GitHub organisation to use GitHub actions to support continuous integration. 
 
-For hosting documentation websites for the code libraries we create, we enabled GitHub Pages in each library's repository. We also developed a consolidated project documentation website (https://www.ready4-dev.com), using the Hugo framework [@hugo_2023] and Docsy theme [@docsy_2023]. To host that website we established an account with Netlify [@netlify_2023] and linked that service to our GitHub organisation so that the website would automatically update whenever the source code in its GitHub repository was edited.
+For hosting documentation websites for the code libraries we create, we enabled GitHub Pages in each library's repository. We also developed a consolidated project documentation website [@rfwn2022], using the Hugo framework [@hugo_2023] and Docsy theme [@docsy_2023]. To host that website we established an account with Netlify [@netlify_2023] and linked that service to our GitHub organisation so that the website would automatically update whenever the source code in its GitHub repository was edited.
 
 We also created a Zenodo community [@ready4zen2022] - a collection of permanent, unbiquely identified repositories. We then linked our Zenodo community and GitHub organisation so that every time we create a new "release" in a GitHub repository, a copy of that code is automatically created on Zenodo with a DOI. Finally, to manage model datasets, we created a dedicated collection within the Harvard Dataverse installation [@ready4dv2022].
 
 ## Software <!-- Novel ref -->
 We created six development version R libraries to help us author model modules, supply them with data and implement reproducible modelling analyses. The six libraries, their primary focus, the standards they support and the third-party packages they depend on are summarised in Table \@ref(tab:cpkgs). 
 
-The foundation for our MOSHEM is provided by the ready4 library [@ready42022] that defines a template module (using R's S4 type class) from which all model module data structures will inherit features and a novel syntax for implementing the algorithms attached to model modules. The ready4 library also contains tools for retrieving web based information on model modules, datasets and analysis programs and for partially automating updates to the project website.
+The foundation for ready4 is provided by a library called ready4 [@ready42022] that defines a template module (using R's S4 type class) from which all model module data structures will inherit features and a novel syntax for implementing the algorithms attached to model modules. The ready4 library also contains tools for retrieving web based information on model modules, datasets and analysis programs and for partially automating updates to the project website.
 
 Three R libraries are designed to standardise and partially automate workflows for authoring new model modules. The ready4pack library [@ready4pack2022] provides tools for authoring module libraries that are:
 
@@ -30,7 +30,7 @@ Three R libraries are designed to standardise and partially automate workflows f
 
 The ready4pack library is designed to integrate with our GitHub organisation and depends on the other two module authoring libraries. Methods from the ready4fun library [@ready4fun2022] are used to verify that functions for implementing module algorithms are written in a consistent house style and to use their standardised format to automatically generate basic documentation for each function. Methods from the ready4class [@ready4class2022] library are used to streamline and standardise the authoring of module data-structures. Like ready4fun, the ready4class library uses standardised naming conventions to automatically generate basic documentation for each module data-structure.
 
-The ready4use [@ready4use2022] library contains modules for ingesting model datasets from online repositories (hosted on a Dataverse installation or on GitHub), labelling model datasets and sharing model datasets via online repositories. The ready4show library [@ready4show2022] contains tools to help author analyses programs that are either self-documenting or which trigger the creation of a scientific summary.
+The ready4use library  [@ready4use2022] contains modules for ingesting model datasets from online repositories (hosted on a Dataverse installation or on GitHub), labelling model datasets and sharing model datasets via online repositories. The ready4show library [@ready4show2022] contains tools to help author analyses programs that are either self-documenting or which trigger the creation of a scientific summary.
 
 When used in conjunction with repositories, the six R libraries provide strong support for implementing 17 framework standards. However, the software only weakly supports implementing the standards relating to safe dissemination of statistical models (R8) and user-interface development (R9) and does not yet provide any workflow tools to help implement the standard for deprecation conventions (U4). Standards not supported or weakly supported by our software can be met with existing developer tools in R. 
 

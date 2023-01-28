@@ -20,4 +20,29 @@ A modular model is constructed from multiple reusable and replaceable sub-models
 
 Modular models provide an opportunity for multiple modelling teams to contribute to, test and reuse models. To enhance this capacity, modular models may be implemented as open source projects that give others liberal permissions to access and use model source code and data [@pan2021modular; @barros2023empowering; @frazier2022robust]. Although there appears to be in principle support from many health economists for greater use of open source health economic models (OSHEMs)  [@Pouwels2022], actual implementations are rare [@Emerson2019; @Michalczyk2018; @Feenstra2022]. Barriers to adoption of OSHEMs include concerns about intellectual property, confidentiality, model misuse and the resources required to support open source implementations [@Pouwels2022; @Wu2019]. Adherence to good practice guidance is an essential requirement for healthcare modelling [@Erdemir2020], but guidelines for implementing OSHEMs remain scarce, piecemeal and need improving [@Sampson2019]. 
 
-We plan to develop a modular OSHEM (MOSHEM) of youth mental health that is accountable, reusable and updatable. Open source approaches have been recommended to help develop the mental health modelling field [@RN73] but only one mental health related model (in Alcohol Use Disorder [@Basu2018]) is currently indexed [RECHECK] in the Open Source Models Clearinghouse [@OSMC_20xx;@Emerson2019]. We  are aware of just one other open source mental health model - a reference model in Major Depressive Disorder - that is currently in development [@IVIMDD2022]. 
+Our interest in modular and open source source approaches developed when we began seeking am appropriate framework for undertaking and validly synthesising diverse types of economic research in mental health. Mental disorders impose high health, social and economic burdens worldwide [@RN8;@GBD2019]. Much of this burden is potentially avertable [@RN25], but poorly financed and organised mental health systems are ill-equipped for this challenge [@RN22;@RN23]. A substantial economic literature already exists to assess the affordability and value for money of mental health interventions [@RN34]. This economic evaluation work is an essential prerequisite for improving allocative efficiency in mental health, but could be of greater value to systems planners if integrated with a broader program of economic research. 
+
+We are developing ready4, a modular OSHEM (MOSHEM) on the mental health of young people aged 12 to 25 that we are initially applying to four of the twelve domains of health economics identified by Wagstaff and Culyer [@wagstaff2012four]:
+<!-- There is therefore an opportunity for health economists to undertake mental health research of significant potential public benefit. -->
+
+- *health and its value* (our projects: utility mapping models); 
+
+- *determinants of health and ill-health* (our projects: models for creating rich and representative synthetic household populations from survey data);
+
+- *demand for health and health care* (our projects: spatial epidemiology and help-seeking choice models); and
+
+- *supply of health services* (our projects: a model of primary mental health care services). 
+
+Once these projects are completed, our aim is to flexibly combine these models to answer questions in two additional Wagstaff and Culyer domains:
+
+- *efficiency and equity* (our goal: assess the distributional impacts and identify the optimal targeting of care provision); and
+
+- *economic evaluation* (our goal: assess the cost-utility of competing policy options).
+
+Standardisation is an essential enabler of workflow automation, module interoperability, and transferability of methods<!-- and efficient collaboration  -->. 
+
+<!-- When planning how to undertake and synthesise this program of work, we became concerned with issues relating to accountability, reusability and updatability. If mistakes are common in individual health economic modelling projects [@Radeva2020], then combining multiple projects may be particularly error prone. The risk of errors may also depend on whether a model is too simple or too complex [@Saltelli2019], so the level of granularity appropriate for one model application may be ill-suited to another. Undertaking a multiannual program of interdependent work raises the risk that models developed in the first phase of a project may need to be updated by the time the project is approaching conclusion. -->
+
+<!-- These concerns led us to seek the MOSHEM approach that provides the transparency to make it easier for errors to be uncovered, the adaptability to fix these errors and the flexibility to facilitate interchangeability between representations of different levels of granularity.  -->
+
+
