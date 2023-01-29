@@ -22,7 +22,7 @@ Modular models provide an opportunity for multiple modelling teams to contribute
 
 Our interest in modular and open source source approaches developed when we began seeking am appropriate framework for undertaking and validly synthesising diverse types of economic research in mental health. Mental disorders impose high health, social and economic burdens worldwide [@RN8;@GBD2019]. Much of this burden is potentially avertable [@RN25], but poorly financed and organised mental health systems are ill-equipped for this challenge [@RN22;@RN23]. A substantial economic literature already exists to assess the affordability and value for money of mental health interventions [@RN34]. This economic evaluation work is an essential prerequisite for improving allocative efficiency in mental health, but could be of greater value to systems planners if integrated with a broader program of economic research. 
 
-We are developing ready4, a modular OSHEM (MOSHEM) on the mental health of young people aged 12 to 25 that we are initially applying to four of the twelve domains of health economics identified by Wagstaff and Culyer [@wagstaff2012four]:
+We are developing ready4 (https://www.ready4-dev.com), a modular OSHEM (MOSHEM) on the mental health of young people aged 12 to 25. We are initially applying ready4 to four of the twelve domains of health economics identified by Wagstaff and Culyer [@wagstaff2012four]:
 <!-- There is therefore an opportunity for health economists to undertake mental health research of significant potential public benefit. -->
 
 - *health and its value* (our projects: utility mapping models); 
@@ -39,7 +39,7 @@ Once these projects are completed, our aim is to flexibly combine these models t
 
 - *economic evaluation* (our goal: assess the cost-utility of competing policy options).
 
-Standardisation is an essential enabler of workflow automation, module interoperability, and transferability of methods<!-- and efficient collaboration  -->. 
+To undertake this work we first needed to develop a framework for standardisation. Standardisation is an essential enabler of automation, collaboration, interoperability and transferability in modular and open source approaches. However, MOSHEMs remain rare and is unclear what standards are most appropriate to specify. A MOSHEMs is a computational modelling project, so standards developed for ready4 will need to be verified and implemented by software, some of which will need to be developed for this specific purpose. 
 
 <!-- When planning how to undertake and synthesise this program of work, we became concerned with issues relating to accountability, reusability and updatability. If mistakes are common in individual health economic modelling projects [@Radeva2020], then combining multiple projects may be particularly error prone. The risk of errors may also depend on whether a model is too simple or too complex [@Saltelli2019], so the level of granularity appropriate for one model application may be ill-suited to another. Undertaking a multiannual program of interdependent work raises the risk that models developed in the first phase of a project may need to be updated by the time the project is approaching conclusion. -->
 
