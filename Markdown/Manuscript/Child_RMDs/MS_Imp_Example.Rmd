@@ -5,7 +5,7 @@ date: '2022-07-21'
 ---
 
 
-We applied the framework to develop modules for developing utility mapping models, supplying those modules with data and implementing utility mapping analyses. The study for which these tools were developed and which applied them to developing utility mapping models for a clinical mental health sample of young people has been previously described [@Hamilton2021.07.07.21260129]. The outputs we authored using the framework's modelling toolkit include:
+We applied the framework to develop ready4 modules for developing utility mapping models, supplying those modules with data and implementing utility mapping analyses. These tools were created to develop utility mapping models for a clinical mental health sample of young people in a study that has been previously described [@Hamilton2021.07.07.21260129]. The framework's modelling toolkit created the following ready artefacts:
 
  - development version module libraries for describing and validating youth mental health human record datasets [@hamilton_matthew_2022_6084467], scoring health utility [@hamilton_matthew_2022_6084824], specifying utility mapping models [@hamilton_matthew_2022_6116701] and implementing reproducible utility mapping studies [@gao_caroline_2022_6130155];
  
@@ -17,5 +17,5 @@ We applied the framework to develop modules for developing utility mapping model
  
  - subroutines for creating a catalogue of utility mapping models [@hamilton_matthew_2022_6116385] and generating a draft scientific manuscript [@matthew_p_hamilton_2022_5976988] for studies implemented with these modules.
  
-When we assesses these study outputs against each framework standard, we conclude that 18 standards were wholly or mostly met (see Table \@ref(tab:checktb)). The two standards where the study outputs currently fall short are in reporting code coverage and including a user-interface. Both these items are scheduled to be addressed when we release production versions of the code libraries.
+When we assesses these study outputs against each framework standard, we conclude that 18 out of 20 standards were wholly or mostly met (see Table \@ref(tab:checktb)). The two standards where the study outputs currently fall short are in reporting code coverage and including a user-interface. Both these items are scheduled to be addressed when we release production versions of the code libraries.
 

@@ -38,17 +38,17 @@ X <- renewSlot(X,
                {
                  args_ls <- X@abstract_args_ls
                  args_ls$abstract_ls <- list(Summary = "Health economists make limited use of the modular and open source approaches to model building that other disciplines use to make large modelling projects more transparent, efficient and sustainable. 
-                                             We propose a framework for a modular open source health economic model (MOSHEM) in youth mental health.
+                                             We propose a framework for developing a modular open source health economic model (MOSHEM) in youth mental health called ready4.
                                              The framework includes of set of 20 standards for implementing a MOSHEM that is accountable (seven standards), reusable (nine standards) and updatable (four standards). 
                                              We provide a rationale for each standard.
-                                             The framework also includes a modelling toolkit of open access repositories and six R packages for authoring MOSHEM modules (data structures and algorithms), supplying those modules with data and using the modules to implement reproducible modelling analyses. 
+                                             The framework also includes a modelling toolkit of open access repositories and six R libraries for authoring ready4 modules (data structures and algorithms), supplying those modules with data and using the modules to implement reproducible modelling analyses. 
                                              We describe an early application of the framework to developing utility mapping models that currently meet 18 framework standards. 
-                                             We discuss the potential benefits and challenges of extending this initial work to develop a more extensive MOSHEM for undertaking a range of economic analyses in youth mental health.",
+                                             We discuss the potential benefits and challenges of extending ready4 in order to undertake and synthesise diverse economic modelling studies in youth mental health and highlight some broader implications for health economists and research funders.",
                                              # Objectives = "We aimed to develop a conceptual and technical framework for implementing open source mental health systems models and illustrate how it can be applicatied to economic topics in youth mental health.",
                                              # Methods = "We created a software development kit in R to support standardised implementation of mental health systems models. As a worked example, we applied the toolkit to develop open source youth mental health utility mapping models, which we assessed against five principles using 17 standards.",
                                              # Results = "Six R packages and a coding style dataset provide a toolkit for implementing mental health models that are TIMELY - Transparent, Iterative, Modular, Epitomising, Licensed and Yielding. The utility mapping models we developed with this toolkit fully met X and partially met Y TIMELY standards.", 
                                              # Conclusion = "Please fund me",
-                                             Code = "Visit https://www.ready4-dev.com for more information about how to find, install and apply the framework and model.")
+                                             Code = "Visit https://www.ready4-dev.com for more information about how to find, install and apply ready4.")
                  args_ls
                  }
                )

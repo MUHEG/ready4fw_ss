@@ -30,10 +30,10 @@ df <- data.frame(`Characteristic` = rep("",20),
                                       1:4)
                                ),
                  Meaning = c(
-                   "Open online repositories are used to permanently archive, uniquely identify and transparently record development history and authorship of model code and data.",#T1
+                   "Open online repositories are used to permanently archive, uniquely identify and transparently record authorship and development history of model code and data.",#T1
                    # T2 MISSING - Merged With T1
                    "Model code and data are documented.",#<T2, Was T3
-                   "Model code uses consistent syntax, with abstraction used for analysis code.",# T3, Was T4 -->
+                   "Model code uses consistent and abstracted syntax.",# T3, Was T4 -->
                    "Literate programming is used to implement model analyses.",#T4,Was T5
                    "Code coverage is reported.", #T5, New, replaces version now moved to T4 
                    "All parts of a study analysis and reporting workflow can be reproduced and/or replicated.", #T6, was T7, Replaces Deleted T6 
@@ -41,13 +41,13 @@ df <- data.frame(`Characteristic` = rep("",20),
                    "Model code is made available for re-use under copyleft or permissive licenses.",#L1: **
                    "Non-confidential model data is licensed for liberal re-use (potentially subject to ethical use terms).",#L2
                    "Model code and data are stored and managed separately.",#*M1: Modified (lost ref to licensed and cited) 
-                   "Module data structures are encapsulating and inheriting.",#*M2: Replacement - Old version now merged with E1 # And with E2: "Modules are inheriting data-structures.",#E2
-                   "Module algorithms are implemented as functions and linked to module data-structures as methods.",#E1: Modified (lost ref to OOP and merged with M2) -->
-                   "Model module data-structures and algorithms are distributed as code libraries.",
+                   "Module data structures use encapsulation and inheritence.",#*M2: Replacement - Old version now merged with E1 # And with E2: "Modules are inheriting data-structures.",#E2
+                   "Module algorithms are implemented as functions.",#E1: Modified (lost ref to OOP and merged with M2) -->
+                   "Module data-structures and algorithms are distributed as code libraries.",
                    "Test data is available to demonstrate generalised applications of model code.",#E3: **
                    # OLD CITATION
                    "Statistical models are distributed with tools to support their safe and appropriate re-use.",#*Y1: New, Replaces Old Y1 (now Y2)
-                   "Simple user-interfaces allow non-technical users to configure and run models.",#Y2: Was Y1     
+                   "User-interfaces allow non-technical users to configure and run models.",#Y2: Was Y1     
                    "Model code and data are version controlled.",#*I1, Was I2 
                    "The signficiance and status of model and code updates are indicated with semantic versioning and release types.",#I2, Was I1 
                    "Continuous integration is used to verify model code updates.",#I3 

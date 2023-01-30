@@ -22,17 +22,17 @@ Three R libraries are designed to standardise and partially automate workflows f
 
 - documented (with a website, a manual itemising selected contents and a manual itemising all contents);
 
-- licensed (with GPL-3 by default);
+- licensed (using GNU GPL-3 [@GNUGPL2022] by default);
 
 - easily citable (citation information can be retrieved within an R session or from hosting repositories); and 
 
-- quality assured (triggering continuous integration workflows, including any unit tests created by module library authors). 
+- quality assured (each update triggers continuous integration workflows, including any unit tests created by module library authors). 
 
-The ready4pack library is designed to integrate with our GitHub organisation and depends on the other two module authoring libraries. Methods from the ready4fun library [@ready4fun2022] are used to verify that functions for implementing module algorithms are written in a consistent house style and to use their standardised format to automatically generate basic documentation for each function. Methods from the ready4class [@ready4class2022] library are used to streamline and standardise the authoring of module data-structures. Like ready4fun, the ready4class library uses standardised naming conventions to automatically generate basic documentation for each module data-structure.
+The ready4pack library is designed to integrate with our GitHub organisation and depends on two other module authoring libraries. Methods from the ready4fun library [@ready4fun2022] are used to verify that functions for implementing module algorithms are written in a consistent house style. The standardised format is then used by ready4fun to automatically generate basic documentation for each function. Methods from the ready4class [@ready4class2022] library are used to streamline and standardise the authoring of module data-structures. Like ready4fun, the ready4class library uses standardised code implementation to automatically generate basic documentation for each module data-structure.
 
 The ready4use library  [@ready4use2022] contains modules for ingesting model datasets from online repositories (hosted on a Dataverse installation or on GitHub), labelling model datasets and sharing model datasets via online repositories. The ready4show library [@ready4show2022] contains tools to help author analyses programs that are either self-documenting or which trigger the creation of a scientific summary.
 
-When used in conjunction with repositories, the six R libraries provide strong support for implementing 17 framework standards. However, the software only weakly supports implementing the standards relating to safe dissemination of statistical models (R8) and user-interface development (R9) and does not yet provide any workflow tools to help implement the standard for deprecation conventions (U4). Standards not supported or weakly supported by our software can be met with existing developer tools in R. 
+When used in conjunction with repositories, the six R libraries provide strong support for implementing 17 out of 20 framework standards. Standards relating to safe dissemination of statistical models (R8), user-interface development (R9) and deprecation conventions (U4) are better met through using existing third party R libraries. Preparing statistical models for dissemination can be accomplished with standard R data management tools like the dplyr [@dplyr2022] and purrr [@dplyr2022] libraries. User-interfaces are typically developed with the shiny [@shiny2022] library, for which a tutorial aimed at health economists is available [@SmithR2020]. The library lifeycle [@lifecycle2021] provides tools for R developers to consistently deprecate their code.
 
 ```{r, child = child_docs_ls$two, echo=FALSE}
 ```

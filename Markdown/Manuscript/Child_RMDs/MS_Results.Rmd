@@ -14,7 +14,7 @@ output: html_document
 <!-- Add child RMDs for results content -->
 # Framework
 <!-- Modular and open source models from other disciplines are enabled by standardisation and software.  -->
-To help us implement a MOSHEM in youth mental health, we have developed a framework that:
+To enable us to implement ready4, we have developed a framework that:
 
 - specifies a set of standards for MOSHEM development and use; and
 
