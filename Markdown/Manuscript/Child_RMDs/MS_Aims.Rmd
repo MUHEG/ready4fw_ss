@@ -5,10 +5,10 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-In this paper, we:
+In this paper, we describe:
 
-(i) describe a framework comprised of:
+(i) the ready4 framework, that is comprised of:
   - a set of standards for implementing an accountable, reusable and updatable MOSHEM; and
-  - a modelling toolkit (online repositories and software) for applying those standards to the authoring of ready4 modules, datasets and analyses; and
+  - a modelling toolkit (online repositories and software) for applying those standards to the authoring of MOSHEM modules, datasets and analyses; and
 
-(ii) provide a worked example of how we used the framework to develop and apply ready4 modules for utility mapping.
+(ii) how we used the ready4 framework to develop and apply modules for utility mapping.

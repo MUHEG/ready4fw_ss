@@ -5,7 +5,7 @@ Health economists make limited use of the modular and open source approaches to 
                                              We provide a rationale for each standard.
                                              The framework also includes a modelling toolkit of open access repositories and six R libraries for authoring ready4 modules (data structures and algorithms), supplying those modules with data and using the modules to implement reproducible modelling analyses. 
                                              We describe an early application of the framework to developing utility mapping models that currently meet 18 framework standards. 
-                                             We discuss the potential benefits and challenges of extending ready4 in order to undertake and synthesise a diverse economic modelling studies in youth mental health and highlight some broader implications for health economists and research funders.
+                                             We discuss the potential benefits and challenges of extending ready4 in order to undertake and synthesise diverse economic modelling studies in youth mental health and highlight some broader implications for health economists and research funders.
 \\newline
 \\newline
 \\textbf{Code: }
