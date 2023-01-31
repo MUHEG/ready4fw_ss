@@ -7,8 +7,6 @@ output: html_document
 
 In this paper, we describe:
 
-(i) the ready4 framework, that is comprised of:
-  - a set of standards for implementing an accountable, reusable and updatable MOSHEM; and
-  - a modelling toolkit (online repositories and software) for applying those standards to the authoring of MOSHEM modules, datasets and analyses; and
+(i) a framework that specifies MOSHEM standards and provides the tools to implement them; and 
 
-(ii) how we used the ready4 framework to develop and apply modules for utility mapping.
+(ii) the application of that framework to develop and use an initial set of ready4 modules in a utility mapping study.

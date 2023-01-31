@@ -13,7 +13,7 @@ X <- Ready4showSynopsis(#background_1L_chr = "Our study is entirely fictional.",
                         keywords_chr = c("open source models","health economics","mental disorders"),
                         outp_formats_chr = "PDF",
                         #sample_desc_1L_chr = "The study sample is fake data that pretends to be young people aged 12 to 25 years who attended Australian primary care services for mental health related needs between November 2019 to August 2020.",
-                        title_1L_chr = "The ready4 framework for implementing a modular open source health economic model (MOSHEM) in youth mental health that is accountable, reusable and updatable")
+                        title_1L_chr = "Framework for implementing a modular open source health economic model (MOSHEM) in youth mental health that is accountable, reusable and updatable")
 X <- renewSlot(X,
                "authors_r3", 
                {
@@ -37,7 +37,7 @@ X <- renewSlot(X,
                "abstract_args_ls",
                {
                  args_ls <- X@abstract_args_ls
-                 args_ls$abstract_ls <- list(Summary = "Health economists make limited use of the modular and open source approaches to model building that other disciplines use to make large modelling projects more transparent, efficient and sustainable. 
+                 args_ls$abstract_ls <- list(Summary = "Health economists make limited use of the modular and open source approaches to model building that other disciplines use for collaborative development of complex modelling projects. 
                                              We propose a framework for developing a modular open source health economic model (MOSHEM) in youth mental health called ready4.
                                              The framework includes of set of 20 standards for implementing a MOSHEM that is accountable (seven standards), reusable (nine standards) and updatable (four standards). 
                                              We provide a rationale for each standard.
