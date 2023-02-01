@@ -60,12 +60,17 @@ df <- tibble::tibble(Package = c("ready4",
                                }) %>% 
                              purrr::map_chr (~ .x %>% paste0(collapse = " "))) %>% 
   as.data.frame() 
-    df$Ref <- c("@ready42022",
+if(params$X@outp_formats_chr[1] != "Word"){
+      df$Ref <- c("@ready42022",
                     "@ready4fun2022",
                     "@ready4class2022",
                     "@ready4pack2022",
                     "@ready4use2022",
                     "@ready4show2022")
+}else{
+  df$Ref <- ""
+}
+
 df <- df %>%
   dplyr::mutate(Standard = purrr::pmap_chr(df,
                                            ~paste0("A",

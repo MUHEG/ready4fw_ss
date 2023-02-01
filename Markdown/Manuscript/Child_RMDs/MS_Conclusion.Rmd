@@ -5,4 +5,4 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 `r ifelse(is.na(params$X@conclusion_1L_chr),"",params$X@conclusion_1L_chr)` 
-<!-- Standards generalisable, Toolkit less os -->
+We have developed a framework for undertaking a MOSHEM in youth mental health and demonstrated its use by applying it to undertake a utility mapping study. We intend using this framework to undertake and synthesise multiple types of economic research. With further development the framework could be applied to extracting greater value from existing economic models in mental health and to facilitate collaborations between health economists and other stakeholders to address complex mental health modelling challenges. Although MOSHEMs provide a promising opportunity to advance the health economcis field, action from funders is required to realise this potential.
