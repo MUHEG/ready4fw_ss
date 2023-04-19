@@ -5,15 +5,15 @@ library(bookdown)
 library(rticles)
 X <- Ready4showSynopsis(#background_1L_chr = "Our study is entirely fictional.",
                         coi_1L_chr = "None declared.",
-                        #conclusion_1L_chr = "We have identified a number of standards that we believe are appropriate to implementing quality OSHEMs in youth mental health. Most of these standards are probably relevant to OSHEMs in other health conditions, though some such as the copyleft licensing may be less relevant to modellers using different tools. Our framework toolkits can help support standardised approaches to dynamic systems model development that are important for collaborative and interdependent projects. ",
+                        #conclusion_1L_chr = "We have identified criteria that can be used to systematically assess extent to which the computational implementation of health economic models adheres to the ethical goals of transparency, reusability and updatability. We have developed an open-source software framework that can support the ethical computational implementation of economic models in youth mental health. Our framework can be used as a prototype for developing future software frameworks to support ethical implementation of CHEMs.",
                         digits_int = 3L,
-                        ethics_1L_chr = "Framework development did not involve human subject research and was not ethically reviewed. The utility mapping worked example is a previously reported study that was reviewed and granted approval by the University of Melbourne’s Human Research Ethics Committee, and the local Human Ethics and Advisory Group (1645367.1).",
-                        funding_1L_chr = "Framework development was funded by Orygen, VicHealth and Victoria University. The utility mapping study used as a worked example was funded by the National Health and Medical Research Council (NHMRC, APP1076940), Orygen and headspace.",
+                        ethics_1L_chr = "Software framework development did not involve human subject research and was not ethically reviewed. The utility mapping worked example is a previously reported study that was reviewed and granted approval by the University of Melbourne’s Human Research Ethics Committee, and the local Human Ethics and Advisory Group (1645367.1).",
+                        funding_1L_chr = "Software framework development was funded by Orygen, VicHealth, Victoria University and an Australian Government Research Training Program (RTP) Scholarship . The utility mapping study used as a worked example was funded by the National Health and Medical Research Council (NHMRC, APP1076940), Orygen and headspace.",
                         #interval_chr = "three months",
                         keywords_chr = c("open source models","health economics","mental disorders"),
                         outp_formats_chr = "PDF",
                         #sample_desc_1L_chr = "The study sample is fake data that pretends to be young people aged 12 to 25 years who attended Australian primary care services for mental health related needs between November 2019 to August 2020.",
-                        title_1L_chr = "Framework for implementing a modular open source health economic model (MOSHEM) in youth mental health that is accountable, reusable and updatable")
+                        title_1L_chr = "A prototype software framework for ethical implementation of computational economic models and its early application in youth mental health")
 X <- renewSlot(X,
                "authors_r3", 
                {
@@ -37,18 +37,18 @@ X <- renewSlot(X,
                "abstract_args_ls",
                {
                  args_ls <- X@abstract_args_ls
-                 args_ls$abstract_ls <- list(Summary = "Health economists make limited use of the modular and open source approaches that other disciplines use for collaborative development of complex models. 
-                                             We propose a framework for developing a modular open source health economic model (MOSHEM) in youth mental health called ready4.
-                                             The framework includes of set of 20 standards for implementing a MOSHEM that is accountable (seven standards), reusable (nine standards) and updatable (four standards). 
-                                             We provide a rationale for each standard.
-                                             The framework also includes a modelling toolkit of open access repositories and six R libraries for authoring MOSHEM modules, supplying those modules with data and implementing reproducible modelling analyses. 
-                                             We describe an early application of the framework to implementing a utility mapping study and detail how the MOSHEM components produced by that study meet 18 framework standards. 
-                                             We discuss how the framework will enable us to undertake and synthesise diverse economic modelling studies in youth mental health and highlight some broader implications for undertaking MOSHEMs to explore mental health and other topics.",
+                 args_ls$abstract_ls <- list(Summary = "Understanding of what constitutes ethical computational implementation of health economic models is underdeveloped and software frameworks to facilitate such implementations are required. 
+                                             We propose criteria for assessing the ethical implementation of computational health economic models (CHEMs), describe a novel prototype software framework for developing CHEMs that meet these criteria and outline how we are using this software framework to develop and synthesise multiple economic models in youth mental health. 
+                                             We propose a total of six assessment criteria – two each for enabling transparent, reusable and updatable (TRU) CHEMs. 
+                                             The software framework is comprised of six R libraries that provide a toolkit for authoring CHEMs, supplying CHEMs with data and using CHEMs to implementing reproducible modelling analyses. 
+                                             The framework libraries integrate with existing online services for collaborative software development and data archiving. One of the initial applications of the software framework was to develop and apply utility mapping models in youth mental health. 
+                                             We assess the utility mapping CHEM as wholly meeting four of our ethical assessment criteria and partially meeting the remaining two criteria. 
+                                             We discuss how the ethical assessment criteria we have identified and the software framework we have developed can inform future work to develop understanding and implementation of ethical computational modelling practice in health economics.",
                                              # Objectives = "We aimed to develop a conceptual and technical framework for implementing open source mental health systems models and illustrate how it can be applicatied to economic topics in youth mental health.",
                                              # Methods = "We created a software development kit in R to support standardised implementation of mental health systems models. As a worked example, we applied the toolkit to develop open source youth mental health utility mapping models, which we assessed against five principles using 17 standards.",
                                              # Results = "Six R packages and a coding style dataset provide a toolkit for implementing mental health models that are TIMELY - Transparent, Iterative, Modular, Epitomising, Licensed and Yielding. The utility mapping models we developed with this toolkit fully met X and partially met Y TIMELY standards.", 
                                             #Conclusion = "",
-                                             Code = "Visit https://www.ready4-dev.com for more information about how to find, install and apply ready4.")
+                                             Code = "Visit https://www.ready4-dev.com for more information about how to find, install and apply the prototype software framework.")
                  args_ls
                  }
                )

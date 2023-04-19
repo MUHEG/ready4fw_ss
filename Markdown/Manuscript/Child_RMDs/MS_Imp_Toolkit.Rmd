@@ -4,42 +4,35 @@ output: html_document
 date: '2022-07-21'
 ---
 
-We developed a toolkit to help us develop and use MOSHEM modules, datasets and analyses that meet the standards listed in Table \@ref(tab:timelygls). The toolkit is comprised of online repositories and software.
+To support the collaborative development of CHEMs that meet TRU assessment criteria, we have created a prototype software framework called ready4. We have designed this framework as a lightweight extension to existing software development infrastructure that could be used to implement CHEMs that are both open-source (for transparency and reusability) and modular (for reusability and updatability).
 
-## Repositories <!-- Existing ref -->
-We created a GitHub organisation (a collection of code repositories) where all our development code is stored and version controlled [@ready4gh2022]. We configured the repositories in our GitHub organisation to use GitHub actions to support continuous integration. Some of the continuous integration checks we have defined assess each library's compliance with policies specified by the Comprehensive R Archive Network (CRAN) [@CRAN2022], to which we plan submitting future production releases. To track our code coverage, we linked our GitHub organisation to an account we established at codecov [@codecov_2022]. 
+## 	Framework libraries 
+To work within the popular open-source programming environment R [@RCORE2022], the ready4 software framework is implemented as six development version R code libraries. The R libraries collectively provide model developers with tools to combine R's functional and object-oriented programming paradigms [@10.1214/13-STS452] in authoring CHEMs, supplying those CHEMs with data and using CHEMs to implement reproducible modelling analyses. The six novel libraries and the preexisting third-party R libraries they depend on are summarised in Table \@ref(tab:cpkgs).
 
-We enabled GitHub Pages in each repository we used for code library development to facilitate the creation and hosting of library documentation websites. We also developed a consolidated and versioned project documentation website [@rfwn2022] using the Hugo framework [@hugo_2023] and Docsy theme [@docsy_2023]. To host that website we established an account with Netlify [@netlify_2023] and linked that service to our GitHub organisation so that the website would automatically update whenever the source code in its GitHub repository was edited.
+Standardization and interoperability are core requirements of implementing a modular approach. Model modules need to be able to share inputs and outputs with each other and to be run as independent models [@barros2023empowering]. Each CHEM module authored with the ready4 framework will include both a data structure (specifying the required properties of data that can validly be supplied to a module) and a set of algorithms (specifying the operations that can be performed on data contained in a module instance). The foundational framework library, called ready4, defines a template module data structure (using R’s S4 class system) from which all CHEM module data structures will be created and a novel syntax that enable module algorithms to be consistently named. The ready4 library also contains tools for retrieving web based information on model modules, datasets and analysis programs authored with the framework and for partially automating updates to a project documentation website.
 
-We also created a Zenodo community [@ready4zen2022] - a collection of permanent, uniquely identified repositories. We then linked our Zenodo community and GitHub organisation so that every time we specify a version of code in one of our GitHub repositories as a "release", a copy of that code is automatically created on Zenodo with a DOI. Finally, to manage model datasets, we created a dedicated collection within the Harvard Dataverse installation [@ready4dv2022].
+Three R libraries are designed to help standardize workflows for authoring, documenting, testing and disseminating new model modules. The ready4pack library is designed to integrate with GitHub and provides tools for authoring model modules and desseminating them as themed bundles in R libraries libraries that are:
 
-## Software <!-- Novel ref -->
-We created six development version R libraries to help us author model modules, supply those modules with data and implement reproducible modelling analyses. The six libraries, their primary focus, the standards they support and the third-party packages they depend on are summarised in Table \@ref(tab:cpkgs). 
+-	documented (with a website, a PDF manual itemising selected contents and a PDF manual itemising all contents);
 
-A library called ready4 [@ready42022] defines a template module (using R's S4 class system) from which all model module data structures will inherit features and a novel syntax for attaching algorithms to those data structures. The ready4 library also contains tools for retrieving web based information on model modules, datasets and analysis programs and for partially automating updates to the project documentation website.
+-	licensed (using the copyleft GNU GPL-3 [66] by default);
 
-Three R libraries are designed to standardise and partially automate workflows for authoring new model modules. The ready4pack library [@ready4pack2022] is designed to integrate with our GitHub organisation and provides tools for authoring module libraries that are:
+-	easily citable (citation information can be retrieved within an R session or from hosting repositories); and
 
-- documented (with a website, a manual itemising selected contents and a manual itemising all contents);
+-	quality assured (each update triggers continuous integration workflows, including any acceptance and unit tests created by module library authors).
 
-- licensed (using GNU GPL-3 [@GNUGPL2022] by default);
+The ready4pack library depends on two other module authoring libraries. Writing model algorithms as collections of functions (short, self-contained and reusable software routines that each perform a discrete task), has been recommended as good practice for scientific computing [@Wilson_2017].  The ready4fun library contains tools for authoring functions in a consistent house style that automatically generates basic documentation for each function. Functions to implement model algorithms can be associated with a module via a special type of function called a method. Tools from the ready4class library can help streamline and standardise the authoring of module data structures and their associated methods and to automatically generate basic documentation for each module.
 
-- easily citable (citation information can be retrieved within an R session or from hosting repositories); and 
+The ready4use library contains tools for supplying model modules with data stored in online repositories (hosted on a Dataverse installation or on GitHub), labelling these datasets and then sharing them via online repositories. The ready4show library contains tools to help author R Markdown programs that combine model modules and datasets to undertake analyses. These programs are either self-documenting (code is easy to understand and integrated with plain English explanations of what it does) or trigger the creation of separate documents (e.g. a scientific manuscript).
 
-- quality assured (each update triggers continuous integration workflows, including any unit tests created by module library authors). 
-
-The ready4pack library depends on two other module authoring libraries. Methods from the ready4fun library [@ready4fun2022] are used to verify that functions for implementing module algorithms are written in a consistent house style. That standardised format is then used by ready4fun methods to automatically generate basic documentation for each function. Methods from the ready4class [@ready4class2022] library are used to streamline and standardise the authoring of module data structures and the linking of methods to these data structures. Like ready4fun, the ready4class library uses standardised code implementation to automatically generate basic documentation for each module data structure.
-
-The ready4use library  [@ready4use2022] contains modules for ingesting model datasets from online repositories (hosted on a Dataverse installation or on GitHub), labelling model datasets and sharing model datasets via online repositories. The ready4show library [@ready4show2022] contains tools to help author analyses programs that are either self-documenting or which trigger the creation of a scientific summary.
-
-When used in conjunction with toolkit repositories, the six R libraries provide support for implementing 17 out of 20 framework standards (Table \@ref(tab:timelygls)). Standards relating to safe dissemination of statistical models (R8), user-interface development (R9) and deprecation conventions (U4) are better met through using existing third party R libraries. Preparing statistical models for dissemination can be accomplished with standard R data management tools like the dplyr [@dplyr2022] and purrr [@dplyr2022] libraries. User-interfaces are typically developed with the shiny [@shiny2022] library, for which a tutorial aimed at health economists is available [@SmithR2020]. The library lifecycle [@lifecycle2021] provides tools for R developers to consistently deprecate their code.
 
 ```{r, child = child_docs_ls$two, echo=FALSE}
 ```
 
-\blandscape
 
-```{r, child = child_docs_ls$three, echo=FALSE}
-```
+##	Framework integration with online services 
+Our software framework needs to be used in conjunction with a number of online services. To facilitate its application to our youth mental health project, we established and configured accounts with these required services (see Availability of data and materials).
 
-\elandscape
+We created a GitHub organisation (a collection of code repositories) where all code (libraries, programs and sub-routines) that we author with the framework is stored and version controlled. We configured individual repositories in our GitHub organisation that are used for code library projects to use GitHub actions to implement continuous integration. By default, code libraries authored with our framework will use continuous integration to assess compliance with policies specified by the Comprehensive R Archive Network (CRAN) [@CRAN2022]. To track our code coverage, we linked our GitHub organisation to an account we established at codecov [@codecov_2022]. To facilitate the creation and hosting of documentation websites, we enabled GitHub Pages in each repository we used for code library development. 
+We also created a Zenodo community - a collection of permanent, uniquely identified repositories. We then linked our Zenodo community and GitHub organisation so that every time we specify a version of code in one of our GitHub repositories as a “release”, a copy of that code is automatically created on Zenodo with a DOI. Finally, to manage model datasets, we created a dedicated collection within the Harvard Dataverse installation.
+

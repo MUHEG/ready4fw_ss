@@ -5,10 +5,28 @@ date: '2022-07-21'
 ---
 
 
-We applied the framework to develop an initial set of ready4 modules, supply those modules with data and implement modelling analyses. These outputs were created as part of a previously described study [@Hamilton2021.07.07.21260129] to develop utility mapping models appropriate for use in samples of young people presenting to primary mental health services. The ready4 framework's modelling toolkit created the following artefacts:
+##	Economic topics
+Currently, we are using the ready4 software framework to develop, apply and share youth mental health computational models in four of the twelve domains of health economics identified by Wagstaff and Culyer [@wagstaff2012four]: 
 
- - development version module libraries for describing and validating youth mental health human record datasets [@hamilton_matthew_2022_6084467], scoring health utility [@hamilton_matthew_2022_6084824], specifying utility mapping models [@hamilton_matthew_2022_6116701] and implementing reproducible utility mapping studies [@gao_caroline_2022_6130155];
- 
+-	health and its value (our projects: utility mapping models);
+
+-	determinants of health and ill-health (our projects: models for creating synthetic household populations with key risk and protective factors for mental disorders);
+
+-	demand for health and health care (our projects: spatial epidemiology and help-seeking choice models); and
+
+-	supply of health services (our projects: a model of primary mental health care services).
+
+Once these projects are completed, our aim is to flexibly combine these models as modules of a multi-purpose model (also called “ready4”) to answer questions in two additional Wagstaff and Culyer domains:
+
+-	efficiency and equity (our goal: assess the distributional impacts and identify the optimal targeting of care provision); and
+
+-	economic evaluation (our goal: assess the cost-utility of competing policy options for improving the mental health of young people).
+
+## Case study: Utility mapping
+Our initial application of the ready4 software framework was to undertake a previously described study [@Hamilton2021.07.07.21260129] to develop utility mapping models for use in samples of young people presenting to primary mental health services. The ready4 software framework was used to develop CHEM modules, supply those modules with data and implement modelling analyses, creating the following artefacts:
+
+ - development version module libraries for describing and validating youth mental health human record datasets [@hamilton_matthew_2022_6084467], scoring health utility [@hamilton_matthew_2022_6084824], specifying utility mapping models [@hamilton_matthew_2022_6116701] and implementing reproducible utility mapping studies [@gao_caroline_2022_6130155]; 
+
  - a development version library of functions for finding and using utility mapping models developed with these tools [@matthew_p_hamilton_2021_5646669];
  
  - data collections of synthetic populations for testing model modules [@DVN/HJXYKQ_2021] and study input and results data [@DVN/DKDIB0_2021]; 
@@ -16,6 +34,15 @@ We applied the framework to develop an initial set of ready4 modules, supply tho
  - programs for replicating all steps from data ingest to manuscript reporting [@hamilton_matthew_2022_6129906], applying utility mapping models to new data [@hamilton_matthew_2022_6416330] and generating a synthetic representation of the study dataset [@hamilton_matthew_p_2022_6321821];
  
  - subroutines for creating a catalogue of utility mapping models [@hamilton_matthew_2022_6116385] and generating a draft scientific manuscript [@matthew_p_hamilton_2022_5976988] for studies implemented with these modules.
- 
-We created a checklist (Table \@ref(tab:checktb)) that we used to assess the extent to which study outputs met framework standards. We assessed these outputs as wholly or mostly meeting 18 out of 20 standards. The two standards where the study outputs currently fall short are in reporting code coverage and including a user-interface. Both these items are scheduled to be addressed when we release production versions of the code libraries.
 
+We created a checklist (Table \@ref(tab:checktb)) that we used to subjectively assess these study outputs against TRU criteria. For each criterion, we provided a global assessment of whether it was met using the responses “yes”, “no” or “partial”.  We believe the outputs from our utility mapping study may be assessable as having satisfactorily met four of the six criteria (T1, T2, R2 and U1) and to have partially met two criteria (R1 and U2). The main shortcomings that we identified when applying the assessment criteria were the need for additional development before the CHEM modules would be sufficiently generalizable for valid application in datasets that measure health utility with different instruments and a general lack of unit testing.
+
+##	Model documentation 
+We developed a versioned model documentation website (www.ready4-dev.com) that provides guidance to model developers on how to use and contribute improvements to the ready4 software framework and model. The documentation website was developed using the Hugo framework [@hugo_2023], Docsy theme [@docsy_2023] and Algolia DocSearch [@algoliadocsearch_2023] and is hosted using the Netlify [@netlify_2023] service.  We used functions from the ready4 R library to partially automate website updates relating to available CHEM modules, datasets and analysis programs. We linked our Netlify account to our GitHub organisation so that the project website would automatically update whenever the source code in its GitHub repository was edited.
+
+\blandscape
+
+```{r, child = child_docs_ls$three, echo=FALSE}
+```
+
+\elandscape

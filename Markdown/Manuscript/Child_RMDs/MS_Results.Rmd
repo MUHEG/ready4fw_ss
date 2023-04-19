@@ -12,19 +12,12 @@ output: html_document
 ```{r child="../Child_RMDs/MS_Figures.Rmd", echo=FALSE}
 ```
 <!-- Add child RMDs for results content -->
-# The ready4 framework
-<!-- Modular and open source models from other disciplines are enabled by standardisation and software.  -->
-To enable us to implement ready4, we have developed a framework that:
 
-- specifies a set of standards for MOSHEM development and use; and
-
-- provides a modelling toolkit (repositories and software) for authoring model modules, managing data and implementing reproducible analyses consistent with those standards.
-
-## Standards
+## Ethical requirements and assessment criteria
 ```{r child="../Child_RMDs/MS_Imp_Guidelines.Rmd", echo=FALSE}
 ```
 
-## Modelling toolkit
+## Software framework
 ```{r child="../Child_RMDs/MS_Imp_Toolkit.Rmd", echo=FALSE}
 ```
 
