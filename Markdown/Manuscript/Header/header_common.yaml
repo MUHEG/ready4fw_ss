@@ -1,8 +1,8 @@
-title: Framework for implementing a modular open source health economic model (MOSHEM) in youth mental health that is accountable, reusable and updatable
+title: A prototype software framework for transparent, reusable and updatable health economic models
 author:
   - Matthew P Hamilton:
-      email: matthew.hamilton@orygen.org.au
-      institute: [Orygen, Monash]
+      email: matthew.hamilton1@monash.edu
+      institute: [Monash, Orygen]
       correspondence: true
   - name: Caroline X Gao
     email: caroline.gao@orygen.org.au
@@ -38,8 +38,8 @@ author:
     email: cathy.mihalopoulos@deakin.edu.au
     institute: [Monash]
 institute:
-  - Orygen: Orygen, Parkville, Australia
   - Monash: School of Public Health and Preventive Medicine, Monash University, Clayton, Australia
+  - Orygen: Orygen, Parkville, Australia
   - CYMH: Centre for Youth Mental Health; The University of Melbourne, Parkville, Australia
   - HF: Heart Foundation, Melbourne, Australia
   - Headspace: headspace National Youth Mental Health Foundation, Melbourne, Australia

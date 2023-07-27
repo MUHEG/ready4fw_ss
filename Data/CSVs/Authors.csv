@@ -1,5 +1,5 @@
 first_nm_chr,middle_nm_chr,last_nm_chr,title_chr,qualifications_chr,institute_chr,sequence_int,is_corresponding_lgl,email_chr,is_equal_first_lgl
-Matthew,Phillip,Hamilton,Mr,"""BBS, MSC""","""Orygen, Monash""",1,TRUE,matthew.hamilton@orygen.org.au,FALSE
+Matthew,Philip,Hamilton,Mr,"""BBS, MSC""","""Monash, Orygen""",1,TRUE,matthew.hamilton1@monash.edu,FALSE
 Caroline,X,Gao,Dr,"""BEng, MBiostatistics, PhD""","""Orygen, CYMH, Monash""",2,FALSE,caroline.gao@orygen.org.au,FALSE
 Glen,,Wiesner,Dr,"""PhD""","""HF""",3,FALSE,glen.wiesner@heartfoundation.org.au,FALSE
 Kate,Maree,Filia,Dr,"""BAppSci, PGradDip, PhD""","""Orygen, CYMH""",5,FALSE,kate.filia@orygen.org.au,FALSE

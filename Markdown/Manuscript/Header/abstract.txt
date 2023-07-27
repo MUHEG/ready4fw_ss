@@ -1,14 +1,16 @@
 \\textbf{Summary: }
-Health economists make limited use of the modular and open source approaches that other disciplines use for collaborative development of complex models. 
-                                             We propose a framework for developing a modular open source health economic model (MOSHEM) in youth mental health called ready4.
-                                             The framework includes of set of 20 standards for implementing a MOSHEM that is accountable (seven standards), reusable (nine standards) and updatable (four standards). 
-                                             We provide a rationale for each standard.
-                                             The framework also includes a modelling toolkit of open access repositories and six R libraries for authoring MOSHEM modules, supplying those modules with data and implementing reproducible modelling analyses. 
-                                             We describe an early application of the framework to implementing a utility mapping study and detail how the MOSHEM components produced by that study meet 18 framework standards. 
-                                             We discuss how the framework will enable us to undertake and synthesise diverse economic modelling studies in youth mental health and highlight some broader implications for undertaking MOSHEMs to explore mental health and other topics.
+Computers are tools that are now essential to the work of health economists. 
+                                             However, the ethical dimensions of alternative approaches to the computational implementation of health economic models are poorly understood. 
+                                             There is a corresponding need for technical infrastructure that can better facilitate implementations of computational health economic models (CHEMs) that meet explicit ethical standards. 
+                                             We propose six criteria for assessing ethical implementation of CHEMs – two each for the three domains of transparency, reusability and updatability. 
+                                             To facilitate the implementation of CHEMs that meet these criteria, we developed a novel prototype software framework in the open source programming language R. 
+                                             The framework comprises six code libraries that collectively provide a toolkit for authoring CHEMs, supplying them with data and using them to undertake reproducible analyses.  
+                                             The framework supports integrations with existing digital services for collaborative software development and data archiving. We are currently applying the software framework to develop and apply utility mapping models in youth mental health. 
+                                             We assess the first set of utility mapping CHEMs that we have developed with the framework as wholly meeting both transparency criteria (open access code and data and clarity about author contributions and beliefs), one reusability criteria (liberal terms of use) and one updatability criteria (infrastructure for model maintenance) and partially meeting the remaining criteria for transparency (supports generalisability and transferability) and updatability (retesting and deprecation).  
+                                             The assessment criteria and the software framework we have developed can inform future work to understand and improve ethical computational implementations of health economic models.
 \\newline
 \\newline
 \\textbf{Code: }
-Visit https://www.ready4-dev.com for more information about how to find, install and apply ready4.
+Visit https://www.ready4-dev.com for more information about how to find, install and apply the prototype software framework.
 \\newline
 \\newline
