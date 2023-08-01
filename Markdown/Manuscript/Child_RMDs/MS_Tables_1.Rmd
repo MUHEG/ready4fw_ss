@@ -4,55 +4,11 @@ author: "Author"
 date: "`r Sys.Date()`"
 output: html_document
 ---
-```{r timelygls, tab.cap='Framework standards', tab.id = 'timelygls', echo = F, results = 'asis'}
+```{r proscons, tab.cap='Considerations when choosing between implementing computational models using commercial software or as softwre projects using a programming language', tab.id = 'proscons', echo = F, results = 'asis'}
 library(kableExtra)  
-df <- data.frame(`Objective` = rep("",20),
-  # `Models are` = c(rep("Transparent",6),
-  #                                 rep("Iterative",4),
-  #                                 rep("Modular",2),
-  #                                 rep("Epitomising",3),
-  #                                 rep("Licensed",3),
-  #                                 rep("Yielding",2)),
-  #                Goal = c(rep("people can easily see how a model has been implemented and tested",6),
-  #                         rep("a model is routinely updated to maintain and improve validity",4),
-  #                         rep("models and their components can be combined to extend their scope",2),
-  #                         rep("model code is sufficiently general to be be re-used in multiple decision contexts",3),
-  #                         rep("a model, its components and derivatives are persistently re-usable by other modeller",3),
-  #                         rep("a model can be simply, flexibly and reliably used as a decision aid",2)),
-                 Standard = c(paste0("A",#"T", 
-                                      1:7
-                                      ),
-                               paste0("R",1:9),# paste0("M",1:2),
-                               # paste0("E",1:3),
-                               # paste0("L",1:3),
-                               # paste0("Y",1:2),
-                               paste0("U",#"I",
-                                      1:4)
-                               ),
-                 Meaning = c(
-                   "Open online repositories are used to permanently archive, uniquely identify and transparently record authorship and development history of model code and data.",#T1
-                   # T2 MISSING - Merged With T1
-                   "Model code and data are documented.",#<T2, Was T3
-                   "Model code uses consistent and abstracted syntax.",# T3, Was T4 -->
-                   "Literate programming is used to implement model analyses.",#T4,Was T5
-                   "Model code coverage is reported.", #T5, New, replaces version now moved to T4 
-                   "All parts of a study analysis and reporting workflow can be reproduced and/or replicated.", #T6, was T7, Replaces Deleted T6 
-                   "Model code and data are distributed with tools to support appropriate citation.",#*L3: New, new location
-                   "Model code is made available for re-use under copyleft or permissive licenses.",#L1: **
-                   "Non-confidential model data is licensed for liberal re-use (potentially subject to ethical use terms).",#L2
-                   "Model code and data are stored and managed separately.",#*M1: Modified (lost ref to licensed and cited) 
-                   "Model code uses encapsulation and inheritence for data structures.",#*M2: Replacement - Old version now merged with E1 # And with E2: "Modules are inheriting data-structures.",#E2
-                   "Model code uses functions to implement algorithms.",#E1: Modified (lost ref to OOP and merged with M2) -->
-                   "Model code is distributed as code libraries.",
-                   "Test data is available to demonstrate the transferability of model code.",#E3: **
-                   # OLD CITATION
-                   "Statistical models are distributed with tools for making out of sample predictions.",#*Y1: New, Replaces Old Y1 (now Y2)
-                   "User-interfaces allow non-technical users to configure and use models.",#Y2: Was Y1     
-                   "Model code and data are version controlled.",#*I1, Was I2 
-                   "The signficiance and status of code and data updates are indicated with semantic versioning and release types.",#I2, Was I1 
-                   "Continuous integration is used to verify model code updates.",#I3 
-                   "Deprecation conventions are used to retire model code and data."#**I4 
-                 ),
+df <- data.frame(Objective = c("Fast", "Cheap", "Good"),
+                 `Commercial modelling software` = c("A","B","C"),
+                 `Programming language` = c("ONE","TWO","THREE"),
                  check.names = F)
 if(params$X@outp_formats_chr[1] == "Word") {
   library("flextable")
@@ -73,12 +29,12 @@ if(params$X@outp_formats_chr[1] == "Word") {
       kableExtra::kable_paper(full_width = F) %>%
       kableExtra::column_spec(1, bold=T) %>%
       # kableExtra::collapse_rows(columns = 1) %>%
-      kableExtra::column_spec(3, width = "35em") %>%
-      kableExtra::pack_rows("Accountable - it is easy to see who developed, tested and applied a model and how they did it.",1,7) %>%
-      kableExtra::pack_rows("Updatable - a model and its components are maintained and continuously improved.",17,20) %>%
+      kableExtra::column_spec(3, width = "35em") # %>%
+      # kableExtra::pack_rows("Accountable - it is easy to see who developed, tested and applied a model and how they did it.",1,7) %>%
+      # kableExtra::pack_rows("Updatable - a model and its components are maintained and continuously improved.",17,20) %>%
       # kableExtra::pack_rows("Modular - models and their components can be combined to extend their scope",11,12) %>%
       # kableExtra::pack_rows("Epitomising - model code can be re-used in other decision contexts",13,15) %>%
-      kableExtra::pack_rows("Reusable - a model and its components can be used in other models and by other modellers.",8,16) #%>%
+      # kableExtra::pack_rows("Reusable - a model and its components can be used in other models and by other modellers.",8,16) #%>%
       # kableExtra::pack_rows("Yielding - a model can be simply, flexibly and reliably used as a decision aid",19,20)
 
     }

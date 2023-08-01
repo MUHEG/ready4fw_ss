@@ -13,7 +13,7 @@ output: html_document
 ```
 <!-- Add child RMDs for results content -->
 
-## Ethical requirements and assessment criteria
+## Assessing ethical computational implementations
 ```{r child="../Child_RMDs/MS_Imp_Guidelines.Rmd", echo=FALSE}
 ```
 

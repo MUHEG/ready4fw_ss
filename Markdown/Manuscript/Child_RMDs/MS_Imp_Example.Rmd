@@ -42,7 +42,7 @@ We developed a versioned model documentation website (www.ready4-dev.com) that p
 
 \blandscape
 
-```{r, child = child_docs_ls$three, echo=FALSE}
+```{r, child = child_docs_ls$four, echo=FALSE}
 ```
 
 \elandscape

@@ -6,6 +6,6 @@ output: html_document
 ---
 
 In this paper, we describe:
-(i)	a set of ethical responsibilities for CHEM developers and criteria for assessing responsible CHEM implementations;
-(ii)	a prototype software framework for the ethical implementation of CHEMs; and
+(i)	criteria for assessing ethical CHEM implementations;
+(ii) a prototype software framework for the ethical implementation of CHEMs; and
 (iii)	use of the software framework to develop a computational economic model in youth mental health, with an initial focus on outcome valuation. 

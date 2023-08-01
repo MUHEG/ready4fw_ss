@@ -21,12 +21,12 @@ Three R libraries are designed to help standardize workflows for authoring, docu
 
 -	quality assured (each update triggers continuous integration workflows, including any acceptance and unit tests created by module library authors).
 
-The ready4pack library depends on two other module authoring libraries. Writing model algorithms as collections of functions (short, self-contained and reusable software routines that each perform a discrete task), has been recommended as good practice for scientific computing [@Wilson_2017].  The ready4fun library contains tools for authoring functions in a consistent house style that automatically generates basic documentation for each function. Functions to implement model algorithms can be associated with a module via a special type of function called a method. Tools from the ready4class library can help streamline and standardise the authoring of module data structures and their associated methods and to automatically generate basic documentation for each module.
+The ready4pack library depends on two other module authoring libraries. <!-- MOVED CONTENT -->The ready4fun library contains tools for authoring functions in a consistent house style that automatically generates basic documentation for each function. Functions to implement model algorithms can be associated with a module via a special type of function called a method. Tools from the ready4class library can help streamline and standardise the authoring of module data structures and their associated methods and to automatically generate basic documentation for each module.
 
 The ready4use library contains tools for supplying model modules with data stored in online repositories (hosted on a Dataverse installation or on GitHub), labelling these datasets and then sharing them via online repositories. The ready4show library contains tools to help author R Markdown programs that combine model modules and datasets to undertake analyses. These programs are either self-documenting (code is easy to understand and integrated with plain English explanations of what it does) or trigger the creation of separate documents (e.g. a scientific manuscript).
 
 
-```{r, child = child_docs_ls$two, echo=FALSE}
+```{r, child = child_docs_ls$three, echo=FALSE}
 ```
 
 
