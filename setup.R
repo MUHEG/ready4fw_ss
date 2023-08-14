@@ -54,6 +54,8 @@ X <- renewSlot(X,
                  args_ls
                  }
                )
+X@tables_in_body_lgl <- F
+#X@rmd_fl_nms_ls$PDF <- "TEST"#"Parent_PDF"
 # authorData(X) # Update ready4show so that default is to not overwrite Child_RMDs / only overwrite header and abstract
 # Pause for interactivity
 # Make manual edits of Markdown files
@@ -62,6 +64,6 @@ authorReport(X, consent_1L_chr = "Y")
 ##
 Y <- X
 Y@outp_formats_chr <- "Word"
-Y@tables_in_body_lgl <- F
+# Y@tables_in_body_lgl <- F
 authorReport(Y)
 # Pause for interactivity

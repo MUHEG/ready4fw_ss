@@ -5,6 +5,14 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
+```{r child="../Child_RMDs/XX_Funs.Rmd", echo=FALSE}
+```
+```{r child="../Child_RMDs/MS_Tables.Rmd", echo=FALSE}
+```
+```{r child="../Child_RMDs/MS_Figures.Rmd", echo=FALSE}
+```
+<!-- Add child RMDs for results content -->
+
 # Introduction
 
 ```{r child="../Child_RMDs/MS_Intro_Short.Rmd", echo=FALSE}

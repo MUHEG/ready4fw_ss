@@ -1,0 +1,103 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.25)  15 AUG 2023 03:34
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Test.tex
+(./Test.tex
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-06-30>
+(./sn-jnl.cls
+Document Class: sn-jnl 2019/11/18 v0.1: An authoring template for Springer Journal articles
+(c:/Users/mham0053/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(c:/Users/mham0053/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fleqn.clo
+File: fleqn.clo 2016/12/29 v1.2b Standard LaTeX option (flush left equations)
+\mathindent=\skip48
+Applying: [2015/01/01] Make \[ robust on input line 50.
+LaTeX Info: Redefining \[ on input line 51.
+Already applied: [0000/00/00] Make \[ robust on input line 62.
+Applying: [2015/01/01] Make \] robust on input line 74.
+LaTeX Info: Redefining \] on input line 75.
+Already applied: [0000/00/00] Make \] robust on input line 83.
+) (c:/Users/mham0053/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen140
+)
+LaTeX Info: Redefining \rm on input line 144.
+LaTeX Info: Redefining \sf on input line 145.
+LaTeX Info: Redefining \tt on input line 146.
+LaTeX Info: Redefining \bf on input line 147.
+LaTeX Info: Redefining \it on input line 148.
+LaTeX Info: Redefining \sl on input line 149.
+LaTeX Info: Redefining \sc on input line 150.
+LaTeX Info: Redefining \cal on input line 151.
+LaTeX Info: Redefining \mit on input line 152.
+LaTeX Info: Redefining \textsubscript on input line 210.
+\columnhsize=\skip51
+(c:/Users/mham0053/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(c:/Users/mham0053/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (c:/Users/mham0053/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+(c:/Users/mham0053/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks18
+)
+\artcatbox=\box51
+\aucount=\count196
+\corraucount=\count197
+\punctcount=\count198
+\emailcnt=\count199
+\c@affn=\count266
+\addcount=\count267
+\PacsCount=\count268
+\PacsTmpCnt=\count269
+\FMremarkdim=\dimen149
+\fmremarkbox=\box52
+
+! LaTeX Error: File `cuted.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.775 \@ifpackageloaded
+                       {cuted}{\gdef\@setmarks{}}{}%^^M 
+Here is how much of TeX's memory you used:
+ 1088 strings out of 477196
+ 15594 string characters out of 5811767
+ 1916238 words of memory out of 5000000
+ 22138 multiletter control sequences out of 15000+600000
+ 558069 words of font info for 36 fonts, out of 8000000 for 9000
+ 24 hyphenation exceptions out of 8191
+ 72i,0n,79p,180b,45s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+!  ==> Fatal error occurred, no output PDF file produced!

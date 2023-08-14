@@ -2,28 +2,64 @@
 bibliography: ../Data/references.bib
 output: 
   bookdown::pdf_book: 
-    base_format: rticles::arxiv_article
+    base_format: rticles::springer_article # rticles::arxiv_article
     includes:
       in_header: preamble.tex
     pandoc_args: 
       - "--metadata-file=../Header/header_common.yaml"
       - '--lua-filter=../Filters/scholarly-metadata.lua'
       - '--lua-filter=../Filters/author-info-blocks.lua'
-  bookdown::pdf_document2: 
-    includes:
-      in_header: preamble.tex
-    pandoc_args: 
-      - "--metadata-file=../Header/header_common.yaml"
-      - '--lua-filter=../Filters/scholarly-metadata.lua'
-      - '--lua-filter=../Filters/author-info-blocks.lua'
-    toc: no
-## CUSTOM_AUTHORS_PLACEHOLDER ##
+  # bookdown::pdf_document2: 
+  #   includes:
+  #     in_header: preamble.tex
+  #   pandoc_args: 
+  #     - "--metadata-file=../Header/header_common.yaml"
+  #     - '--lua-filter=../Filters/scholarly-metadata.lua'
+  #     - '--lua-filter=../Filters/author-info-blocks.lua'
+  #   toc: no
+  #   keep_tex: true
+
 params:
   X: NULL
 abstract: "TO BE REPLACED"
 # abstract: "`r paste0(readLines('../Header/abstract.txt'),collapse=' ')`"
 graphics: yes
-csl: plos.csl
+#csl: plos.csl
+title: REPLACE ME
+titlerunning: TEMPORARY
+authorrunning: Hamilton, Gao, Wiesner et al.
+thanks: | 
+    The study was funded by ADD DETAILS HERE. 
+keywords: one, two, three, four, five, six
+#PACS: 
+#- PAC1
+#- superPAC
+    
+# MSC:
+# - MSC code 1
+# - MSC code 2
+classoptions: 
+  - sn-basic      
+  # - Numbered      # Optional: Use numbered references instead of namedate references (only for sn-nature, sn-basic, sn-vancouver, sn-chicago, sn-mathphys or sn-nature)
+  # - referee       # Optional: Use double line spacing 
+  # - lineno        # Optional: Add line numbers
+  # - iicol         # Optional: Double column layour
+#biblio-style: spbasic
+# bibstyle options spbasic(default), spphys, spmpsci
+# header-includes:
+# - \usepackage{booktabs}
+# - \usepackage{longtable}
+# - \usepackage{array}
+# - \usepackage{multirow}
+# - \usepackage{wrapfig}
+# - \usepackage{float}
+# - \usepackage{colortbl}
+# - \usepackage{pdflscape}
+# - \usepackage{tabu}
+# - \usepackage{threeparttable}
+# - \usepackage[normalem]{ulem}
+# - \usepackage{threeparttablex}
+# - \usepackage{makecell}
 ---
 
 ```{r echo = F}

@@ -1,0 +1,165 @@
+%Version 2.1 April 2023
+% See section 11 of the User Manual for version history
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[sn-basic,pdflatex]{sn-jnl}
+
+%%%% Standard Packages
+%%<additional latex packages if required can be included here>
+
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+%%%%
+
+%%%%%=============================================================================%%%%
+%%%%  Remarks: This template is provided to aid authors with the preparation
+%%%%  of original research articles intended for submission to journals published
+%%%%  by Springer Nature. The guidance has been prepared in partnership with
+%%%%  production teams to conform to Springer Nature technical requirements.
+%%%%  Editorial and presentation requirements differ among journal portfolios and
+%%%%  research disciplines. You may find sections in this template are irrelevant
+%%%%  to your work and are empowered to omit any such section if allowed by the
+%%%%  journal you intend to submit to. The submission guidelines and policies
+%%%%  of the journal take precedence. A detailed User Manual is available in the
+%%%%  template package for technical guidance.
+%%%%%=============================================================================%%%%
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage[normalem]{ulem}
+\usepackage{threeparttablex}
+\usepackage{makecell}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+
+
+\raggedbottom
+
+
+
+
+% tightlist command for lists without linebreak
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+
+
+\begin{document}
+
+
+\title[Article Title runing]{Article Title}
+
+%%=============================================================%%
+%% Prefix	-> \pfx{Dr}
+%% GivenName	-> \fnm{Joergen W.}
+%% Particle	-> \spfx{van der} -> surname prefix
+%% FamilyName	-> \sur{Ploeg}
+%% Suffix	-> \sfx{IV}
+%% NatureName	-> \tanm{Poet Laureate} -> Title after name
+%% Degrees	-> \dgr{MSc, PhD}
+%% \author*[1,2]{\pfx{Dr} \fnm{Joergen W.} \spfx{van der} \sur{Ploeg} \sfx{IV} \tanm{Poet Laureate}
+%%                 \dgr{MSc, PhD}}\email{iauthor@gmail.com}
+%%=============================================================%%
+
+\author*[1,2]{\pfx{Dr.} \fnm{Leading} \spfx{van} \sur{Author} \sfx{III} \tanm{Poet
+Laureate} \dgr{MSc,
+PhD}}\email{\href{mailto:abc@def}{\nolinkurl{abc@def}}}
+
+\author[2]{\fnm{Second} \sur{Author} }
+
+
+
+  \affil*[1]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\city{City}, \country{Country}, \postcode{100190}, \state{State}, \street{Street}}}
+  \affil*[2]{\orgname{Other Organisation}}
+
+\abstract{\textbf{Purpose}: The abstract serves both as a general
+introduction to the topic and as a brief, non-technical summary of the
+main results and their implications. The abstract must not include
+subheadings (unless expressly permitted in the journal's Instructions to
+Authors), equations or citations. As a guide the abstract should not
+exceed 200 words. Most journals do not set a hard limit however authors
+are advised to check the author instructions for the journal they are
+submitting to.
+
+\textbf{Methods:} The abstract serves both as a general introduction to
+the topic and as a brief, non-technical summary of the main results and
+their implications. The abstract must not include subheadings (unless
+expressly permitted in the journal's Instructions to Authors), equations
+or citations. As a guide the abstract should not exceed 200 words. Most
+journals do not set a hard limit however authors are advised to check
+the author instructions for the journal they are submitting to.
+
+\textbf{Results:} The abstract serves both as a general introduction to
+the topic and as a brief, non-technical summary of the main results and
+their implications. The abstract must not include subheadings (unless
+expressly permitted in the journal's Instructions to Authors), equations
+or citations. As a guide the abstract should not exceed 200 words. Most
+journals do not set a hard limit however authors are advised to check
+the author instructions for the journal they are submitting to.
+
+\textbf{Conclusion:} The abstract serves both as a general introduction
+to the topic and as a brief, non-technical summary of the main results
+and their implications. The abstract must not include subheadings
+(unless expressly permitted in the journal's Instructions to Authors),
+equations or citations. As a guide the abstract should not exceed 200
+words. Most journals do not set a hard limit however authors are advised
+to check the author instructions for the journal they are submitting
+to.\}}
+
+\keywords{key, dictionary, word}
+
+
+\pacs[JEL Classification]{D8, H51}
+\pacs[MSC Classification]{35A01, 65L10}
+
+\maketitle
+
+TEST
+
+\bibliography{../Data/references.bib}
+
+
+\end{document}

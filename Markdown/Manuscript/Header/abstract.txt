@@ -1,7 +1,7 @@
 \\textbf{Summary: }
 Computers are tools that are now essential to the work of health economists. 
                                              However, the ethical dimensions of how health economic models are implemented computationally are poorly understood. 
-                                             Explicit ethical standards for computational health economic models (CHEMs) amd the technical infrastructure to facilitate implementations of that meet those standards are required. 
+                                             Explicit ethical standards for computational health economic models (CHEMs) and the technical infrastructure to facilitate implementations of that meet those standards are required. 
                                              We propose six criteria for assessing ethical implementation of CHEMs – two each for the three domains of transparency, reusability and updatability. 
                                              To facilitate the implementation of CHEMs that meet these criteria, we developed a novel prototype software framework in the open source programming language R. 
                                              The framework comprises six code libraries that collectively provide a toolkit for authoring CHEMs, supplying them with data and using them to undertake generalisable and transferable analyses.  
