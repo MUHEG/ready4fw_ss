@@ -65,5 +65,5 @@ authorReport(X, consent_1L_chr = "Y")
 Y <- X
 Y@outp_formats_chr <- "Word"
 # Y@tables_in_body_lgl <- F
-authorReport(Y)
+authorReport(Y, consent_1L_chr = "Y")
 # Pause for interactivity
