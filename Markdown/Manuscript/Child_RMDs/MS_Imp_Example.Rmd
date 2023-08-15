@@ -37,8 +37,7 @@ Our initial application of the ready4 software framework was to undertake a prev
 
 We created a checklist (Table \@ref(tab:checktb)) that we used to subjectively assess these study outputs against TRU criteria. For each criterion, we provided a global assessment of whether it was met using the responses “yes”, “no” or “partial”.  We believe the outputs from our utility mapping study may be assessable as having satisfactorily met four of the six criteria (T1, T2, R2 and U1) and to have partially met two criteria (R1 and U2). The main shortcomings that we identified when applying the assessment criteria were the need for additional development before the CHEM modules would be sufficiently generalizable for valid application in datasets that measure health utility with different instruments and a general lack of unit testing.
 
-##	Model documentation 
-We developed a versioned model documentation website (www.ready4-dev.com) that provides guidance to model developers on how to use and contribute improvements to the ready4 software framework and model. The documentation website was developed using the Hugo framework [@hugo_2023], Docsy theme [@docsy_2023] and Algolia DocSearch [@algoliadocsearch_2023] and is hosted using the Netlify [@netlify_2023] service.  We used functions from the ready4 R library to partially automate website updates relating to available CHEM modules, datasets and analysis programs. We linked our Netlify account to our GitHub organisation so that the project website would automatically update whenever the source code in its GitHub repository was edited.
+
 
 \blandscape
 
