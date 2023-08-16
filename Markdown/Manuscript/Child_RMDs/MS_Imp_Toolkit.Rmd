@@ -27,19 +27,19 @@ Three framework libraries are designed to help standardize workflows for **autho
 
 <!-- to provide tools for authoring CHEMs, supplying those CHEMs with data and using CHEMs to implement reproducible modelling analyses. -->
 
-<!-- The ready4pack library depends on two other module authoring libraries. <!-- MOVED CONTENT --> -->
+<!-- The ready4pack library depends on two other module authoring libraries. <!-- MOVED CONTENT -->
 
 <!-- Each CHEM module authored with the ready4 framework will include both a data structure (specifying the required properties of data that can validly be supplied to a module) and a set of algorithms (specifying the operations that can be performed on data contained in a module instance). -->
 
 <!-- development version -->
 
-A library for **authoring datasets** contains tools for supplying model modules with data stored in online repositories (hosted on a Dataverse installation or on GitHub), labelling these datasets and then sharing them via online repositories. A library for **authoring analyses** contains tools to help author R Markdown programs that combine model modules and datasets to undertake analyses. These analysis programs authored with this library can be either self-documenting (code is easy to understand and integrated with plain English explanations of what it does) or trigger the creation of separate documents (e.g. a scientific manuscript).
+A library for **authoring datasets** contains tools for supplying model modules with data stored in online repositories (hosted on a Dataverse installation or on GitHub), labelling these datasets and then sharing them via online repositories. A library for **authoring analyses** contains tools to help author programs that combine model modules and datasets to undertake analyses. These analysis programs authored with this library can be either self-documenting (code is easy to understand and integrated with plain English explanations of what it does) or trigger the creation of separate documents (e.g. a scientific manuscript).
 
 ```{r, child = child_docs_ls$three, echo=FALSE}
 ```
 
 ###	Online services 
-Our software framework needs to be used in conjunction with a number of online services. 
+Our framework libraries are designed to be used in conjunction with a number of online services. 
 <!-- To facilitate its application to our youth mental health project, we established and configured accounts with these required services (see Availability of data and materials). -->
 
 We created a GitHub organisation (a collection of code repositories) where all code (libraries, programs and sub-routines) that we author with the framework is stored and version controlled. We configured individual repositories in our GitHub organisation that are used for code library projects to use GitHub actions to implement continuous integration. By default, code libraries authored with our framework will use continuous integration to assess compliance with policies specified by the Comprehensive R Archive Network (CRAN) [@CRAN2022]. To track our code coverage, we linked our GitHub organisation to an account we established at codecov [@codecov_2022]. To facilitate the creation and hosting of documentation websites, we enabled GitHub Pages in each repository we used for code library development. 
