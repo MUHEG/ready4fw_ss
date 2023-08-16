@@ -5,11 +5,11 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-## Assessing ethical CHEM implementations
+# Assessing ethical CHEM implementations
 ```{r child="../Child_RMDs/MS_Imp_Guidelines.Rmd", echo=FALSE}
 ```
 
-## Software framework
+# Software framework
 ```{r child="../Child_RMDs/MS_Imp_Toolkit.Rmd", echo=FALSE}
 ```
 
