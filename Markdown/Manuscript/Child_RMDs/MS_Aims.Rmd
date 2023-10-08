@@ -7,8 +7,8 @@ output: html_document
 
 In this paper, we describe:
 
-(i)	criteria for assessing ethical CHEM implementations;
+(i)	proposed criteria for assessing ethical CHEM implementations;
 
 (ii) a prototype software framework for the ethical implementation of CHEMs; and
 
-(iii)	use of the software framework to develop an open-source CHEM in youth mental health, with an initial focus on outcome valuation. 
+(iii)	how the software framework is being used to develop an open-source CHEM in youth mental health, with an initial focus on valuing health outcomes. 

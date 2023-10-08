@@ -4,7 +4,7 @@ author: "Author"
 date: "`r Sys.Date()`"
 output: html_document
 ---
-```{r proscons, tab.cap='Considerations when choosing between implementing computational models using commercial software or as softwre projects using a programming language', tab.id = 'proscons', echo = F, results = 'asis'}
+```{r proscons, tab.cap='Considerations when choosing between implementing computational models using commercial modelling software or as software projects using an open-source programming language', tab.id = 'proscons', echo = F, results = 'asis'}
 library(kableExtra)  
 df <- data.frame(Objective = c("Fast", "Cheap", "Good"),
                  `Commercial modelling software` = c("A","B","C"),

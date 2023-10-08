@@ -4,7 +4,7 @@ author: "Author"
 date: "`r Sys.Date()`"
 output: html_document
 ---
-```{r timelygls, tab.cap='Framework standards', tab.id = 'timelygls', echo = F, results = 'asis'}
+```{r timelygls, tab.cap='How transparent, reusable and updatable (TRU) computational health economic models (CHEMs) suggest ethical modelling practice', tab.id = 'timelygls', echo = F, results = 'asis'}
 library(kableExtra)  
 df <- data.frame(`Objective` = rep("",20),
   # `Models are` = c(rep("Transparent",6),

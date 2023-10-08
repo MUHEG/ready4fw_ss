@@ -37,15 +37,19 @@ X <- renewSlot(X,
                "abstract_args_ls",
                {
                  args_ls <- X@abstract_args_ls
-                 args_ls$abstract_ls <- list(Summary = "Computers are tools that are now essential to the work of health economists. 
-                                             However, the ethical dimensions of how health economic models are implemented computationally are poorly understood. 
-                                             Explicit ethical standards for computational health economic models (CHEMs) and the technical infrastructure to facilitate implementations of that meet those standards are required. 
-                                             We propose six criteria for assessing ethical implementation of CHEMs – two each for the three domains of transparency, reusability and updatability. 
-                                             To facilitate the implementation of CHEMs that meet these criteria, we developed a novel prototype software framework in the open source programming language R. 
-                                             The framework comprises six code libraries that collectively provide a toolkit for authoring CHEMs, supplying them with data and using them to undertake generalisable and transferable analyses.  
-                                             The framework supports integrations with existing digital services for collaborative software development and data archiving. We are currently applying the software framework to develop and apply utility mapping models in youth mental health. 
-                                             We assess the first set of utility mapping CHEMs that we have developed with the framework as wholly meeting both transparency criteria (open access code and data and clarity about author contributions and beliefs), one reusability criteria (liberal terms of use) and one updatability criteria (infrastructure for model maintenance) and partially meeting the two remaining criteria for transparency (supports generalisability and transferability) and updatability (retesting and deprecation).  
-                                             The assessment criteria and the software framework we have developed can inform future work to understand and improve ethical computational implementations of health economic models.",
+                 args_ls$abstract_ls <- list(Summary = "Computers are essential tools for health economists. 
+                                                        However, the ethical dimensions of how health economic models are implemented computationally are poorly understood and inadequately fulfilled. 
+                                                        We propose six criteria for assessing ethical implementation of computational health economic models (CHEMs) – two each for the three domains of transparency, reusability and updatability. 
+                                                        Citeria for assessing CHEM transparency include open access sharing of code and data and clarity about the contributions, assumptions and judgments of model developers. 
+                                                        CHEM reusability can be assessed against the criteria of development practices that promote generalisability and transferability and release under liberal terms of use.
+                                                        The updatability of CHEMS can be assessed against the criteria of use of technical infrastructure to support model maintenance and quality assuring new releases through retesting and deprecation conventions.
+                                                        To facilitate the implementation of CHEMs that meet these criteria, we developed a novel prototype software framework called ready4. 
+                                                        Software frameworks are technologies that facilitate collaborative and efficient code development.
+                                                        The ready4 framework, comprised of six code libraries in the programming language R, provides a toolkit for authoring modular and open-source CHEMs, supplying CHEMs with data and using CHEMs to undertake reproducible analyses. 
+                                                        The ready4 framework supports integrations with existing digital services for collaborative software development and data archiving. 
+                                                        We are currently applying the ready4 framework to develop and apply CHEMs in youth mental health. 
+                                                        We determined that the first set of CHEMs developed with the ready4 framework wholly met both transparency criteria and both reusability criteria. We further determined that these CHEMs wholly met the updatability criterion relating to model maintenance infrastructure  and partially met the criterion concerning retesting and deprecation. 
+                                                        The assessment criteria and the software framework we have developed can inform future work to understand and improve ethical CHEM implementations.",
                                              # Objectives = "We aimed to develop a conceptual and technical framework for implementing open source mental health systems models and illustrate how it can be applicatied to economic topics in youth mental health.",
                                              # Methods = "We created a software development kit in R to support standardised implementation of mental health systems models. As a worked example, we applied the toolkit to develop open source youth mental health utility mapping models, which we assessed against five principles using 17 standards.",
                                              # Results = "Six R packages and a coding style dataset provide a toolkit for implementing mental health models that are TIMELY - Transparent, Iterative, Modular, Epitomising, Licensed and Yielding. The utility mapping models we developed with this toolkit fully met X and partially met Y TIMELY standards.", 
@@ -55,6 +59,7 @@ X <- renewSlot(X,
                  }
                )
 X@tables_in_body_lgl <- F
+X@figures_in_body_lgl <- F
 #X@rmd_fl_nms_ls$PDF <- "TEST"#"Parent_PDF"
 # authorData(X) # Update ready4show so that default is to not overwrite Child_RMDs / only overwrite header and abstract
 # Pause for interactivity

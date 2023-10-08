@@ -5,3 +5,7 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
+```{r fig1, fig.cap=paste0("High level summary of planned implementation of youth mental health economic model"),echo=F, out.width = "400px"}
+knitr::include_graphics("../Data/images/Figure1.png"#results_ls$paths_to_figs_ls$combined_utl
+                        )
+```
