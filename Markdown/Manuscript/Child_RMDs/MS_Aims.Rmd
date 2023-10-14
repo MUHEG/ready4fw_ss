@@ -5,10 +5,10 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-In this paper, we describe:
+In this paper, we:
 
-(i)	proposed criteria for assessing ethical CHEM implementations;
+(i)	propose core ethical responsibilities for CHEM developers and criteria for assessing ethical CHEM implementations;
 
-(ii) a prototype software framework for the ethical implementation of CHEMs; and
+(ii) describe a prototype software framework we have developed to support the ethical implementation of CHEMs; and
 
-(iii)	how the software framework is being used to develop an open-source CHEM in youth mental health, with an initial focus on valuing health outcomes. 
+(iii)	assess an initial set of youth mental health CHEMs developed with our software framework against our proposed ethical CHEM implementation criteria. 

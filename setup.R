@@ -13,7 +13,7 @@ X <- Ready4showSynopsis(#background_1L_chr = "Our study is entirely fictional.",
                         keywords_chr = c("open source models","health economics","mental disorders"),
                         outp_formats_chr = "PDF",
                         #sample_desc_1L_chr = "The study sample is fake data that pretends to be young people aged 12 to 25 years who attended Australian primary care services for mental health related needs between November 2019 to August 2020.",
-                        title_1L_chr = "A prototype software framework for transparent, reusable and updatable health economic models")
+                        title_1L_chr = "A prototype software framework for transparent, reusable and updatable computational health economic models")
 X <- renewSlot(X,
                "authors_r3", 
                {
@@ -37,16 +37,16 @@ X <- renewSlot(X,
                "abstract_args_ls",
                {
                  args_ls <- X@abstract_args_ls
-                 args_ls$abstract_ls <- list(Summary = "The ethical dimensions of implementing health economic models as software are poorly understood. 
-                                                        We propose that the core responsibilities of computational health economic model (CHEM) developers over a project lifecycle are to (i) make socially acceptable design decisions; (ii) ensure fit for purpose development; and (iii) support socially beneficial use. 
-                                                        We further propose that a transparent, reusable and updatable CHEM is suggestive of a modelling team that has largely fulfilled these responsibilities.
-                                                        We propose six criteria for assessing the transparency (T), reusability (R) and updatability (U) of CHEMs: (T1) Software files are published in open access repositories; (T2) It is easy to identify the underpinning judgments and individual contributions of CHEM developers; 
-                                                        (R1) Programming practices that promote generalisability and transferability have been used; (R2) Open source licenses have been used; (U1) Maintenance infrastructure is in place; and 
-                                                        (U2) New CHEM versions are systematically retested and appropriately deprecated.
+                 args_ls$abstract_ls <- list(Summary = "Most health economic analyses are undertaken with the aid of computers. However, the ethical dimensions of implementing health economic models as software are poorly understood. 
+                                                        We propose that the core responsibilities of health economic model software developers over a project lifecycle are to (i) make socially acceptable design decisions; (ii) ensure fit for purpose implementation; and (iii) support socially beneficial use. 
+                                                        We further propose that a transparent (T), reusable (R) and updatable (U) computational health economic model (CHEM) is suggestive of a developer team that has largely fulfilled these responsibilities.
+                                                        We propose six TRU criteria for assessing CHEMs: (T1) software files are open access; (T2) developer judgments and contributions are easily identified; 
+                                                        (R1) programming practices promote generalisability and transferability; (R2) terms of use restrict only unethical applications; (U1) maintenance infrastructure is in place; and 
+                                                        (U2) new releases are systematically retested and appropriately deprecated.
                                                         To facilitate CHEMs that meet TRU criteria, we have developed a prototype software framework in the programming language R.
                                                         The framework comprises six code libraries for authoring CHEMs, supplying CHEMs with data and using CHEMs to undertake analyses. 
-                                                        The framework supports integrations with existing digital services for collaborative software development and research data archiving. 
-                                                        We are applying the framework to model youth mental health systems and determine that our initial CHEMs wholly meet criteria T1-2, R1-2 and U1 and partially meet criterion U2.
+                                                        The framework integrates with existing services for software development and research data archiving. 
+                                                        We determine that an initial set of youth mental health CHEMs we developed with the framework wholly meet criteria T1-2, R1-2 and U1 and partially meet criterion U2.
                                                         Our assessment criteria and software framework can help inform and improve ethical implementation of future health economic software projects.",
                                              # Objectives = "We aimed to develop a conceptual and technical framework for implementing open source mental health systems models and illustrate how it can be applicatied to economic topics in youth mental health.",
                                              # Methods = "We created a software development kit in R to support standardised implementation of mental health systems models. As a worked example, we applied the toolkit to develop open source youth mental health utility mapping models, which we assessed against five principles using 17 standards.",
