@@ -1,7 +1,7 @@
 \\textbf{Summary: }
 Most health economic analyses are undertaken with the aid of computers. However, the ethical dimensions of implementing health economic models as software are poorly understood. 
-                                                        We propose that the core responsibilities of health economic model software developers over a project lifecycle are to (i) make socially acceptable design decisions; (ii) ensure fit for purpose implementation; and (iii) support socially beneficial use. 
-                                                        We further propose that a transparent (T), reusable (R) and updatable (U) computational health economic model (CHEM) is suggestive of a developer team that has largely fulfilled these responsibilities.
+                                                        We propose that the core ethical responsibilities of model developers and funders over a health economic software development lifecycle are to (i) make socially acceptable system requirements and design decisions; (ii) ensure fit for purpose implementation; and (iii) support socially beneficial use. 
+                                                        We further propose that a transparent (T), reusable (R) and updatable (U) computational health economic model (CHEM) is suggestive of a project team that has largely fulfilled these responsibilities.
                                                         We propose six TRU criteria for assessing CHEMs: (T1) software files are open access; (T2) developer judgments and contributions are easily identified; 
                                                         (R1) programming practices promote generalisability and transferability; (R2) terms of use restrict only unethical applications; (U1) maintenance infrastructure is in place; and 
                                                         (U2) new releases are systematically retested and appropriately deprecated.

@@ -7,7 +7,7 @@ output: html_document
 
 In this paper, we:
 
-(i)	propose core ethical responsibilities for CHEM developers and criteria for assessing ethical CHEM implementations;
+(i)	propose core ethical responsibilities for CHEM developers and funders and criteria for assessing ethical CHEM implementations;
 
 (ii) describe a prototype software framework we have developed to support the ethical implementation of CHEMs; and
 
