@@ -5,6 +5,7 @@ output:
     base_format: rticles::springer_article # rticles::arxiv_article
     includes:
       in_header: preamble.tex
+    keep_tex: true
     pandoc_args: 
       - "--metadata-file=../Header/header_common.yaml"
       - '--lua-filter=../Filters/scholarly-metadata.lua'

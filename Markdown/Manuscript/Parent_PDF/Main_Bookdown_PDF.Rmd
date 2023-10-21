@@ -9,6 +9,7 @@ output:
       - '--lua-filter=../Filters/scholarly-metadata.lua'
       - '--lua-filter=../Filters/author-info-blocks.lua'
     toc: no
+    kep_tex: yes
 params:
   X: NULL
 abstract: "`r paste0(readLines('../Header/abstract.txt'),collapse=' ')`"

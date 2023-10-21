@@ -4,55 +4,14 @@ author: "Author"
 date: "`r Sys.Date()`"
 output: html_document
 ---
-```{r timelygls, tab.cap='How transparent, reusable and updatable (TRU) computational health economic models (CHEMs) suggest ethical modelling practice', tab.id = 'timelygls', echo = F, results = 'asis'}
+```{r timelygls, tab.cap='Transparent, reusable and updatable (TRU) computational health economic models (CHEMs) are suggestive of ethical modelling practice', tab.id = 'timelygls', echo = F, results = 'asis', warning=FALSE}
 library(kableExtra)  
-df <- data.frame(`Objective` = rep("",20),
-  # `Models are` = c(rep("Transparent",6),
-  #                                 rep("Iterative",4),
-  #                                 rep("Modular",2),
-  #                                 rep("Epitomising",3),
-  #                                 rep("Licensed",3),
-  #                                 rep("Yielding",2)),
-  #                Goal = c(rep("people can easily see how a model has been implemented and tested",6),
-  #                         rep("a model is routinely updated to maintain and improve validity",4),
-  #                         rep("models and their components can be combined to extend their scope",2),
-  #                         rep("model code is sufficiently general to be be re-used in multiple decision contexts",3),
-  #                         rep("a model, its components and derivatives are persistently re-usable by other modeller",3),
-  #                         rep("a model can be simply, flexibly and reliably used as a decision aid",2)),
-                 Standard = c(paste0("A",#"T", 
-                                      1:7
-                                      ),
-                               paste0("R",1:9),# paste0("M",1:2),
-                               # paste0("E",1:3),
-                               # paste0("L",1:3),
-                               # paste0("Y",1:2),
-                               paste0("U",#"I",
-                                      1:4)
-                               ),
-                 Meaning = c(
-                   "Open online repositories are used to permanently archive, uniquely identify and transparently record authorship and development history of model code and data.",#T1
-                   # T2 MISSING - Merged With T1
-                   "Model code and data are documented.",#<T2, Was T3
-                   "Model code uses consistent and abstracted syntax.",# T3, Was T4 -->
-                   "Literate programming is used to implement model analyses.",#T4,Was T5
-                   "Model code coverage is reported.", #T5, New, replaces version now moved to T4 
-                   "All parts of a study analysis and reporting workflow can be reproduced and/or replicated.", #T6, was T7, Replaces Deleted T6 
-                   "Model code and data are distributed with tools to support appropriate citation.",#*L3: New, new location
-                   "Model code is made available for re-use under copyleft or permissive licenses.",#L1: **
-                   "Non-confidential model data is licensed for liberal re-use (potentially subject to ethical use terms).",#L2
-                   "Model code and data are stored and managed separately.",#*M1: Modified (lost ref to licensed and cited) 
-                   "Model code uses encapsulation and inheritence for data structures.",#*M2: Replacement - Old version now merged with E1 # And with E2: "Modules are inheriting data-structures.",#E2
-                   "Model code uses functions to implement algorithms.",#E1: Modified (lost ref to OOP and merged with M2) -->
-                   "Model code is distributed as code libraries.",
-                   "Test data is available to demonstrate the transferability of model code.",#E3: **
-                   # OLD CITATION
-                   "Statistical models are distributed with tools for making out of sample predictions.",#*Y1: New, Replaces Old Y1 (now Y2)
-                   "User-interfaces allow non-technical users to configure and use models.",#Y2: Was Y1     
-                   "Model code and data are version controlled.",#*I1, Was I2 
-                   "The signficiance and status of code and data updates are indicated with semantic versioning and release types.",#I2, Was I1 
-                   "Continuous integration is used to verify model code updates.",#I3 
-                   "Deprecation conventions are used to retire model code and data."#**I4 
-                 ),
+df <- data.frame(`CHEM attribute` = c("Transparent", "Reusable", "Updatable"),
+                 `Social acceptability` = c("Modeller judgments, model features and verification checks can be reviewed by third parties.",
+                                                                        "Models can be modified to reflect alternative value judgments.",
+                                                                        "Models can be modified to reflect alternative value judgments."),
+                 `Fitness for purpose` = c("Modeller judgments, model features and verification checks can be reviewed by third parties.","Third party use increases likelihood of errors being identified.","Models that are maintained can be validly used for longer."),
+                 `Beneficial use` = c("Decision makers more likely to understand strengths and weakness of model before applying it.","Can be used to inform more decision problems, in more contexts and can help reduce duplicative mode development effort.","Models that are maintained can be validly used for longer."),
                  check.names = F)
 if(params$X@outp_formats_chr[1] == "Word") {
   library("flextable")
@@ -66,20 +25,49 @@ if(params$X@outp_formats_chr[1] == "Word") {
                             sanitize_fn = NULL) %>%
     ftExtra::colformat_md()
   }else{
-    df %>%
-      kableExtra::kbl(booktabs = T, 
-                      escape = F,
-                      caption = knitr::opts_current$get("tab.cap")) %>%
-      kableExtra::kable_paper(full_width = F) %>%
-      kableExtra::column_spec(1, bold=T) %>%
-      # kableExtra::collapse_rows(columns = 1) %>%
-      kableExtra::column_spec(3, width = "35em") %>%
-      kableExtra::pack_rows("Accountable - it is easy to see who developed, tested and applied a model and how they did it.",1,7) %>%
-      kableExtra::pack_rows("Updatable - a model and its components are maintained and continuously improved.",17,20) %>%
-      # kableExtra::pack_rows("Modular - models and their components can be combined to extend their scope",11,12) %>%
-      # kableExtra::pack_rows("Epitomising - model code can be re-used in other decision contexts",13,15) %>%
-      kableExtra::pack_rows("Reusable - a model and its components can be used in other models and by other modellers.",8,16) #%>%
+    # library(huxtable)
+    # library(dplyr)
+    #flextable::set_flextable_defaults() #fonts_ignore=TRUE
+    flextable::flextable(df) %>%
+      flextable::add_header_row(values = c(" ","Project team responsibility"),colwidths = c(1,3)) %>%
+      flextable::border_inner(border = officer::fp_border(style = "none")) %>%
+      flextable::border_outer() %>%
+      flextable::padding(padding.top = 5, part = "all") %>%
+      flextable::padding(padding.bottom = 5, part = "all") %>%
+            flextable::padding(padding.left = 5, part = "all") %>%
+      flextable::padding(padding.right = 5, part = "all") %>%
+      flextable::align(align = "center", part = "header") %>%
+      flextable::merge_h() %>%
+      flextable::merge_v() %>%
+      flextable::bold(j=1, part = "header") %>%
+      flextable::width(width = 1.5)
+    # %>%
+    #   
+      #flextable::merge_at(i=2,j=1:2)
+    # huxtable::as_hux(df) %>% 
+    #   #insert_row("MPG-DISP", "", "", "HP-WT", fill = "") %>% 
+    #   #huxtable::merge_cells(2:3,1) %>% 
+    #  # huxtable::set_header_rows(1, TRUE) %>% 
+    #   huxtable::set_col_width(c(.1,.1,.1,.7)) %>%
+    #   huxtable::set_wrap(1, value=T)
+      #huxtable::style_headers(bold = TRUE)
+    # df %>%
+    #   kableExtra::kbl(booktabs = T, 
+    #                   escape = F,
+    #                   caption = knitr::opts_current$get("tab.cap")) %>%
+    #   kableExtra::kable_paper(full_width = F) %>%
+    #   kableExtra::column_spec(1, bold=T) %>%
+    #   kableExtra::add_header_above(c(" ", "Project team responsibility" = 3), bold = T, italic = T) %>%
+    #   kableExtra::column_spec(2, width = "13em") %>%
+    #   kableExtra::column_spec(3, width = "13em") %>%
+    #   kableExtra::column_spec(4, width = "13em") %>%
+    #   kableExtra::collapse_rows(columns = 2, latex_hline = "none")
+      # kableExtra::column_spec(3, width = "35em") %>%
+      # kableExtra::pack_rows("Accountable - it is easy to see who developed, tested and applied a model and how they did it.",1,7) %>%
+      # kableExtra::pack_rows("Updatable - a model and its components are maintained and continuously improved.",17,20) %>%
+      # # kableExtra::pack_rows("Modular - models and their components can be combined to extend their scope",11,12) %>%
+      # # kableExtra::pack_rows("Epitomising - model code can be re-used in other decision contexts",13,15) %>%
+      # kableExtra::pack_rows("Reusable - a model and its components can be used in other models and by other modellers.",8,16) #%>%
       # kableExtra::pack_rows("Yielding - a model can be simply, flexibly and reliably used as a decision aid",19,20)
-
     }
 ```
