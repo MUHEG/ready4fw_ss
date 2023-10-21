@@ -27,7 +27,7 @@ author:
     institute: [Orygen, CYMH]
   - name: Alexandra  Parker
     email: alex.parker@vu.edu.au
-    institute: [VU]
+    institute: [VU, CYMH]
   - name: Jonathan  Karnon
     email: jonathan.karnon@flinders.edu.au
     institute: [Flinders]
@@ -43,6 +43,6 @@ institute:
   - CYMH: Centre for Youth Mental Health; The University of Melbourne, Parkville, Australia
   - HF: Heart Foundation, Melbourne, Australia
   - Headspace: headspace National Youth Mental Health Foundation, Melbourne, Australia
-  - VU: Victoria University, Footscray, Australia
+  - VU: Institute for Health and Sport, Victoria University, Footscray, Australia
   - Flinders: Flinders University, Adelaide, Australia
 keywords:  open source models, health economics, mental disorders

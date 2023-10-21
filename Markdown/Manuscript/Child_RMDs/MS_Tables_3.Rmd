@@ -12,22 +12,16 @@ df <- tibble::tibble(Package = c("ready4",
                                        "ready4pack",
                                        "ready4use",
                                        "ready4show"),
-                           # Version = Package %>%
-                           #   purrr::map_chr(~utils::packageDescription(.x) %>%
-                           #                    purrr::pluck("Version")),
-                           Focus = c("Foundation",
-                                     "Module algorithms",
-                                     "Module structures",
-                                     "Module libraries",
-                                     "Datasets",
-                                     "Analyses"),
-                           A = c("3","2-3","2","1-2,5,7","1-2,7","4,6"), 
-                           R = c("4","5","4-5","1,3,6","3,7",""),
-                           U = c("","","","1-3","1",""),
-                           # E = c("", "1","1-2","1","3",""),
-                           # L = c("","","","1,3","2-3",""),
-                           # Y = c("","","","","","1-2"),
-                           `Depends on` = Package %>%
+                     Purpose = c("Provide a template and novel syntax for modular CHEM implementations and tools for finding interoperable CHEM modules, datasets and reproducible analysis programs.",
+                                 "Streamline and standardise the authoring and documenting of functions that support transferable and generalisable model algorithms.",
+                                 "Streamline and standardise the authoring and documenting of new interoperable CHEM modules.",
+                                 "Help bundle and disseminate newly created CHEM modules as R libraries that are documented, licensed and quality assured.",
+                                 "Help manage the labelling and transfer of data between CHEM modules and local and remote data repositories.",
+                                 "Facilitate the use of CHEM modules in programs to implement integrated and reproducible data ingest, analysis and reporting pipelines."),
+                           # A = c("3","2-3","2","1-2,5,7","1-2,7","4,6"), 
+                           # R = c("4","5","4-5","1,3,6","3,7",""),
+                           # U = c("","","","1-3","1",""),
+                           `R library dependencies` = Package %>%
                              purrr::map(~ {
                                utils::packageDescription(.x) %>%
                                  `[`(c("Depends", "Imports")) %>%
@@ -60,78 +54,63 @@ df <- tibble::tibble(Package = c("ready4",
                                }) %>% 
                              purrr::map_chr (~ .x %>% paste0(collapse = " "))) %>% 
   as.data.frame() 
-if(params$X@outp_formats_chr[1] != "Word"){
-      df$Ref <- c(rep("",6)
-       # "@ready42022","@ready4fun2022","@ready4class2022","@ready4pack2022","@ready4use2022","@ready4show2022"
-                  )
-}else{
-  df$Ref <- ""
-}
+# if(params$X@outp_formats_chr[1] != "Word"){
+#       df$Ref <- c(rep("",6)
+#        # "@ready42022","@ready4fun2022","@ready4class2022","@ready4pack2022","@ready4use2022","@ready4show2022"
+#                   )
+# }else{
+#   df$Ref <- ""
+# }
 
 df <- df %>%
-  dplyr::mutate(Standard = purrr::pmap_chr(df,
-                                           ~paste0("A",
-                                                  ..3,
-                                                  paste0(rep("&nbsp;",
-                                                      2+max(nchar(df[,3]))-nchar(..3)),
-                                                      collapse = ""#
-                                                      ),
-                                                  ifelse(..4=="","","R"),
-                                                  ..4,
-                                                  paste0(rep("&nbsp;",
-                                                      2+max(nchar(df[,4]))-nchar(..4)),
-                                                      collapse = ""#
-                                                      ),
-                                                  ifelse(..5=="","","U"),
-                                                  ..5,
-                                                  paste0(rep("&nbsp;",
-                                                      1+max(nchar(df[,5]))-nchar(..5)),
-                                                      collapse = ""#
-                                                      )#,
-                                                  # ifelse(..6=="","","E"),
-                                                  # ..6,
-                                                  # paste0(rep("&nbsp;",
-                                                  #     1+max(nchar(df[,6]))-nchar(..6)),
-                                                  #     collapse = ""#
-                                                  #     ),
-                                                  # ifelse(..7=="","","L"),
-                                                  # ..7,
-                                                  # # paste0(rep("&nbsp;",
-                                                  # #     1+max(nchar(df[,7]))-nchar(..7)),
-                                                  # #     collapse = ""#
-                                                  # #     ),
-                                                  # ifelse(..8=="","","&nbsp; &nbsp; &nbsp; &nbsp; Y"),
-                                                  # ..8,
-                                                  # paste0(rep("&nbsp;",
-                                                  #     1+max(nchar(df[,8]))-nchar(..8)),
-                                                  #     collapse = ""#
-                                                  #     )
-                                                  ))) %>%
+  # dplyr::mutate(Standard = purrr::pmap_chr(df,
+  #                                          ~paste0("A",
+  #                                                 ..3,
+  #                                                 paste0(rep("&nbsp;",
+  #                                                     2+max(nchar(df[,3]))-nchar(..3)),
+  #                                                     collapse = ""#
+  #                                                     ),
+  #                                                 ifelse(..4=="","","R"),
+  #                                                 ..4,
+  #                                                 paste0(rep("&nbsp;",
+  #                                                     2+max(nchar(df[,4]))-nchar(..4)),
+  #                                                     collapse = ""#
+  #                                                     ),
+  #                                                 ifelse(..5=="","","U"),
+  #                                                 ..5,
+  #                                                 paste0(rep("&nbsp;",
+  #                                                     1+max(nchar(df[,5]))-nchar(..5)),
+  #                                                     collapse = ""#
+  #                                                     )#,
+  #                                                 ))) %>%
   
   dplyr::select(Package,
-                Ref,
-                Focus,
-                Standard,
-                `Depends on`) 
+                #Ref,
+                Purpose,
+                #Standard,
+                `R library dependencies`) 
 
 names_chr <- names(df)
-df <- data.frame(df[,1],
-                 rep(ifelse(params$X@outp_formats_chr[1] == "Word"," ","&nbsp; &nbsp; &nbsp;"),
-                     nrow(df)),
-                 df[,2:3],
-                 rep(ifelse(params$X@outp_formats_chr[1] == "Word"," ","&nbsp; &nbsp; &nbsp;")
-                     ,nrow(df)),
-                 df[,4],
-                 #rep("&nbsp; &nbsp; &nbsp;",nrow(df)),
-                 df[,5])
-colnames(df) <- c("Package",
-                  ifelse(params$X@outp_formats_chr[1] == "Word","XXX"," "),
-                  "Ref", "Focus", 
-                  ifelse(params$X@outp_formats_chr[1] == "Word","YYY"," "),
-                  "Standard     ",# " ",
-                  "Depends on these R libraries")
+# df <- data.frame(df[,1],
+#                  rep(ifelse(params$X@outp_formats_chr[1] == "Word"," ","&nbsp; &nbsp; &nbsp;"),
+#                      nrow(df)),
+#                  df[,2#:3
+#                     ],
+#                  rep(ifelse(params$X@outp_formats_chr[1] == "Word"," ","&nbsp; &nbsp; &nbsp;")
+#                      ,nrow(df)),
+#                  #df[,4],
+#                  #rep("&nbsp; &nbsp; &nbsp;",nrow(df)),
+#                  df[,3#5
+#                     ])
+# colnames(df) <- c("Package",
+#                   ifelse(params$X@outp_formats_chr[1] == "Word","XXX"," "),
+#                   #"Ref", 
+#                   "Purpose", 
+#                   ifelse(params$X@outp_formats_chr[1] == "Word","YYY"," "),
+#                   #"Standard     ",# " ",
+#                   "R library dependencies")
 #df$Package <- "![](../Data/images/ready4.png){ width=10% }"#"\\includegraphics[valign=T,scale=2.5,raise=2mm]{../Data/images/ready4.png}"
-df$`Standard     `  <- df$`Standard     ` %>% stringr::str_replace_all("&nbsp;"," ")
+#df$`Standard     `  <- df$`Standard     ` %>% stringr::str_replace_all("&nbsp;"," ")
 if(params$X@outp_formats_chr[1] == "Word") {
   library("flextable")
   library("ftExtra")
@@ -144,12 +123,13 @@ if(params$X@outp_formats_chr[1] == "Word") {
                             sanitize_fn = NULL) %>%
     ftExtra::colformat_md()
   }else{
-    df$Ref<-NULL
+    #df$Ref<-NULL
     #df$Package <- ""
     df$Package  <- df$Package %>% 
                       purrr::map_chr(~paste0("\\includegraphics[valign=M,width=1.9cm,raise=4mm]{../Data/images/",.x,"_logo.png}"))#scale=0.4,raise=3mm]
     # df$Package <- "\\includegraphics[valign=M,scale=0.08,raise=3mm]{../Data/images/ready4.png}"
-    df[,c(1,3,5:6)]   %>%
+    #df[,c(1,3,5:6)]   %>%
+    df %>%
     # kableExtra::kbl(format = "markdown",
     #                   escape = F,
     #                 caption = knitr::opts_current$get("tab.cap"))
@@ -157,10 +137,11 @@ if(params$X@outp_formats_chr[1] == "Word") {
                       escape = F,
                       caption = knitr::opts_current$get("tab.cap")) %>%
       kableExtra::kable_paper(full_width = F) %>%
-      kableExtra::column_spec(3,latex_valign = "m") %>%
+      kableExtra::column_spec(2, width = "20em", latex_valign = "m") %>%
       # kableExtra::column_spec(1, 
       #                         image = kableExtra::spec_image(rep("../Data/images/ready4.png",nrow(df)), 
       #                                                           150, 150)) %>%
-      kableExtra::column_spec(4, width = "24em",latex_valign = "m")
+      kableExtra::column_spec(3, width = "20em",
+                              latex_valign = "m")
     }
 ```
