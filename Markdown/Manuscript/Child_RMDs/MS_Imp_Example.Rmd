@@ -38,7 +38,7 @@ We have previously described a study [@Hamilton2021.07.07.21260129] to develop u
  
  - collections of real data (study input and results [@DVN/DKDIB0_2021]) and toy data (synthetic populations for testing model modules [@DVN/HJXYKQ_2021]); 
  
- - programs for replicating all steps from data ingest to manuscript reporting [@hamilton_matthew_2022_6129906], applying utility mapping models to new data [@hamilton_matthew_2022_6416330] and generating a synthetic representation of the study dataset [@hamilton_matthew_p_2022_6321821]; and
+ - programs for replicating all steps from data ingest to manuscript production [@hamilton_matthew_2022_6129906], applying utility mapping models to new data [@hamilton_matthew_2022_6416330] and generating a synthetic representation of the study dataset [@hamilton_matthew_p_2022_6321821]; and
  
  - subroutines for creating a catalogue of utility mapping models [@hamilton_matthew_2022_6116385] and generating a draft scientific manuscript [@matthew_p_hamilton_2022_5976988] for studies implemented with these modules.
 

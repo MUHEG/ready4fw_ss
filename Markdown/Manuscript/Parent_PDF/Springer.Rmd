@@ -1,0 +1,149 @@
+---
+# Supported options: 
+#   sn-nature:       Style for submissions to Nature Portfolio journals
+#   sn-basic:        Basic Springer Nature Reference Style/Chemistry Reference Style
+#   sn-mathphys:     Math and Physical Sciences Reference Style
+#   sn-aps:          American Physical Society (APS) Reference Style
+#   sn-vancouver:    Vancouver Reference Style
+#   sn-apa:          APA Reference Style 
+#   sn-chicago:      Chicago-based Humanities Reference Style
+#   default:         Default
+
+classoptions: 
+  - sn-vancouver      
+  - Numbered      # Optional: Use numbered references instead of namedate references (only for sn-nature, sn-basic, sn-vancouver, sn-chicago, sn-mathphys or sn-nature)
+  # - referee       # Optional: Use double line spacing 
+  # - lineno        # Optional: Add line numbers
+  # - iicol         # Optional: Double column layour
+
+title: A prototype software framework for transparent, reusable and updatable computational health economic models
+titlerunning: Transparent, reusable and updatable computational models
+
+authors: 
+  - prefix: Dr.
+    firstname: Leading
+    particle: van 
+    lastname: Author
+    suffix: III
+    naturename: Poet Laureate
+    degrees: MSc, PhD
+    email: abc@def
+    affiliation: [1,2]
+    corresponding: TRUE
+    equalcont: These authors contributed equally to this work.
+    
+  - firstname: Second
+    lastname: Author
+    affiliation: 2
+    equalcont: These authors contributed equally to this work.
+
+
+affiliations:
+  - number: 1
+    corresponding: TRUE
+    info:
+      orgdiv: Department
+      orgname: Organization
+    address:
+        street: Street
+        city: City
+        postcode: 100190
+        state: State
+        country: Country
+  - number: 2
+    corresponding: TRUE
+    info:
+      orgname: Other Organisation
+    
+  
+keywords:
+  - key
+  - dictionary
+  - word
+  
+pacs: 
+  jel:
+    - "D8"
+    - "H51"
+  msc:
+    - "35A01"
+    - "65L10"
+
+# Sample for unstructured abstract 
+
+params:
+  X: NULL
+
+abstract: "`r paste0(readLines('../Header/abstract.txt'),collapse=' ')`"
+
+bibliography: bibliography.bib
+
+header-includes: |
+  %% Per the spinger doc, new theorem styles can be included using built in style, 
+  %% but it seems the don't work so commented below
+  %\theoremstyle{thmstyleone}%
+  \newtheorem{theorem}{Theorem}%  meant for continuous numbers
+  %%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
+  %% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
+  \newtheorem{proposition}[theorem]{Proposition}%
+  %%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
+
+  %% \theoremstyle{thmstyletwo}%
+  \theoremstyle{remark}
+  \newtheorem{example}{Example}%
+  \newtheorem{remark}{Remark}%
+
+  %% \theoremstyle{thmstylethree}%
+  \theoremstyle{definition}
+  \newtheorem{definition}{Definition}%
+  
+  \usepackage{float}
+  \let\origfigure\figure
+  \let\endorigfigure\endfigure
+  \renewenvironment{figure}[1][2] {
+      \expandafter\origfigure\expandafter[H]
+  } {
+      \endorigfigure
+  }
+  \usepackage{lscape}
+  \usepackage{pdflscape}
+  \newcommand{\blandscape}{\begin{landscape}}
+  \newcommand{\elandscape}{\end{landscape}}
+  \usepackage[none]{hyphenat}
+  \usepackage[export]{adjustbox}
+  \usepackage{multirow}
+  \usepackage{longtable}
+  \usepackage{array}
+  \usepackage{wrapfig}
+  \usepackage{colortbl}
+  \usepackage{booktabs} 
+  \usepackage{colortbl}
+  \usepackage{pdflscape}
+  \usepackage{tabu}
+  \usepackage{threeparttable}
+  \usepackage[normalem]{ulem}
+  \usepackage{threeparttablex}
+  \usepackage{makecell}
+
+# output: rticles::springer_article
+output: 
+  bookdown::pdf_book: 
+    base_format: rticles::springer_article
+    # includes:
+    #   in_header: preamble.tex
+    keep_tex: true
+    pandoc_args: 
+      - '--lua-filter=../Filters/scholarly-metadata.lua'
+      - '--lua-filter=../Filters/author-info-blocks.lua'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      out.extra = "")
+#library(flextable)# This forces knitr to label all figures.
+```
+
+
+```{r child="../Child_RMDs/All_Content.Rmd", echo=FALSE, warning=FALSE}
+```
+

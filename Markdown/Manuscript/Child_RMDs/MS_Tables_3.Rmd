@@ -114,7 +114,7 @@ names_chr <- names(df)
 if(params$X@outp_formats_chr[1] == "Word") {
   library("flextable")
   library("ftExtra")
-  df[,c(1,3:4,6:7)] %>%
+  df %>% #[,c(1,3:4,6:7)] %>%
     ready4show::print_table(output_type_1L_chr = params$X@outp_formats_chr[1],
                             caption_1L_chr = knitr::opts_current$get("tab.cap"),
                             mkdn_tbl_ref_1L_chr = paste0("tab:",knitr::opts_current$get("tab.id")),
@@ -125,8 +125,8 @@ if(params$X@outp_formats_chr[1] == "Word") {
   }else{
     #df$Ref<-NULL
     #df$Package <- ""
-    df$Package  <- df$Package %>% 
-                      purrr::map_chr(~paste0("\\includegraphics[valign=M,width=1.9cm,raise=4mm]{../Data/images/",.x,"_logo.png}"))#scale=0.4,raise=3mm]
+    # df$Package  <- df$Package %>% 
+    #                   purrr::map_chr(~paste0("\\includegraphics[valign=M,width=1.9cm,raise=4mm]{../Data/images/",.x,"_logo.png}"))#scale=0.4,raise=3mm]
     # df$Package <- "\\includegraphics[valign=M,scale=0.08,raise=3mm]{../Data/images/ready4.png}"
     #df[,c(1,3,5:6)]   %>%
     df %>%

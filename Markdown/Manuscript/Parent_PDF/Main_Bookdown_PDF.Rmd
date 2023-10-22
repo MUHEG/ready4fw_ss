@@ -2,14 +2,14 @@
 bibliography: ../Data/references.bib
 output: 
   bookdown::pdf_document2: 
+    toc: no
+    keep_tex: true
     includes:
       in_header: preamble.tex
     pandoc_args: 
       - "--metadata-file=../Header/header_common.yaml"
       - '--lua-filter=../Filters/scholarly-metadata.lua'
       - '--lua-filter=../Filters/author-info-blocks.lua'
-    toc: no
-    kep_tex: yes
 params:
   X: NULL
 abstract: "`r paste0(readLines('../Header/abstract.txt'),collapse=' ')`"

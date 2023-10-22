@@ -2,7 +2,7 @@
 Most health economic analyses are undertaken with the aid of computers. However, the ethical dimensions of implementing health economic models as software (or computational health economic models (CHEMs)) are poorly understood. 
                                                         We propose that developers and funders of CHEMs share ethical responsibilities to (i) establish socially acceptable user requirements and design specifications; (ii) ensure fitness for purpose; and (iii) support socially beneficial use. 
                                                         We further propose that a transparent (T), reusable (R) and updatable (U) CHEM is suggestive of a project team that has largely fulfilled these responsibilities.
-                                                        We propose six criteria for assessing CHEMs: (T1) software files are open access; (T2) project team judgments and contributions are easily identified; 
+                                                        We propose six criteria for assessing CHEMs: (T1) software files are open access; (T2) project team contributions and judgments are easily identified; 
                                                         (R1) programming practices promote generalisability and transferability; (R2) licenses restrict only unethical reuse; (U1) maintenance infrastructure is in place; and 
                                                         (U2) new releases are systematically retested and appropriately deprecated.
                                                         To facilitate CHEMs that meet TRU criteria, we have developed a prototype software framework in the open-source programming language R.
@@ -13,6 +13,6 @@ Most health economic analyses are undertaken with the aid of computers. However,
 \\newline
 \\newline
 \\textbf{Code: }
-Visit https://www.ready4-dev.com for more information about how to find, install and apply the prototype software framework.
+Visit https://www.ready4-dev.com for more information about how to find, install and apply the prototype software framework and CHEMs developed with it.
 \\newline
 \\newline
