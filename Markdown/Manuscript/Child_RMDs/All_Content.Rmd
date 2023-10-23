@@ -8,8 +8,8 @@ output: html_document
 ```{r child="../Child_RMDs/MS_Body.Rmd", echo=FALSE}
 ```
 
-\newpage
-# References {-}
+<!-- \newpage -->
+<!-- # References {-} -->
 
 <div id="refs"></div>
 ```{r echo=FALSE}

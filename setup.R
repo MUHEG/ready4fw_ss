@@ -64,7 +64,7 @@ X@figures_in_body_lgl <- F
 # Make manual edits of Markdown files
 #authorReport(X, consent_1L_chr = "Y") # For Preprint
 params_ls <- list(X = X)
-params_ls$X@figures_in_body_lgl <- params_ls$X@tables_in_body_lgl <- F
+#params_ls$X@figures_in_body_lgl <- params_ls$X@tables_in_body_lgl <- F
 rmarkdown::render(paste0("Markdown/Manuscript/Parent_",
                          "PDF",#
                          "/",
