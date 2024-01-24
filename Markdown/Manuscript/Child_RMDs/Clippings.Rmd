@@ -3,6 +3,18 @@ title: "Clippings"
 output: html_document
 date: "2023-04-18"
 ---
+<!-- Functions to implement model algorithms can be associated with a module via . -->
+
+<!-- to provide tools for authoring CHEMs, supplying those CHEMs with data and using CHEMs to implement reproducible modelling analyses. -->
+
+<!-- The ready4pack library depends on two other module authoring libraries. <!-- MOVED CONTENT -->
+
+<!-- Each CHEM module authored with the ready4 framework will include both a data structure (specifying the required properties of data that can validly be supplied to a module) and a set of algorithms (specifying the operations that can be performed on data contained in a module instance). -->
+
+<!-- development version -->
+
+<!-- Talk about DARTH (https://doi.org/10.1007/s40273-019-00837-x )/ BCEA -->
+
 
 #################################
 

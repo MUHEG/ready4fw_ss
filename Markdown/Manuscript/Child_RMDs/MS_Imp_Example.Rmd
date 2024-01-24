@@ -4,7 +4,6 @@ output: html_document
 date: '2022-07-21'
 ---
 
-<!-- Add intro text -->
 We are using the ready4 software framework to implement multiple transparent, reusable and updatable CHEMs in youth mental health (see Figure \@ref(fig:fig1)).  Some initial outputs from this work are publicly available as development version releases.
 
 ```{r, child = child_figs_ls$fig1, echo=FALSE}
@@ -42,7 +41,7 @@ We have previously described a study [@Hamilton2021.07.07.21260129] to develop u
  
  - subroutines for creating a catalogue of utility mapping models [@hamilton_matthew_2022_6116385] and generating a draft scientific manuscript [@matthew_p_hamilton_2022_5976988] for studies implemented with these modules.
 
-We created a checklist (Table \@ref(tab:checktb)) that we used to subjectively assess these study outputs against TRU criteria. For each criterion, we provided a global assessment of whether it was met using the responses “yes”, “no” or “partial”.  We believe our utility mapping study CHEMs have satisfactorily met five of the six criteria (T1, T2, R1, R2 and U1) and have partially met one criterion (U2). The main shortcomings that we identified when applying the assessment criteria was that we have yet to adequately implement unit testing of the R libraries authored as part of this study. 
+We created a checklist (Table \@ref(tab:checktb)) that we used to subjectively assess these study outputs against <!-- Edit_start -->explicit criteria for assessing transparent, reusable and updatable CHEMs that we have previously developed (add REF) <!-- Edit_end -->. For each criterion, we provided a global assessment of whether it was met using the responses “yes”, “no” or “partial”.  We believe our utility mapping study CHEMs have satisfactorily met five of the six criteria (T1, T2, R1, R2 and U1) and have partially met one criterion (U2). The main shortcomings that we identified when applying the assessment criteria was that we have yet to adequately implement unit testing of the R libraries authored as part of this study. 
 
 
 \blandscape

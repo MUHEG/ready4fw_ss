@@ -7,8 +7,9 @@ output: html_document
 
 In this paper, we:
 
-(i)	propose a set of ethical responsibilities for CHEM project teams and criteria for assessing ethical CHEM implementations;
+(i)	describe a prototype software framework we have developed to support the ethical implementation of CHEMs; and
+<!-- propose a set of ethical responsibilities for CHEM project teams and criteria for assessing ethical CHEM implementations; -->
 
-(ii) describe a prototype software framework we have developed to support the ethical implementation of CHEMs; and
+<!-- (ii)  -->
 
 (iii)	assess an initial set of youth mental health CHEMs developed with our software framework against our proposed ethical CHEM implementation criteria. 
