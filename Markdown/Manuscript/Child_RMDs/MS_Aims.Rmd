@@ -5,11 +5,9 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-In this paper, we:
+In this paper, we describe:
 
-(i)	describe a prototype software framework we have developed to support the ethical implementation of CHEMs; and
+(i)	a prototype software framework we have developed to support the development of modular and open source CHEMs; and
 <!-- propose a set of ethical responsibilities for CHEM project teams and criteria for assessing ethical CHEM implementations; -->
-
 <!-- (ii)  -->
-
-(iii)	assess an initial set of youth mental health CHEMs developed with our software framework against our proposed ethical CHEM implementation criteria. 
+(ii)	how we have applied that software framework to develop and share an initial set of modules for a economic model of youth mental health. 

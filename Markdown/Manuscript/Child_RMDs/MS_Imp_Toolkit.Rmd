@@ -4,7 +4,25 @@ output: html_document
 date: '2022-07-21'
 ---
 
-To support the development of CHEMs that are Transparent, Reusable and Updatable (TRU),<!-- assessment criteria,  --> we have created a prototype software framework called ready4. The software framework aims to provide a toolkit for: (i) enabling modular implementation of CHEMs; (ii) authoring and documenting CHEM modules; (iii) managing the labelling and transfer of CHEM input and output data; and (iv) authoring reproducible analyses that apply CHEMs to compatible data.
+## Purpose
+The overarching goal of our software framework, which we call ready4, is to support the development of CHEMs that meet explicit criteria for transparency, reusability and updatability. We have describe these criteria elsewhere [@ethicsCHEMS2024], but briefly they are: software files are open access, developer contributions are easily identified, programming practices promote selective reuse, licenses restrict only unethical reuse, maintenance infrastructure is in place and systematic retesting and deprecation with each new release.
+
+## User requirements
+
+1) Provide a standardised template model module and programming syntax.
+
+2) Develop consolidated project documentation and provide tools to find model modules, datasets and study replication programs.
+
+3) Author, document and share model modules, integrating with online services for open source software development
+
+4) Ingest, label and share model data, integrating with online services for open science data archiving.
+
+5) Implement integrated and reproducible data ingest, analysis and reporting pipelines.
+
+
+
+## XXXYYY
+The software framework aims to provide a toolkit for: (i) enabling modular implementation of CHEMs; (ii) authoring and documenting CHEM modules; (iii) managing the labelling and transfer of CHEM input and output data; and (iv) authoring reproducible analyses that apply CHEMs to compatible data.
 
 To achieve these goals, we have implemented the software framework as R [@RCORE2022] code libraries that integrate with a number of online services and which are supported by a documentation website.
 
