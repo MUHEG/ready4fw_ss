@@ -5,24 +5,26 @@ date: '2022-07-21'
 ---
 
 ## Purpose
-The overarching goal of our software framework, which we call ready4, is to support the development of CHEMs that meet explicit criteria for transparency, reusability and updatability. We have describe these criteria elsewhere [@ethicsCHEMS2024], but briefly they are: software files are open access, developer contributions are easily identified, programming practices promote selective reuse, licenses restrict only unethical reuse, maintenance infrastructure is in place and systematic retesting and deprecation with each new release.
+We decided to develop a software framework to help us address challenges we encountered during the planning and early implementation of readyforwhatsnext. The software framework is called ready4 [@ready424]. The purpose of ready4 is to support the development of CHEMs that meet explicit criteria for transparency, reusability and updatability. We have describe these criteria elsewhere [@ethicsCHEMS2024], but briefly they are: software files are open access, developer contributions are easily identified, programming practices promote selective reuse, licenses restrict only unethical reuse, maintenance infrastructure is in place and new releases are systematically retested, with and deprecation of outdated artefacts.
 
 ## User requirements
-We developed user requirements (URs) for ready4 to address challenges we faced during the initial phases of an open source modelling project we are developing in youth mental health called readyforwhatsnext [@rfwn2024]. The requirements for ready4 were not defined at the start of the project, but evolved over six years (2018-2024) as we became aware of each new challenge. Currently, these requirements are:
+We created ready4 with one primary user group in mind - ourselves. The user requirements (URs) for ready4 evolved over six years (2018-2024) as we became aware of new challenges in implementing readyforwhatsnext that we needed to solve. We specified these user requirements in terms that facilitate solutions that may meet the needs of two other CHEM developers. Currently, these requirements are:
 
-UR 1) A *template* from which all CHEM modules can be created.
+UR 1) A *template CHEM module* which can be used to create CHEM modules that can: (i) safely share inputs and outputs with each other without impairing any module's integrity; (ii) be run as independent models; and (iii) be selectively replaced, updated or extended.
 
-UR 2) A simple *syntax* to support consistency in how CHEM modules are used in health economic analysis programs.
+UR2) *Tools* for creating new CHEM modules from the template module. 
 
-UR 3) Integration with online open source software development services to streamline the *authoring, testing, documenting and sharing of CHEM modules*. 
+UR 3) A simple *syntax* to support consistency in how CHEM modules are used in health economic analysis programs.
 
-UR 4) Integration with online open science data archiving services to streamline the *ingesting, labeling and sharing of CHEM data*.
+UR 4) Integration with online open source software development services to streamline the *authoring, testing, documenting and sharing of CHEM modules*. 
 
-UR 5) Tools to help *author replicable health economic analysis programs and reporting subroutines*.
+UR 5) Integration with online open science data archiving services to streamline the *ingesting, labeling and sharing of CHEM data*.
 
-UR 6) Tools to *find CHEM modules, datasets and replication programs*.
+UR 6) Tools to help *author replicable health economic analysis programs and reporting subroutines*.
 
-UR 7) Integration with open source project documentation tools to *develop and maintain a consolidated CHEM project website*.
+UR 7) Tools to *find CHEM modules, datasets and replication programs*.
+
+UR 8) Integration with tools for documenting open source software to help *develop and maintain a consolidated CHEM project website*.
 
 
 ## Implementation
@@ -30,11 +32,11 @@ UR 7) Integration with open source project documentation tools to *develop and m
 We implemented the software framework as R [@RCORE2022] code libraries that integrate with a number of online services and which are supported by a documentation website.
 
 ### R libraries 
-A library in the R language will typically depend on multiple other R libraries, all of which potentially have different authors. As the number of third-party dependencies of an R library grows so does the fragility of that library (e.g., the library may cease to work as intended due to changes in one of its dependency libraries). To reduce the fragility of our framework we implemented it as multiple R libraries rather than one R library. In total we authored six novel R libraries to implement the ready4 framework, all of which have distinct purposes and dependencies (Table \@ref(tab:cpkgs)).
+A library in the R language will typically depend on multiple other R libraries, many of which are likely to have different authors. As the number of third-party dependencies of an R library grows so does the fragility of that library (e.g., the library may cease to work as intended due to changes in one of its dependency libraries). To reduce the fragility of our framework we implemented it as multiple R libraries rather than one R library. In total we authored six novel R libraries to implement the ready4 framework, all of which have distinct purposes and dependencies (Table \@ref(tab:cpkgs)).
 
-One library provides the foundation for the ready4 framework. In modular model implementations, modules need to be able to share inputs and outputs with each other and to be run as independent models [@barros2023empowering]. To achieve this, the foundation framework library defines a template CHEM module (using R’s S4 class system), which can be used to create other CHEM modules with a common set of inherited properties (meeting *UR 1*). One of these inherited properties is a novel syntax of 15 core commands that enable CHEM module algorithms to be consistently named (meeting *UR 2*). The foundation library also contains tools for retrieving web-based information on CHEM modules, datasets and analysis programs authored with ready4 (meeting *UR 6*) and tools for developing and maintaining a project documentation website (*UR 7*).
+One library provides the foundation for the ready4 framework. <!-- In modular model implementations, modules need to be able to share inputs and outputs with each other and to be run as independent models [@barros2023empowering].  -->The ready4 foundation library defines a template CHEM module using R’s S4 class system, that supports an object-oriented programming paradigm. Two notable features of object-oriented programming are encapsulation [@8717448] and inheritence [@8717448]. Encapsulation allows a CHEM module to bundle model data and algorithms in a protected environment. Encapsulation can be used to help ensure that CHEM modules continue to work as intended when they are combined<!-- [@ready4oop2022] -->. Inheritence allows new CHEM modules to be created that inherit some or all of the properties of a parent module. Inheritence is useful in cases where it is necessary to update CHEM modules that are being combined to account for interaction effects. Inheritance also facilitates the selective editing of CHEM modules when transferring models to different decision contexts <!-- [@ready4oop2022] -->. The ready4 template CHEM module can therefore be used to create other CHEM modules that inherit common set of properties (meeting *UR 1*). One of these inherited properties is a novel syntax of 15 core commands that enable CHEM module algorithms to be consistently named (meeting *UR 3*). The foundation library also contains tools for retrieving web-based information on CHEM modules, datasets and analysis programs authored with ready4 (meeting *UR 7*) and tools for developing and maintaining a project documentation website (*UR 8*).
 
-Three framework libraries are designed to meet *UR 3*. The R language supports functional and object-oriented programming paradigms [@10.1214/13-STS452]. Authoring with each of these paradigms is facilitated by a dedicated CHEM module authoring library. One module authoring library contains tools for writing functions in a consistent house style and automatically generating basic documentation for each function. A second module authoring library contains tools to help streamline and standardise the authoring of novel, documented CHEM modules from the template CHEM module. A third module authoring library provides tools for disseminating themed bundles of CHEM modules as R libraries that are:
+Three framework libraries are designed to meet *URs 2 and 4*. <!-- Define functional and object-oriented approaches, acceptance and unit testing. -->The R language supports functional and object-oriented programming paradigms [@10.1214/13-STS452]. Authoring with each of these paradigms is facilitated by a dedicated CHEM module authoring library. One module authoring library contains tools for writing functions in a consistent house style and automatically generating basic documentation for each function. A second module authoring library contains tools to help streamline and standardise the authoring of novel, documented CHEM modules from the template CHEM module. A third module authoring library provides tools for disseminating themed bundles of CHEM modules as R libraries that are:
 
 -	documented (with a website and PDF manuals);
 
@@ -44,13 +46,13 @@ Three framework libraries are designed to meet *UR 3*. The R language supports f
 
 -	quality assured (each update triggers continuous integration workflows, including any acceptance and unit tests created by module library authors).
 
-A library for managing CHEM data contains tools for supplying CHEM modules with input data ingested from local (i.e., a user's computer) or remote (online repositories) locations, labelling CHEM module datasets and exporting CHEM module data to online repositories (meeting *UR 4*). A library for authoring reproducible analysis programs and reporting subroutines (*UR5*) contains tools to help write executables that apply CHEM modules to compatible datasets for the purpose of undertaking health economic analyses. The library supports the creation of analysis programs that are self-documenting (code is integrated with plain English explanations of what it does) and subroutines that can be used as templates that trigger the creation of explanatory documents (e.g., a scientific manuscript).
+A library for managing CHEM data contains tools for supplying CHEM modules with input data ingested from local (i.e., a user's computer) or remote (online repositories) locations, labelling CHEM module datasets and exporting CHEM module data to online repositories (meeting *UR 5*). A library for authoring reproducible analysis programs and reporting subroutines (*UR6*) contains tools to help write executables that apply CHEM modules to compatible datasets for the purpose of undertaking health economic analyses. The library supports the creation of analysis programs that are self-documenting (code is integrated with plain English explanations of what it does) and subroutines that can be used as templates that trigger the creation of explanatory documents (e.g., a scientific manuscript).
 
 ```{r, child = child_docs_ls$three, echo=FALSE}
 ```
 
 ###	Online services 
-Framework libraries are designed to be used in conjunction with a number of third-party online services that we established and configured accounts with. 
+Framework libraries are designed to be used in conjunction with a number of third-party online services that users of the framework will need to establish and configure accounts with. 
 
 We created a GitHub organisation (a collection of code repositories) where source code that we author is stored and version controlled. We configured individual repositories in our GitHub organisation to implement continuous integration. By default, code libraries authored with our framework will use continuous integration to assess compliance with policies specified by the Comprehensive R Archive Network (CRAN) [@CRAN2022]. To track our code coverage, we linked our GitHub organisation to an account we established at codecov [@codecov_2022]. To facilitate the creation and hosting of documentation websites, we enabled GitHub Pages in each repository used for code library development. 
 
