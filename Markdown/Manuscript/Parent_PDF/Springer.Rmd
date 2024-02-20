@@ -16,8 +16,8 @@ classoptions:
   # - lineno        # Optional: Add line numbers
   # - iicol         # Optional: Double column layour
 
-title: A prototype software framework for transparent, reusable and updatable computational health economic models
-titlerunning: Framework for ethical computational models
+title: A prototype software framework for transferable computational health economic models
+titlerunning: Framework for transferable computational models
 
 # authors:
 #   - name: Matthew P Hamilton

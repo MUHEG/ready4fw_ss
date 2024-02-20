@@ -4,7 +4,10 @@ output: html_document
 date: '2022-07-21'
 ---
 
-We became interested in modular and open-source approaches to CHEM development in 2018 when beginning to plan how to synthesise a number of current or planned economic modelling projects in youth mental health in one multi-purpose model. This overarching youth mental health model  is called readyforwhatsnext [@rfwn2024]. Initially, we plan to construct readyforwhatsnext from projects in four of the twelve domains of health economics identified by Wagstaff and Culyer [@wagstaff2012four]: 
+We became interested in modular and open-source approaches to CHEM development in 2018 when beginning to plan how to synthesise a number of current or planned economic modelling projects in youth mental health in one multi-purpose model. This overarching youth mental health model is called readyforwhatsnext [@rfwn2024]. 
+
+## Economic topics
+Initially, we plan to construct readyforwhatsnext from projects in four of the twelve domains of health economics identified by Wagstaff and Culyer [@wagstaff2012four]: 
 
 -	health and its value (our projects: models to map psychological and functional measures to health utility);
 
@@ -20,10 +23,25 @@ Potential future directions are to supplement readyforwhatsnext with projects in
 
 -	economic evaluation (our goal: assess the cost-utility of competing policy options for improving the mental health of young people).
 
-Although we are principally interested in using readyforwhatsnext to answer policy questions relating to the mental health of young people in Australia, we want to facilitate transferability by other teams to different jurisdictions. A high level schematic of how we aim to implement readyforwhatsnext as a modular and open source CHEM is outlined in Figure \@ref(fig:fig1). 
+A high level schematic of how we aim to implement readyforwhatsnext as a modular and open source CHEM to address these topics is outlined in Figure \@ref(fig:fig1). 
 
 ```{r, child = child_figs_ls$fig1, echo=FALSE}
 ```
+
+## User requirements
+Although we are principally interested in using readyforwhatsnext to answer policy questions relating to the mental health of young people in Australia, we want to facilitate model transfer to other jurisdictions. We believe that a good starting point for facilitating model transferable is to develop a CHEM that is relatively easy to understand, use and adapt. For that reason, the initial user-requirements we specified for readyforwhatsnext are to meet six explicit criteria for transparency, reusability and updatability. We have describe these criteria elsewhere [@ethicsCHEMS2024], but briefly they are: 
+
+T1) Software files are open access;
+
+T2) Developer contributions are easily identified;
+
+T3) Programming practices promote selective reuse; 
+
+T4) Licenses restrict only unethical reuse; <!-- rephrase Liceses permit derivative works-->
+
+T5) Maintenance infrastructure is in place; and 
+
+T6) New releases are systematically retested, with deprecation of outdated artefacts.
 
 
 

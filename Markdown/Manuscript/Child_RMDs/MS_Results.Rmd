@@ -13,7 +13,7 @@ output: html_document
 ```{r child="../Child_RMDs/MS_Imp_Toolkit.Rmd", echo=FALSE}
 ```
 
-# Application in youth mental health
+# Initial application
 ```{r child="../Child_RMDs/MS_Imp_Example.Rmd", echo=FALSE}
 ```
 

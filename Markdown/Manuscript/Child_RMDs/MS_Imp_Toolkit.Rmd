@@ -4,8 +4,7 @@ output: html_document
 date: '2022-07-21'
 ---
 
-## Purpose
-We decided to develop a software framework to help us address challenges we encountered during the planning and early implementation of readyforwhatsnext. The software framework is called ready4 [@ready424]. The purpose of ready4 is to support the development of CHEMs that meet explicit criteria for transparency, reusability and updatability. We have describe these criteria elsewhere [@ethicsCHEMS2024], but briefly they are: software files are open access, developer contributions are easily identified, programming practices promote selective reuse, licenses restrict only unethical reuse, maintenance infrastructure is in place and new releases are systematically retested, with deprecation of outdated artefacts.
+We decided to develop a software framework to help us address challenges we encountered during the planning and early implementation of readyforwhatsnext. The software framework is called ready4 [@ready424]. 
 
 ## User requirements
 We created ready4 with one primary user group in mind - ourselves. The user requirements (URs) for ready4 evolved over six years (2018-2024) as we became aware of new challenges in implementing readyforwhatsnext that we needed to solve. We specified these user requirements in terms that facilitate solutions that may meet the needs of two other CHEM developers. Currently, these requirements are:
@@ -14,19 +13,18 @@ UR 1) A *template* for creating CHEM modules that can: (i) safely share inputs a
 
 UR 2) *Developer tools* that integrate with online open source software development services to support streamlined workflows for authoring R libaries of CHEM modules that are: (i) created using the template module; (ii) written in a consistent house style; (iii) consistently documented; (iv) licensed for reuse; (v) bundled with citation data specifying authorship, funding source, version number and a Digital Object Identifier (DOI); and (vi) quality assured with publicly available acceptance and unit tests. 
 
-UR 3) A simple *syntax* that promotes support consistency in how algorithms associated with CHEM modules are described and used in health economic analysis programs.
+UR 3) A *syntax* that promotes simplicity and consistency in how algorithms associated with CHEM modules are described and used in health economic analysis programs.
 
 <!-- UR 4) Integration with online open source software development services to streamline the *authoring, testing, documenting and sharing of CHEM modules*.  -->
 
 UR 5) *Data management tools* that integrate with online data repository services to streamline the ingesting, labeling and sharing of publicly available and confidential data.
 
-UR 6) *Reporting tools* that include: 
+UR 6) *Reporting tools* that: (i) help author programs for generating analysis reports and scientific summaries from a template that can render documents in HTML, Adobe PDF and Microsoft Word file formats; (ii) retrieve version specific reporting template programs from online code repositories and (iii) supply study specific data (e.g authorship details, input data and analysis results) to reporting template programs to render reports and scientific summaries.
 <!-- help generate tables for multiple outputs, retrieve templates, modify templates with authorship and results -->
-(i) replicable health economic analysis programs; and (ii) reporting subroutines that.
 
-UR 7) Tools to *find CHEM modules, datasets and replication programs*.
+UR 7) *Search tools* to retrieve web based information on a CHEM project's: (i) publicly available model modules, module libraries and tutorials; (ii) datasets and data collections; and (iii) replication programs and reporting templates.
 
-UR 8) Integration with tools for documenting open source software to help *develop and maintain a consolidated CHEM project website*.
+UR 8) *Documentation tools* that integrate with open source website development and hosting infrastructure to help: (i) develop a consolidated project documentation website that synthesises data from mulitple code library websites and code and data repositories; and (ii) partially automate the updating of website resources such as tutorials and code and data release information. 
 
 
 ## Implementation
