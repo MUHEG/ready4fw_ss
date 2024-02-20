@@ -4,7 +4,7 @@ output: html_document
 date: '2022-07-21'
 ---
 
-We became interested in modular and open-source approaches to CHEM development in 2018 when beginning to plan how to synthesise a number of current or planned economic modelling projects in youth mental health in one multi-purpose model. This overarching youth mental health model  is called readyforwhatsnext [@rfwn2024]. Initially we planned to construct readyforwhatsnext from projects in four of the twelve domains of health economics identified by Wagstaff and Culyer [@wagstaff2012four]: 
+We became interested in modular and open-source approaches to CHEM development in 2018 when beginning to plan how to synthesise a number of current or planned economic modelling projects in youth mental health in one multi-purpose model. This overarching youth mental health model  is called readyforwhatsnext [@rfwn2024]. Initially, we plan to construct readyforwhatsnext from projects in four of the twelve domains of health economics identified by Wagstaff and Culyer [@wagstaff2012four]: 
 
 -	health and its value (our projects: models to map psychological and functional measures to health utility);
 
