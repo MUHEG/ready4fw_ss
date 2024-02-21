@@ -17,7 +17,7 @@ Initially, we plan to construct readyforwhatsnext from projects in four of the t
 
 -	supply of health services (our projects: a model of primary mental health care services for young people).
 
-Potential future directions are to supplement readyforwhatsnext with projects in two additional Wagstaff and Culyer domains of: (i) public health (to model the impact of selected fiscal policy and regulation options on young people's mental health); and (ii) human resources (to model the supply and behaviours of the youth mental health workforce). Our ultimate aim is for readyforwhatsnext to flexibly combine its constituent parts in analyses that help answer questions in two additional Wagstaff and Culyer domains:
+Potential future directions are to incorporate projects in two additional Wagstaff and Culyer domains of: (i) public health (to model the impact of selected fiscal policy and regulation options on young people's mental health); and (ii) human resources (to model the supply and behaviours of the youth mental health workforce). Our ultimate aim is for readyforwhatsnext to flexibly combine its constituent parts in analyses that help answer questions in two additional Wagstaff and Culyer domains:
 
 -	efficiency and equity (our goal: assess the distributional impacts and identify the optimal targeting of youth mental health interventions); and
 
@@ -28,8 +28,8 @@ A high level schematic of how we aim to implement readyforwhatsnext as a modular
 ```{r, child = child_figs_ls$fig1, echo=FALSE}
 ```
 
-## User requirements
-Although we are principally interested in using readyforwhatsnext to answer policy questions relating to the mental health of young people in Australia, we want to facilitate model transfer to other jurisdictions. We believe that a good starting point for facilitating model transferable is to develop a CHEM that is relatively easy to understand, use and adapt. For that reason, the initial user-requirements we specified for readyforwhatsnext are to meet six explicit criteria for transparency, reusability and updatability. We have describe these criteria elsewhere [@ethicsCHEMS2024], but briefly they are: 
+## Transferability
+Although we are principally interested in using readyforwhatsnext to answer policy questions relating to the mental health of young people in Australia, we want to facilitate model transfer to other jurisdictions. We believe that a good starting point for facilitating model transferable is to develop a CHEM that is relatively easy to understand, use and adapt. For that reason, the transferability requirements we specified for readyforwhatsnext are to meet six explicit criteria for transparency, reusability and updatability. We have describe these criteria and theire relationship to ethical modelling practice elsewhere [@ethicsCHEMS2024], but briefly they are: 
 
 T1) Software files are open access;
 
@@ -37,11 +37,11 @@ T2) Developer contributions are easily identified;
 
 T3) Programming practices promote selective reuse; 
 
-T4) Licenses restrict only unethical reuse; <!-- rephrase Liceses permit derivative works-->
+T4) Licenses restrict permit derivative works; <!-- rephrase Liceses permit derivative works-->
 
 T5) Maintenance infrastructure is in place; and 
 
-T6) New releases are systematically retested, with deprecation of outdated artefacts.
+T6) Systematic retesting and deprecation.
 
 
 

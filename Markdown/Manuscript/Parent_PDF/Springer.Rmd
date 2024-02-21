@@ -16,7 +16,7 @@ classoptions:
   # - lineno        # Optional: Add line numbers
   # - iicol         # Optional: Double column layour
 
-title: A prototype software framework for transferable computational health economic models
+title: A prototype software framework for transferable computational health economic models and its early application in youth mental health
 titlerunning: Framework for transferable computational models
 
 # authors:
