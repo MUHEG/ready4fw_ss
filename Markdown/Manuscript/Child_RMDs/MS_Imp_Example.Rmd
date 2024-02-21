@@ -6,8 +6,6 @@ date: '2022-07-21'
 
 <!-- Although we are principally interested in using CHEMs to answer policy questions relating to the mental health of young people in Australia, we want to facilitate CHEM transferability to other jurisdictions.  -->
 
-Our CHEMs are being derived from and applied to real data (which can be empirical, simulated or assumption, so long as it is appropriate for use in analysis intended to inform decision-making) from Australia. To help demonstrate the potential use of CHEMs in other decision contexts, we also create toy datasets. Data created for illustration purposes is prominently labelled as not for use in decision-analysis.
-
 ## Case study: health and its value
 We have previously described a study [@Hamilton2021.07.07.21260129] to develop utility mapping models for use in samples of young people presenting to primary mental health services. The ready4 software framework was used in that study to develop CHEM modules, supply those modules with data and implement modelling analyses, creating the following artefacts:
 
@@ -23,6 +21,18 @@ We have previously described a study [@Hamilton2021.07.07.21260129] to develop u
 
 We created a checklist (Table \@ref(tab:checktb)) that we used to subjectively assess these study outputs against <!-- Edit_start -->explicit criteria for assessing transparent, reusable and updatable CHEMs that we have previously developed (add REF) <!-- Edit_end -->. For each criterion, we provided a global assessment of whether it was met using the responses “yes”, “no” or “partial”.  We believe our utility mapping study CHEMs have satisfactorily met five of the six criteria (T1, T2, R1, R2 and U1) and have partially met one criterion (U2). The main shortcomings that we identified when applying the assessment criteria was that we have yet to adequately implement unit testing of the R libraries authored as part of this study. 
 
+## Online services
+To track our code coverage, we linked our GitHub organisation to an account we established at codecov [@codecov_2022]. The framework also supports integrations with the open science repositories Zenodo [@Zenodo2013] and Dataverse [@Dataverse2007] that provide persistent storage solutions that generate a Digital Object Identifier (DOI) for each code and data collection.
+
+The third party services that our framework is designed to work with include GitHub, Zenodo, Dataverse,
+codecov [@codecov_2022]
+
+We created a GitHub organisation (a collection of code repositories) where source code that we author is stored and version controlled. We configured individual repositories in our GitHub organisation to implement continuous integration. By default, code libraries authored with our framework will use continuous integration to assess compliance with policies specified by the Comprehensive R Archive Network (CRAN) [@CRAN2022]. To track our code coverage, we linked our GitHub organisation to an account we established at codecov [@codecov_2022]. To facilitate the creation and hosting of documentation websites, we enabled GitHub Pages in each repository used for code library development. 
+
+We also created a Zenodo community - a collection of permanent, uniquely identified repositories. We then linked our Zenodo community and GitHub organisation so that every time we specify a version of code in one of our GitHub repositories as a “release”, a copy of that code is automatically created on Zenodo with a DOI. Finally, to manage model datasets, we created a dedicated collection within the Harvard Dataverse installation.
+
+## Documentation website
+We used functions from our foundation framework library to partially automate website updates relating to available CHEM modules, datasets and analysis programs. 
 
 \blandscape
 

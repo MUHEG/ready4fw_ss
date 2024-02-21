@@ -4,16 +4,16 @@ output: html_document
 date: '2022-07-21'
 ---
 
-We decided to develop a software framework to help us address challenges we encountered during the planning and early implementation of readyforwhatsnext. The software framework is called ready4 [@ready424]. 
+We began developing a prototype software framework in order to address a number of challenges we encountered during the planning and early implementation of readyforwhatsnext. The software framework is called ready4. 
 
 ## User requirements
-We created ready4 with one primary user group in mind - ourselves. The user requirements (URs) for ready4 evolved over six years (2018-2024) as we became aware of new challenges in implementing readyforwhatsnext that we needed to solve. We specified these user requirements in terms that facilitate solutions that may meet the needs of two other CHEM developers. Currently, these requirements are:
+We created ready4 with one primary user group in mind - ourselves. The user requirements (URs) for ready4 evolved over six years (2018-2024) as we became aware of new issues that we needed to solve. Currently, these requirements are:
 
-UR 1) A *template* for creating CHEM modules that can: (i) safely share inputs and outputs with each other without impairing any module's integrity; (ii) be run as independent models; and (iii) be selectively replaced, updated or extended.
+UR 1) A *template module* for use in CHEM implementations in which modules can: (i) be run as independent models; (ii) safely combined, sharing inputs and outputs with each other without unintended interference; and (iii) be selectively replaced, updated or extended.
 
 UR 2) *Developer tools* that integrate with online open source software development services to support streamlined workflows for authoring R libaries of CHEM modules that are: (i) created using the template module; (ii) written in a consistent house style; (iii) consistently documented; (iv) licensed for reuse; (v) bundled with citation data specifying authorship, funding source, version number and a Digital Object Identifier (DOI); and (vi) quality assured with publicly available acceptance and unit tests. 
 
-UR 3) A *syntax* that promotes simplicity and consistency in how algorithms associated with CHEM modules are described and used in health economic analysis programs.
+UR 3) A *programming syntax* that promotes simplicity and consistency in how algorithms associated with CHEM modules are described and used in health economic analysis programs.
 
 <!-- UR 4) Integration with online open source software development services to streamline the *authoring, testing, documenting and sharing of CHEM modules*.  -->
 
@@ -52,13 +52,9 @@ A library for managing CHEM data contains tools for supplying CHEM modules with 
 ```
 
 ###	Online services 
-Framework libraries are designed to be used in conjunction with a number of third-party online services that users of the framework will need to establish and configure accounts with. 
+Framework libraries are designed to be used in conjunction with a number of third-party online services that users of ready4 will need to establish and configure accounts with. The framework's developer tools integrate with online code development, testing and archiving services. The ready4 framework uses the GitHub [@github2007] service's tools for: software development, testing, version control and distribution; hosting of documentation websites; and transparent record keeping of collaborator contributions. A useful concept for informing software users about the extensiveness of testing procedures is code coverage [@ERICWONG2010188] - the proportion of code that has been explicitly tested. The ready4 framework uses the codecov [@codecov_2022] service to measure and share information about code coverage. The open science repository service Zenodo [@Zenodo2013] is used to provide persistent storage, uniquely identified with a a Digital Object Identifier (DOI), of each code release. 
 
-We created a GitHub organisation (a collection of code repositories) where source code that we author is stored and version controlled. We configured individual repositories in our GitHub organisation to implement continuous integration. By default, code libraries authored with our framework will use continuous integration to assess compliance with policies specified by the Comprehensive R Archive Network (CRAN) [@CRAN2022]. To track our code coverage, we linked our GitHub organisation to an account we established at codecov [@codecov_2022]. To facilitate the creation and hosting of documentation websites, we enabled GitHub Pages in each repository used for code library development. 
-
-We also created a Zenodo community - a collection of permanent, uniquely identified repositories. We then linked our Zenodo community and GitHub organisation so that every time we specify a version of code in one of our GitHub repositories as a “release”, a copy of that code is automatically created on Zenodo with a DOI. Finally, to manage model datasets, we created a dedicated collection within the Harvard Dataverse installation.
+The framework's data management tools use the Dataverse [@Dataverse2007] data repository service for persistent, uniquely identifiable and versioned storage of model input and output data. For the management of frequently updated datasets that do not require persistent storage, ready4 uses GitHub.
 
 ###	Documentation website
-We developed a framework documentation website (https://www.ready4-dev.com) that provides guidance to model developers on how to use and contribute improvements to the ready4 software framework and CHEM modules developed with it. The documentation website is versioned, which means documentation relating to prior versions of framework software can be archived, retrieved and viewed.
-
-The documentation website was developed using the Hugo framework [@hugo_2023], Docsy theme [@docsy_2023] and Algolia DocSearch [@algoliadocsearch_2023] and is hosted using the Netlify [@netlify_2023] service.  We used functions from our foundation framework library to partially automate website updates relating to available CHEM modules, datasets and analysis programs. We linked our Netlify account to our GitHub organisation so that the project website would automatically update whenever its  source code (publicly available in a GitHub repository) was edited.
+We developed a framework documentation website (https://www.ready4-dev.com) that provides guidance to model developers on how to use and contribute improvements to the ready4 software framework and CHEM modules developed with it. The documentation website is versioned, which means documentation relating to prior versions of framework software can be archived, retrieved and viewed. The documentation website was developed using the Hugo framework [@hugo_2023], Docsy theme [@docsy_2023] and Algolia DocSearch [@algoliadocsearch_2023] and is hosted using the Netlify [@netlify_2023] service.  We linked our Netlify account to our GitHub organisation so that the project website would automatically update whenever its source code (publicly available in a GitHub repository) was edited.

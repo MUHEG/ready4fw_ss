@@ -7,7 +7,7 @@ date: '2022-07-21'
 We became interested in modular and open-source approaches to CHEM development in 2018 when beginning to plan how to synthesise a number of current or planned economic modelling projects in youth mental health in one multi-purpose model. This overarching youth mental health model is called readyforwhatsnext [@rfwn2024]. 
 
 ## Economic topics
-Initially, we plan to construct readyforwhatsnext from projects in four of the twelve domains of health economics identified by Wagstaff and Culyer [@wagstaff2012four]: 
+Initially, we are constructing readyforwhatsnext from projects in four of the twelve domains of health economics identified by Wagstaff and Culyer [@wagstaff2012four]: 
 
 -	health and its value (our projects: models to map psychological and functional measures to health utility);
 
@@ -17,19 +17,14 @@ Initially, we plan to construct readyforwhatsnext from projects in four of the t
 
 -	supply of health services (our projects: a model of primary mental health care services for young people).
 
-Potential future directions are to incorporate projects in two additional Wagstaff and Culyer domains of: (i) public health (to model the impact of selected fiscal policy and regulation options on young people's mental health); and (ii) human resources (to model the supply and behaviours of the youth mental health workforce). Our ultimate aim is for readyforwhatsnext to flexibly combine its constituent parts in analyses that help answer questions in two additional Wagstaff and Culyer domains:
+Potential future directions could incorporate projects in two additional Wagstaff and Culyer domains of: (i) public health (to model the impact of selected fiscal policy and regulation options on young people's mental health); and (ii) human resources (to model the supply and behaviours of the youth mental health workforce). Our ultimate aim is for readyforwhatsnext to flexibly combine its constituent parts in analyses that help answer questions in two additional Wagstaff and Culyer domains:
 
 -	efficiency and equity (our goal: assess the distributional impacts and identify the optimal targeting of youth mental health interventions); and
 
 -	economic evaluation (our goal: assess the cost-utility of competing policy options for improving the mental health of young people).
 
-A high level schematic of how we aim to implement readyforwhatsnext as a modular and open source CHEM to address these topics is outlined in Figure \@ref(fig:fig1). 
-
-```{r, child = child_figs_ls$fig1, echo=FALSE}
-```
-
 ## Transferability
-Although we are principally interested in using readyforwhatsnext to answer policy questions relating to the mental health of young people in Australia, we want to facilitate model transfer to other jurisdictions. We believe that a good starting point for facilitating model transferable is to develop a CHEM that is relatively easy to understand, use and adapt. For that reason, the transferability requirements we specified for readyforwhatsnext are to meet six explicit criteria for transparency, reusability and updatability. We have describe these criteria and theire relationship to ethical modelling practice elsewhere [@ethicsCHEMS2024], but briefly they are: 
+Although we are principally interested in using readyforwhatsnext to answer policy questions relating to the mental health of young people in Australia, we want to facilitate model transfer to other jurisdictions. The transferability requirements we have specified for readyforwhatsnext are to meet six explicit criteria for transparency, reusability and updatability. We have describe these criteria and their relationship to ethical modelling practice elsewhere [@ethicsCHEMS2024], but briefly they are: 
 
 T1) Software files are open access;
 
@@ -37,14 +32,18 @@ T2) Developer contributions are easily identified;
 
 T3) Programming practices promote selective reuse; 
 
-T4) Licenses restrict permit derivative works; <!-- rephrase Liceses permit derivative works-->
+T4) Licenses permit derivative works; <!-- rephrase Liceses permit derivative works-->
 
 T5) Maintenance infrastructure is in place; and 
 
 T6) Systematic retesting and deprecation.
 
+The readyforwhatsnext model is being derived from and applied to real Australian data (which can be empirical, simulated or assumption, so long as it is appropriate for use in analysis intended to inform decision-making). To help demonstrate the potential transferability of readyforwhatsnext to other decision contexts, we are also creating toy datasets. Toy data created for illustration purposes will be prominently labelled as not for use in decision-analysis.
 
+A high level schematic guiding our implementation of readyforwhatsnext as a modular and open source CHEM is outlined in Figure \@ref(fig:fig1). 
 
+```{r, child = child_figs_ls$fig1, echo=FALSE}
+```
 
 
 
