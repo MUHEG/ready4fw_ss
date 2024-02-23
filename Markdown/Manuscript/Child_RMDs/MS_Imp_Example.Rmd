@@ -32,30 +32,24 @@ We established and configured accounts with the online services supported by rea
 <!-- The third party services that our framework is designed to work with include GitHub, Zenodo, Dataverse, -->
 <!-- codecov [@codecov_2022] -->
 
-### Outputs
-We have previously described a study [@Hamilton2021.07.07.21260129] to develop utility mapping models for use in samples of young people presenting to primary mental health services. The ready4 software framework was used in that study to develop CHEM modules, supply those modules with data and implement modelling analyses, creating the following artefacts:
+### Modules
+We used all six ready4 framework libraries to author five development version readyforwhatsnext module libraries (Table \@ref(tab:rfwnlibs)). These libraries are youthvars [@hamilton_matthew_2022_6084467] which addresses MURs 1 and 2, scorz [@hamilton_matthew_2022_6084824] which addresses MUR 3, specific [@hamilton_matthew_2022_6116701] which addresses MUR 4, TTU [@gao_caroline_2022_6130155] which addresses MUR 5 and youthu [@matthew_p_hamilton_2021_5646669] which addresses MUR 6.
 
-- development version module libraries for describing and validating youth mental health human record datasets [@hamilton_matthew_2022_6084467], scoring health utility [@hamilton_matthew_2022_6084824], specifying utility mapping models [@hamilton_matthew_2022_6116701] and implementing reproducible utility mapping studies [@gao_caroline_2022_6130155]; 
+### Reporting templates
+We used the framework reporting tools library to author two reporting templates that are designed to be used in conjunction with these utility mapping models. The first reporting template is used to create a catalogue of utility mapping models [@hamilton_matthew_2022_6116385]. The second reporting template can be used to generate a manuscript [@matthew_p_hamilton_2022_5976988] providing a scientific summary of each study implemented with these modules.
 
- - a development version library of functions for finding and using utility mapping models developed with these tools [@matthew_p_hamilton_2021_5646669];
- 
- - collections of real data (study input and results [@DVN/DKDIB0_2021]) and toy data (synthetic populations for testing model modules [@DVN/HJXYKQ_2021]); 
- 
- - programs for replicating all steps from data ingest to manuscript production [@hamilton_matthew_2022_6129906], applying utility mapping models to new data [@hamilton_matthew_2022_6416330] and generating a synthetic representation of the study dataset [@hamilton_matthew_p_2022_6321821]; and
- 
- - subroutines for creating a catalogue of utility mapping models [@hamilton_matthew_2022_6116385] and generating a draft scientific manuscript [@matthew_p_hamilton_2022_5976988] for studies implemented with these modules.
+### Application
+We have previously described a study [@Hamilton2021.07.07.21260129] that used applied these modules and reporting templates to develop utility mapping models in a sample of young people presenting to primary mental health services. We used these module libraries to write programs that reproduced that study's reporting and analysis algorithm [@hamilton_matthew_2022_6129906], to demonstratehow to applying the utility mapping models constructed in that study to new data [@hamilton_matthew_2022_6416330] and to generate a synthetic representation of the study dataset [@hamilton_matthew_p_2022_6321821]. We also created an open access study input parameters and results dataset [@DVN/DKDIB0_2021]) and toy datasets to help demonstrate the transferability of the study algorithm [@DVN/HJXYKQ_2021]).
+
 
 ```{r, child = child_docs_ls$threeb, echo=FALSE}
 ```
 
-(Table \@ref(tab:rfwnlibs)).
-
-
 ## Documentation website
-We used functions from our foundation framework library to partially automate website updates relating to available CHEM modules, datasets and analysis programs. 
+We created a documentation website (https://readyforwhatsnext.org/) using functions from our foundation framework library to partially automate content updates relating to available modules, datasets and analysis programs. 
 
 ## Transferability assessment
-We created a checklist (Table \@ref(tab:checktb)) that we used to subjectively assess these study outputs against <!-- Edit_start -->explicit criteria for assessing transparent, reusable and updatable CHEMs that we have previously developed (add REF) <!-- Edit_end -->. For each criterion, we provided a global assessment of whether it was met using the responses “yes”, “no” or “partial”.  We believe our utility mapping study CHEMs have satisfactorily met five of the six criteria (T1, T2, R1, R2 and U1) and have partially met one criterion (U2). The main shortcomings that we identified when applying the assessment criteria was that we have yet to adequately implement unit testing of the R libraries authored as part of this study. 
+We created a checklist (Table \@ref(tab:checktb)) that we used to subjectively assess these study outputs against <!-- Edit_start -->our TRU criteria <!-- Edit_end -->. For each criterion, we provided a global assessment of whether it was met using the responses “yes”, “no” or “partial”.  We believe our utility mapping study modules have satisfactorily met five of the six criteria (T1, T2, R1, R2 and U1) and have partially met one criterion (U2). The main shortcomings that we identified when applying the assessment criteria was that we have yet to adequately implement unit testing of the R libraries authored as part of this study. 
 
 \blandscape
 
