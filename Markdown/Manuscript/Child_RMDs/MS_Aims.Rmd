@@ -7,7 +7,7 @@ output: html_document
 
 In this paper, we describe:
 
-(i)	our motivation for developing a modular and open source CHEM in youth mental health;
+(i)	our motivation for developing a transferable CHEM in youth mental health;
 
 (ii) a prototype software framework we have developed to support the development of transferable CHEMs; and
 <!-- propose a set of ethical responsibilities for CHEM project teams and criteria for assessing ethical CHEM implementations; -->

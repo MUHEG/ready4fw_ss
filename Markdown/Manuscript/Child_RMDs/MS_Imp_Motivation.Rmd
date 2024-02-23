@@ -24,23 +24,27 @@ Potential future directions could incorporate projects in two additional Wagstaf
 -	economic evaluation (our goal: assess the cost-utility of competing policy options for improving the mental health of young people).
 
 ## Transferability
-Although we are principally interested in using readyforwhatsnext to answer policy questions relating to the mental health of young people in Australia, we want to facilitate model transfer to other jurisdictions. The transferability requirements we have specified for readyforwhatsnext are to meet six explicit criteria for transparency, reusability and updatability. We have describe these criteria and their relationship to ethical modelling practice elsewhere [@ethicsCHEMS2024], but briefly they are: 
+We are principally interested in using readyforwhatsnext to answer policy questions relating to the mental health of young people in Australia. Australian mental health services are primarily planned and commissioned by the Australian Government, the governments of Australia's state and territories and independent organisations focused on smaller regions called Primary Health Networks. Promoting mentally healthy local communities is also an important role for Australian local governments. Australia is an international leader in developing innovative youth mental health service models that are subsequently adopted in other jurisdictions [@RN27]. For these reasons, we want readyforwhatsnext to be implemented in a manner that facilitates its transfer to multiple decision contexts. 
+
+However, there are ethical risks associated with each potential transfer, in particular the need to ensure social acceptability, fitness for purpose and appropriate use of readyforwhatsnext in each new decision context. For that reason, we have set the goal of readyforwhatsnext meeting six explicit criteria for transparency, reusability and updatability (TRU criteria). We have describe these criteria and their origins in ethical modelling practice elsewhere [@ethicsCHEMS2024], but briefly they are: 
+
+<!-- Model mutipurpose and complexity increasing validation [@Feenstra2022] -->
 
 T1) Software files are open access;
 
 T2) Developer contributions are easily identified;
 
-T3) Programming practices promote selective reuse; 
+R1) Programming practices promote selective reuse; 
 
-T4) Licenses permit derivative works; <!-- rephrase Liceses permit derivative works-->
+R2) Licenses permit derivative works; <!-- rephrase Liceses permit derivative works-->
 
-T5) Maintenance infrastructure is in place; and 
+U1) Maintenance infrastructure is in place; and 
 
-T6) Systematic retesting and deprecation.
+U6) Systematic retesting and deprecation.
 
-The readyforwhatsnext model is being derived from and applied to real Australian data (which can be empirical, simulated or assumption, so long as it is appropriate for use in analysis intended to inform decision-making). To help demonstrate the potential transferability of readyforwhatsnext to other decision contexts, we are also creating toy datasets. Toy data created for illustration purposes will be prominently labelled as not for use in decision-analysis.
-
-A high level schematic guiding our implementation of readyforwhatsnext as a modular and open source CHEM is outlined in Figure \@ref(fig:fig1). 
+We are developing readyforwhatsnext using real Australian data (which can be empirical, simulated or assumption, so long as it is appropriate for use in analysis intended to inform decision-making). To help demonstrate the potential transferability of readyforwhatsnext to other decision contexts, we are also creating toy datasets. Toy data created for illustration purposes is prominently labelled as not for use in decision-analysis.
+<!-- PHNS -->
+A high level schematic guiding our implementation of readyforwhatsnext as a transferable CHEM is outlined in Figure \@ref(fig:fig1). 
 
 ```{r, child = child_figs_ls$fig1, echo=FALSE}
 ```
