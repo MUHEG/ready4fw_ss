@@ -4,10 +4,10 @@ output: html_document
 date: '2022-07-21'
 ---
 
-We became interested in modular and open-source approaches to CHEM development in 2018 when beginning to plan how to synthesise a number of current or planned economic modelling projects in youth mental health in one multi-purpose model. This overarching youth mental health model is called readyforwhatsnext [@rfwn2024]. 
+We became interested in solving some of the technical barriers to transferable CHEMs in 2018 when considering how to synthesise multiple youth mental health economic modelling projectsin one multi-purpose model. This overarching youth mental health model is called readyforwhatsnext [@rfwn2024]. 
 
 ## Economic topics
-Initially, we are constructing readyforwhatsnext from projects in four of the twelve domains of health economics identified by Wagstaff and Culyer [@wagstaff2012four]: 
+We are constructing readyforwhatsnext from projects in four of the twelve domains of health economics identified by Wagstaff and Culyer [@wagstaff2012four]. These are: 
 
 -	health and its value (our projects: models to map psychological and functional measures to health utility);
 
@@ -17,16 +17,16 @@ Initially, we are constructing readyforwhatsnext from projects in four of the tw
 
 -	supply of health services (our projects: a model of primary mental health care services for young people).
 
-Potential future directions could incorporate projects in two additional Wagstaff and Culyer domains of: (i) public health (to model the impact of selected fiscal policy and regulation options on young people's mental health); and (ii) human resources (to model the supply and behaviours of the youth mental health workforce). Our ultimate aim is for readyforwhatsnext to flexibly combine its constituent parts in analyses that help answer questions in two additional Wagstaff and Culyer domains:
+Potential future directions for readyforwhatsnext may incorporate projects in two additional Wagstaff and Culyer domains of: (i) public health (to model the impact of selected fiscal policy and regulation options on young people's mental health); and (ii) human resources (to model the supply and behaviours of the youth mental health workforce). Our ultimate aim is for readyforwhatsnext to flexibly combine its constituent parts in analyses that help answer questions in two additional Wagstaff and Culyer domains:
 
 -	efficiency and equity (our goal: assess the distributional impacts and identify the optimal targeting of youth mental health interventions); and
 
 -	economic evaluation (our goal: assess the cost-utility of competing policy options for improving the mental health of young people).
 
 ## Transferability
-We are principally interested in using readyforwhatsnext to answer policy questions relating to the mental health of young people in Australia. Australian mental health services are primarily planned and commissioned by the Australian Government, the governments of Australia's state and territories and independent organisations focused on smaller regions called Primary Health Networks. Promoting mentally healthy local communities is also an important role for Australian local governments. Australia is an international leader in developing innovative youth mental health service models that are subsequently adopted in other jurisdictions [@RN27]. For these reasons, we want readyforwhatsnext to be implemented in a manner that facilitates its transfer to multiple decision contexts. 
+We are principally interested in using readyforwhatsnext to answer policy questions relating to the mental health of young people in Australia. Australian public mental health services can be planned and commissioned by the Australian Government, the governments of Australia's state and territories and independent organisations focused on smaller regions called Primary Health Networks. Promoting mentally healthy local communities is also an important role for Australian local governments. The mental health of young people is a global priority [@https://doi.org/10.1002/wps.20938] and Australia has initiated youth mental health service model reforms that have been adopted in other jurisdictions [@RN27]. For these reasons, we aim to develop readyforwhatsnext in a manner that facilitates its transfer to multiple decision contexts. 
 
-However, there are ethical risks associated with each potential transfer, in particular the need to ensure social acceptability, fitness for purpose and appropriate use of readyforwhatsnext in each new decision context. For that reason, we have set the goal of readyforwhatsnext meeting six explicit criteria for transparency, reusability and updatability (TRU criteria). We have describe these criteria and their origins in ethical modelling practice elsewhere [@ethicsCHEMS2024], but briefly they are: 
+However, there are ethical risks associated with each potential transfer, in particular the need to ensure the social acceptability, fitness for purpose and appropriate use of readyforwhatsnext in each new decision context [@ethicsCHEMS2024]. For that reason, we have set the goal of readyforwhatsnext meeting six explicit criteria for transparency, reusability and updatability (TRU criteria). We have describe these criteria and their origins in ethical modelling practice elsewhere [@ethicsCHEMS2024], but briefly they are: 
 
 <!-- Model mutipurpose and complexity increasing validation [@Feenstra2022] -->
 
@@ -40,7 +40,7 @@ R2) Licenses permit derivative works; <!-- rephrase Liceses permit derivative wo
 
 U1) Maintenance infrastructure is in place; and 
 
-U6) Systematic retesting and deprecation.
+U6) Software is systematically retested and deprecated.
 
 We are developing readyforwhatsnext using real Australian data (which can be empirical, simulated or assumption, so long as it is appropriate for use in analysis intended to inform decision-making). To help demonstrate the potential transferability of readyforwhatsnext to other decision contexts, we are also creating toy datasets. Toy data created for illustration purposes is prominently labelled as not for use in decision-analysis.
 <!-- PHNS -->
