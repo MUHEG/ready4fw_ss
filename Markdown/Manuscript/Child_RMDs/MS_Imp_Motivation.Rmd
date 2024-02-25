@@ -32,7 +32,7 @@ However, there are ethical risks associated with each potential transfer, in par
 
 T1) Software files are open access;
 
-T2) Developer contributions are easily identified;
+T2) Developer contributions and judgments on appropriate use are easily identified;
 
 R1) Programming practices promote selective reuse; 
 
@@ -40,7 +40,7 @@ R2) Licenses permit derivative works; <!-- rephrase Liceses permit derivative wo
 
 U1) Maintenance infrastructure is in place; and 
 
-U6) Software is systematically retested and deprecated.
+U6) Releases are systematically retested and deprecated.
 
 We are developing readyforwhatsnext using real Australian data (which can be empirical, simulated or assumption, so long as it is appropriate for use in analysis intended to inform decision-making). To help demonstrate the potential transferability of readyforwhatsnext to other decision contexts, we are also creating toy datasets. Toy data created for illustration purposes is prominently labelled as not for use in decision-analysis.
 <!-- PHNS -->
