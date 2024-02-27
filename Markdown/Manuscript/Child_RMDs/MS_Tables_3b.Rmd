@@ -4,9 +4,9 @@ author: "Author"
 date: "`r Sys.Date()`"
 output: html_document
 ---
-```{r rfwnlibs, tab.cap='readyforwhatsnext module libraries for utility mapping', tab.id = 'cpkgs', echo = F, results = 'asis'}
+```{r rfwnlibs, tab.cap='Model module libraries for utility mapping', tab.id = 'cpkgs', echo = F, results = 'asis'}
 library(kableExtra)  
-df <- tibble::tibble(Package = c("youthvars",
+df <- tibble::tibble(Library = c("youthvars",
                                        "scorz",
                                        "specific",
                                        "TTU",
@@ -16,7 +16,7 @@ df <- tibble::tibble(Package = c("youthvars",
                                  "Construct and evaluate utility mapping models.",
                                  "Implement reproducible utility mapping sudies.",
                                  "Apply utility mapping models to out of sample data."),
-                           `R library dependencies` = Package %>%
+                           `R library dependencies` = Library %>%
                              purrr::map(~ {
                                utils::packageDescription(.x) %>%
                                  `[`(c("Depends", "Imports")) %>%
@@ -50,7 +50,7 @@ df <- tibble::tibble(Package = c("youthvars",
                              purrr::map_chr (~ .x %>% paste0(collapse = " "))) %>% 
   as.data.frame() 
 df <- df %>%
-  dplyr::select(Package,
+  dplyr::select(Library,
                 Purpose,
                 `R library dependencies`) 
 

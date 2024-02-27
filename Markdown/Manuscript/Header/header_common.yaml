@@ -19,7 +19,7 @@ author:
   - name: Petra  Plencnerova
     email: pplencnerova@headspace.org.au
     institute: [Headspace]
-  - name: David  Baker
+  - name: David G Baker
     email: david.baker@orygen.org.au
     institute: [Orygen, CYMH]
   - name: Patrick D McGorry
@@ -45,4 +45,4 @@ institute:
   - Headspace: headspace National Youth Mental Health Foundation, Melbourne, Australia
   - VU: Institute for Health and Sport, Victoria University, Footscray, Australia
   - Flinders: Flinders University, Adelaide, Australia
-keywords:  computational models, health economics, mental disorders, open-source models, software frameworks
+keywords:  adolescence, computational models, health economics, mental disorders, open-source models, software frameworks

@@ -1,5 +1,5 @@
 ---
-bibliography: ../Data/references.bib
+bibliography: ../Data/WordBibliography.bib
 output:
   bookdown::markdown_document2:
     base_format: "officedown::rdocx_document"

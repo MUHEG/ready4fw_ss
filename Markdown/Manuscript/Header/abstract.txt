@@ -1,16 +1,16 @@
 \\textbf{Summary: }
-We are developing an open source and modular Computational Health Economic Model (CHEM) in youth mental health.
-                                                        In order for that CHEM to be readily transferable to multiple jurisdictions, we aim for it to meet six explicit transparency, reusability and updatability (TRU) criteria.
-                                                        These criteria are: (T1) open access software files; (T2) easily identifiable developer contributions and judgments; (R1) programming practices promote selective reuse; (R2) permissions for derivative works; (U1) maintenance infrastructure; and (U2) systematic retesting and deprecation.
-                                                        To overcome technical challenges to achieving this goal, we developed a prototype software framework.
-                                                        We specified framework user requirements for a template CHEM module, a simple programming syntax and tools for authoring new CHEM modules, supplying CHEMs with data, reporting reproducible analyses, searching for CHEM modules and maintaining a project website.
-                                                        We developed the framework as six development version code libraries in the open-source programming language R that integrate with online services for software development and research data archiving. 
-                                                        We used the framework to author five development version R libraries of utility mapping CHEM modules in youth mental health that provide tools for variable validation, dataset description, multi-attribute instrument scoring, construction of mapping models, reporting of mapping studies and making out of sample predictions.
-                                                        We assessed these utility mapping modules as meeting TRU criteria T1, R1-2 and U1. The remaining two TRU criteria are partially met, but require more detailed documentation (for T2) and more unit testing (for U2).
+We are developing an economic model to explore multiple topics in Australian youth mental health policy. 
+                                                        We want that model to be readily transferable to other jurisdictions.
+                                                        We developed a software framework for authoring transparent, reusable and updatable Computational Health Economic Models (CHEMs) (the software files that implement health economic models).
+                                                        We specified framework user requirements of a template CHEM module that facilitates modular model implementations, a simple programming syntax and tools for authoring new CHEM modules, supplying CHEMs with data, reporting reproducible CHEM analyses, searching for CHEM modules and maintaining a CHEM project website.
+                                                        We implemented the framework as six development version code libraries in the programming language R that integrate with online services for software development and research data archiving. 
+                                                        We used the framework to author five development version R libraries of CHEM modules focused on utility mapping in youth mental health. 
+                                                        These modules provide tools for variable validation, dataset description, multi-attribute instrument scoring, construction of mapping models, reporting of mapping studies and making out of sample predictions.
+                                                        We assessed these CHEM module libraries as mostly meeting transparency, reusability and updatability criteria that we have previously developed, but requiring more detailed documentation and unit testing of individual modules.
                                                         Our software framework has potential value as a prototype for future tools to support the development of transferable CHEMs.
 \\newline
 \\newline
 \\textbf{Code: }
-Visit https://www.ready4-dev.com for more information about how to find, install and apply the prototype software framework. 
+Visit https://www.ready4-dev.com for more information about how to find, install and apply the prototype software framework.
 \\newline
 \\newline

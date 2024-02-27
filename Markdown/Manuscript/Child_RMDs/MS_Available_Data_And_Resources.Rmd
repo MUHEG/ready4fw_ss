@@ -5,4 +5,4 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-The most up to date and comprehensive source of documentation on our framework and model is available at https://www.ready4-dev.com . Development versions of all code repositories referenced in this article are available in https://github.com/ready4-dev/ . Archived code releases are available in https://zenodo.org/communities/ready4  . All data repositories referenced in this article are available in https://dataverse.harvard.edu/dataverse/ready4 .
+The ready4 framework is documented at https://www.ready4-dev.com. Documentation on readyforwhatsnext is available at https://readyforwhatsnext.org/. Development versions of all code repositories referenced in this article are available in https://github.com/ready4-dev/. Archived code releases are available in https://zenodo.org/communities/ready4. All data repositories referenced in this article are available in https://dataverse.harvard.edu/dataverse/ready4.
