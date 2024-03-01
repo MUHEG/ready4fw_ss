@@ -6,5 +6,5 @@ output: html_document
 ---
 `r ifelse(is.na(params$X@conclusion_1L_chr),"",params$X@conclusion_1L_chr)` 
 <!-- We have identified criteria that can be used to systematically assess the extent to which the computational implementation of health economic models adheres to transparency, reusability and updatability criteria.  -->
-Our software framework provides the outline of a technical solution to some of the challenges of transferable CHEM development using open-source and modular approaches. Our framework can be used as a prototype for developing future software frameworks to support implementation of transferable CHEMs. 
+Our software framework provides a solution to some technical barriers we faced when seeking to implement a transferable CHEM in youth mental health. Our framework can be used as a prototype for developing future software frameworks that address the user-requirements of the broader health economic modelling community. 
 <!-- Barriers to ethical CHEM practice arising from resource constraints should be addressed by research funders. -->

@@ -12,4 +12,5 @@ In this paper, we describe:
 (ii) a prototype software framework we have developed to support the development of transferable CHEMs; and
 <!-- propose a set of ethical responsibilities for CHEM project teams and criteria for assessing ethical CHEM implementations; -->
 <!-- (ii)  -->
-(ii)	how we have applied the prototype software framework to develop and share an initial set of modules for our youth mental health CHEM. 
+
+(iii)	how we have applied the prototype software framework to undertake initial development of our youth mental health CHEM.

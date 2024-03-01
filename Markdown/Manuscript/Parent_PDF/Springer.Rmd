@@ -191,7 +191,7 @@ affiliations:
   - number: 7
     corresponding: FALSE
     info:
-#      orgdiv: XXXXXXXXXXX
+      orgdiv: Flinders Health and Medical Research Institute
       orgname: Flinders University   
     address:
     #     # street: "182 Victoria Square"     
