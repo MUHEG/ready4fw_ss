@@ -40,7 +40,8 @@ if(params$X@outp_formats_chr[1] == "Word") {
                       caption = knitr::opts_current$get("tab.cap")) %>%
       kableExtra::kable_paper(full_width = F) %>%
       kableExtra::column_spec(1, width = "10em", bold=T) %>%
-      kableExtra::column_spec(3, width = "35em")
+      kableExtra::column_spec(3, width = "35em") %>%
+      kableExtra::kable_styling(latex_options = "striped")
     }
 ```
 

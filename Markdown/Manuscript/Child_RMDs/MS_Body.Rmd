@@ -13,6 +13,15 @@ output: html_document
 ```
 <!-- Add child RMDs for results content -->
 
+**Key points for decision makers:**
+
+-	How health economic models are implemented as software significantly shapes how easy they are to transfer to other decision contexts.
+
+-	We have developed a software framework that can help implement a transparent, reusable and updatable economic model in youth mental health.
+
+-	Our framework can be a prototype for software tools that improve the transferability of health economic models more generally.
+
+
 # Introduction
 
 ```{r child="../Child_RMDs/MS_Intro_Short.Rmd", echo=FALSE}
@@ -56,3 +65,6 @@ The authors would like to acknowledge the contribution of John Gillam who provid
 ## Conflict of Interest {-#conflict-of-interest}
 ```{r child="../Child_RMDs/MS_COI.Rmd", echo=FALSE}
 ```
+
+## Author contributions
+MPH led the conceptualisation and software implementation of ready4 and readyforwhatsnext and manuscript drafting. MH, CG and GW co-authored the software described in this article. All co-authors critically reviewed and revised manuscript drafts and approved the final manuscript text.
