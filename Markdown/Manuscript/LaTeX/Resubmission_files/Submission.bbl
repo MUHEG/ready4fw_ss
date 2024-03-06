@@ -1,0 +1,276 @@
+\begin{thebibliography}{10}
+\providecommand{\doi}[1]{\url{https://doi.org/#1}}
+\bibcommenthead
+
+\bibitem[\protect\citeauthoryear{Dakin et~al.}{2015}]{dakin2015influence}
+Dakin H, Devlin N, Feng Y, Rice N, O'Neill P, Parkin D.
+\newblock The influence of cost-effectiveness and other factors on nice decisions.
+\newblock Health economics. 2015;24(10):1256--1271.
+
+\bibitem[\protect\citeauthoryear{Erdemir et~al.}{2020}]{Erdemir2020}
+Erdemir A, Mulugeta L, Ku JP, Drach A, Horner M, Morrison TM, et~al.
+\newblock Credible practice of modeling and simulation in healthcare: ten rules from a multidisciplinary perspective [Journal Article].
+\newblock Journal of translational medicine. 2020;18(1):369.
+\newblock \doi{10.1186/s12967-020-02540-4}.
+
+\bibitem[\protect\citeauthoryear{Arnold and Ekins}{2010}]{Arnold2010}
+Arnold RJG, Ekins S.
+\newblock Time for Cooperation in Health Economics among the Modelling Community [Journal Article].
+\newblock PharmacoEconomics. 2010;28(8):609--613.
+\newblock \doi{10.2165/11537580-000000000-00000}.
+
+\bibitem[\protect\citeauthoryear{Augustovski et~al.}{2009}]{RN39}
+Augustovski F, Iglesias C, Manca A, Drummond M, Rubinstein A, Marti SG.
+\newblock Barriers to generalizability of health economic evaluations in Latin America and the Caribbean region [Journal Article].
+\newblock Pharmacoeconomics. 2009;27(11):919--29.
+\newblock \doi{10.2165/11313670-000000000-00000}.
+
+\bibitem[\protect\citeauthoryear{Myll{\"a}rniemi et~al.}{2018}]{myllarniemi2018development}
+Myll{\"a}rniemi V, Kujala S, Raatikainen M, Sevo{\'n}n P.
+\newblock Development as a journey: factors supporting the adoption and use of software frameworks.
+\newblock Journal of software engineering research and development. 2018;6(1):1--22.
+
+\bibitem[\protect\citeauthoryear{Edwin}{2014}]{edwin2014software}
+Edwin NM.
+\newblock Software frameworks, architectural and design patterns.
+\newblock Journal of Software Engineering and Applications. 2014;2014.
+
+\bibitem[\protect\citeauthoryear{readyforwhatsnext~development team}{}]{rfwn2024}
+readyforwhatsnext~development team T.: readyforwhatsnext - A prototype modular and open-source economic model of youth mental health.
+\newblock Available from: \url{https://readyforwhatsnext.org/}.
+
+\bibitem[\protect\citeauthoryear{Wagstaff and Culyer}{2012}]{wagstaff2012four}
+Wagstaff A, Culyer AJ.
+\newblock Four decades of health economics through a bibliometric lens.
+\newblock Journal of health economics. 2012;31(2):406--439.
+
+\bibitem[\protect\citeauthoryear{McGorry et~al.}{2022}]{https://doi.org/10.1002/wps.20938}
+McGorry PD, Mei C, Chanen A, Hodges C, Alvarez-Jimenez M, Killackey E.
+\newblock Designing and scaling up integrated youth mental health care.
+\newblock World Psychiatry. 2022;21(1):61--76.
+\newblock \doi{https://doi.org/10.1002/wps.20938}.
+\newblock {\href{https://arxiv.org/abs/https://onlinelibrary.wiley.com/doi/pdf/10.1002/wps.20938}{{https://onlinelibrary.wiley.com/doi/pdf/10.1002/wps.20938}}}.
+
+\bibitem[\protect\citeauthoryear{Hetrick et~al.}{2017}]{RN27}
+Hetrick SE, Bailey AP, Smith KE, Malla A, Mathias S, Singh SP, et~al.
+\newblock Integrated (one-stop shop) youth health care: best available evidence and future directions [Journal Article].
+\newblock Med J Aust. 2017;207(10):S5--S18.
+\newblock \doi{10.5694/mja17.00694}.
+
+\bibitem[\protect\citeauthoryear{Hamilton et~al.}{2024}]{ethicsCHEMS2024}
+Hamilton M, Gao C, Karnon J, Salvador-Carulla L, Cotton S, Mihalopoulos C.
+\newblock Ethical considerations for computational implementation of health economic models; 2024.
+
+\bibitem[\protect\citeauthoryear{Pan et~al.}{2021}]{pan2021modular}
+Pan M, Gawthrop PJ, Cursons J, Crampin EJ.
+\newblock Modular assembly of dynamic models in systems biology.
+\newblock PLoS computational biology. 2021;17(10):e1009513.
+
+\bibitem[\protect\citeauthoryear{Bellovin et~al.}{2019}]{bellovin2019privacy}
+Bellovin SM, Dutta PK, Reitinger N.
+\newblock Privacy and synthetic datasets.
+\newblock Stan Tech L Rev. 2019;22:1.
+
+\bibitem[\protect\citeauthoryear{ready4~development team}{}]{ready424}
+ready4~development team T.: ready4 - A prototype software framework for transparent, reusable and updatable computational health economic models.
+\newblock Available from: \url{https://ready4-dev.com/}.
+
+\bibitem[\protect\citeauthoryear{{R Core Team}}{2022}]{RCORE2022}
+{R Core Team}.: R: A Language and Environment for Statistical Computing.
+\newblock Vienna, Austria.
+\newblock Available from: \url{https://www.R-project.org/}.
+
+\bibitem[\protect\citeauthoryear{Hamilton}{2023}]{ready4lib24}
+Hamilton M.: ready4: Implement Modular and Open-Source Health Economic Models.
+\newblock R package version 0.1.6.9000.
+\newblock Available from: \url{https://ready4-dev.github.io/ready4/}.
+
+\bibitem[\protect\citeauthoryear{Hourani et~al.}{2019}]{8717448}
+Hourani H, Wasmi H, Alrawashdeh T.
+\newblock A Code Complexity Model of Object Oriented Programming (OOP).
+\newblock In: 2019 IEEE Jordan International Joint Conference on Electrical Engineering and Information Technology (JEEIT); 2019. p. 560--564.
+
+\bibitem[\protect\citeauthoryear{Hamilton and Wiesner}{2023}]{ready4funlib24}
+Hamilton M, Wiesner G.: ready4fun: Author and Document Functions that Implement Transferable Health Economic Model Algorithms.
+\newblock R package version 0.0.0.9535.
+\newblock Available from: \url{https://ready4-dev.github.io/ready4fun/}.
+
+\bibitem[\protect\citeauthoryear{Hamilton and Wiesner}{2023}]{ready4classlib24}
+Hamilton M, Wiesner G.: ready4class: Author and Document Classes that Make Health Economic Models Modular.
+\newblock R package version 0.0.0.9296.
+\newblock Available from: \url{https://ready4-dev.github.io/ready4class/}.
+
+\bibitem[\protect\citeauthoryear{Hamilton}{2023}]{ready4packlib24}
+Hamilton M.: ready4pack: Author R Packages of Health Economic Model Modules.
+\newblock R package version 0.0.0.9033.
+\newblock Available from: \url{https://ready4-dev.github.io/ready4pack/}.
+
+\bibitem[\protect\citeauthoryear{Hamilton and Wiesner}{2023}]{ready4uselib24}
+Hamilton M, Wiesner G.: ready4use: Author, Ingest, Label and Share Health Economic Model Datasets.
+\newblock R package version 0.0.0.9231.
+\newblock Available from: \url{https://ready4-dev.github.io/ready4use/}.
+
+\bibitem[\protect\citeauthoryear{Hamilton and Wiesner}{2023}]{ready4showlib24}
+Hamilton M, Wiesner G.: ready4show: Author Health Economic Analysis Programs and Reporting Templates.
+\newblock R package version 0.0.0.9111.
+\newblock Available from: \url{https://ready4-dev.github.io/ready4show/}.
+
+\bibitem[\protect\citeauthoryear{github}{2007}]{github2007}
+github.: GitHub.
+\newblock Available from: \url{https://github.com/}.
+
+\bibitem[\protect\citeauthoryear{Shahin et~al.}{2017}]{CI2017}
+Shahin M, Ali~Babar M, Zhu L.
+\newblock Continuous Integration, Delivery and Deployment: A Systematic Review on Approaches, Tools, Challenges and Practices.
+\newblock IEEE Access. 2017;5:3909--3943.
+\newblock \doi{10.1109/ACCESS.2017.2685629}.
+
+\bibitem[\protect\citeauthoryear{Martin}{2003}]{martin2003agile}
+Martin RC.
+\newblock Agile software development: principles, patterns, and practices.
+\newblock Prentice Hall PTR; 2003.
+
+\bibitem[\protect\citeauthoryear{}{2023}]{codecov_2022}
+: Codecov.
+\newblock Accessed: 2023-01-26.
+\newblock Available from: \url{https://about.codecov.io/}.
+
+\bibitem[\protect\citeauthoryear{{Eric Wong} et~al.}{2010}]{ERICWONG2010188}
+{Eric Wong} W, Debroy V, Choi B.
+\newblock A family of code coverage-based heuristics for effective fault localization.
+\newblock Journal of Systems and Software. 2010;83(2):188--208.
+\newblock Computer Software and Applications. \doi{https://doi.org/10.1016/j.jss.2009.09.037}.
+
+\bibitem[\protect\citeauthoryear{{European Organization For Nuclear Research} and {OpenAIRE}}{2013}]{Zenodo2013}
+{European Organization For Nuclear Research}, {OpenAIRE}.: Zenodo.
+\newblock CERN.
+\newblock Available from: \url{https://www.zenodo.org/}.
+
+\bibitem[\protect\citeauthoryear{for Quantitative Social~Science}{2007}]{Dataverse2007}
+for Quantitative Social~Science I.: Dataverse.
+\newblock Harvard University.
+\newblock Available from: \url{https://dataverse.org}.
+
+\bibitem[\protect\citeauthoryear{}{2023}]{hugo_2023}
+: Hugo: The world’s fastest framework for building websites.
+\newblock Accessed: 2023-01-26.
+\newblock Available from: \url{https://gohugo.io}.
+
+\bibitem[\protect\citeauthoryear{}{2023}]{docsy_2023}
+: Docsy.
+\newblock Accessed: 2023-01-26.
+\newblock Available from: \url{https://www.docsy.dev}.
+
+\bibitem[\protect\citeauthoryear{}{2023}]{algoliadocsearch_2023}
+: Docsearch.
+\newblock Accessed: 2023-04-19.
+\newblock Available from: \url{https://docsearch.algolia.com}.
+
+\bibitem[\protect\citeauthoryear{}{2023}]{netlify_2023}
+: Netlify.
+\newblock Accessed: 2023-01-26.
+\newblock Available from: \url{https://www.netlify.com}.
+
+\bibitem[\protect\citeauthoryear{Richardson et~al.}{2012}]{Richardson2012AQ}
+Richardson JR, Peacock SJ, Hawthorne G, Iezzi A, Elsworth G, Day NA.
+\newblock Construction of the descriptive system for the assessment of quality of life AQoL-6D utility instrument [Journal Article].
+\newblock Health and quality of life outcomes. 2012;10(1):38.
+
+\bibitem[\protect\citeauthoryear{Devlin and Brooks}{2017}]{devlin2017eq}
+Devlin NJ, Brooks R.
+\newblock EQ-5D and the EuroQol group: past, present and future.
+\newblock Applied health economics and health policy. 2017;15:127--137.
+
+\bibitem[\protect\citeauthoryear{for Statistical~Computing}{2022}]{CRAN2022}
+for Statistical~Computing RF.: The Comprehensive R Archive Network.
+\newblock Available from: \url{https://cran.r-project.org}.
+
+\bibitem[\protect\citeauthoryear{Hamilton and Gao}{2023}]{hamilton_matthew_2022_6084467}
+Hamilton M, Gao C.: {youthvars: Describe and Validate Youth Mental Health Datasets}.
+\newblock Available from: \url{https://ready4-dev.github.io/youthvars/}.
+
+\bibitem[\protect\citeauthoryear{Hamilton and Gao}{2023}]{hamilton_matthew_2022_6084824}
+Hamilton M, Gao C.: {scorz: Score Multi-Attribute Utility Instruments}.
+\newblock Available from: \url{https://ready4-dev.github.io/scorz/}.
+
+\bibitem[\protect\citeauthoryear{Hamilton and Gao}{2023}]{hamilton_matthew_2022_6116701}
+Hamilton M, Gao C.: {specific: Specify Models to Solve Inverse Problems}.
+\newblock Available from: \url{https://ready4-dev.github.io/specific/}.
+
+\bibitem[\protect\citeauthoryear{Gao and Hamilton}{2023}]{gao_caroline_2022_6130155}
+Gao C, Hamilton M.: {TTU: Implement Transfer to Utility Mapping Algorithms}.
+\newblock Zenodo.
+\newblock {Caroline Gao and Matthew Hamilton (2022). TTU: Implement Transfer to Utility Mapping Algorithms. Version 0.0.0.9337. Zenodo. https://doi.org/10.5281/zenodo.6212507}.
+\newblock Available from: \url{https://ready4-dev.github.io/TTU/}.
+
+\bibitem[\protect\citeauthoryear{Hamilton and Gao}{2024}]{matthew_p_hamilton_2021_5646669}
+Hamilton MP, Gao CX.: youthu: Transform Youth Outcomes to Health Utility Predictions.
+\newblock Zenodo.
+\newblock Available from: \url{https://ready4-dev.github.io/youthu/}.
+
+\bibitem[\protect\citeauthoryear{Hamilton}{2022}]{hamilton_matthew_2022_6116385}
+Hamilton M.: {ttu\_mdl\_ctlg: Generate a template utility mapping (transfer to utility) model catalogue}.
+\newblock Zenodo.
+\newblock {Matthew Hamilton (2022). ttu\_mdl\_ctlg: Generate a template utility mapping (transfer to utility) model catalogue. Zenodo. https://doi.org/10.5281/zenodo.5936870. Version 0.0.9.5}.
+\newblock Available from: \url{https://doi.org/10.5281/zenodo.6116385}.
+
+\bibitem[\protect\citeauthoryear{Hamilton}{2022}]{matthew_p_hamilton_2022_5976988}
+Hamilton MP.: {ready4-dev/ttu\_lng\_ss: Create a Draft Scientific Manuscript For A Utility Mapping Study}.
+\newblock Zenodo.
+\newblock Available from: \url{https://doi.org/10.5281/zenodo.5976988}.
+
+\bibitem[\protect\citeauthoryear{Hamilton et~al.}{2022}]{Hamilton2021.07.07.21260129}
+Hamilton MP, Gao CX, Filia KM, Menssink JM, Sharmin S, Telford N, et~al.
+\newblock Mapping psychological distress, depression and anxiety measures to AQoL-6D utility using data from a sample of young people presenting to primary mental health services.
+\newblock medRxiv. 2022;\doi{10.1101/2021.07.07.21260129}.
+\newblock {\href{https://arxiv.org/abs/https://www.medrxiv.org/content/early/2022/09/13/2021.07.07.21260129.full.pdf}{{https://www.medrxiv.org/content/early/2022/09/13/2021.07.07.21260129.full.pdf}}}.
+
+\bibitem[\protect\citeauthoryear{Hamilton and Gao}{2022}]{hamilton_matthew_2022_6129906}
+Hamilton M, Gao C.: {Complete study program to reproduce all steps from data ingest through to results dissemination for a study to map mental health measures to AQoL-6D health utility}.
+\newblock Zenodo.
+\newblock {Matthew Hamilton and Caroline Gao (2022). Complete study program to reproduce all steps from data ingest through to results dissemination for a study to map mental health measures to AQoL-6D health utility. Zenodo. https://doi.org/10.5281/zenodo.6212704. Version 0.0.9.3}.
+\newblock Available from: \url{https://doi.org/10.5281/zenodo.6212704}.
+
+\bibitem[\protect\citeauthoryear{Hamilton and Gao}{2022}]{hamilton_matthew_2022_6416330}
+Hamilton M, Gao C.: {aqol6dmap\_use: Apply AQoL-6D Utility Mapping Models To New Data}.
+\newblock Zenodo.
+\newblock {Matthew Hamilton and Caroline Gao (2022). aqol6dmap\_use: Apply AQoL-6D Utility Mapping Models To New Data. Zenodo. https://doi.org/10.5281/zenodo.6317180. Version 0.0.9.1}.
+\newblock Available from: \url{https://doi.org/10.5281/zenodo.6416330}.
+
+\bibitem[\protect\citeauthoryear{Hamilton}{2022}]{hamilton_matthew_p_2022_6321821}
+Hamilton MP.: {aqol6dmap\_fakes: Generate fake input data for an AQoL-6D mapping study}.
+\newblock Zenodo.
+\newblock {Matthew P Hamilton (2022). aqol6dmap\_fakes: Generate fake input data for an AQoL-6D mapping study. Zenodo. Version 0.0.9.0}.
+\newblock Available from: \url{https://doi.org/10.5281/zenodo.6321821}.
+
+\bibitem[\protect\citeauthoryear{Hamilton et~al.}{2021}]{DVN/DKDIB0_2021}
+Hamilton MP, Gao CX, Filia KM, Menssink JM, Sharmin S, Telford N, et~al.: {Transfer to AQoL-6D Utility Mapping Algorithms}.
+\newblock Harvard Dataverse.
+\newblock Available from: \url{https://doi.org/10.7910/DVN/DKDIB0}.
+
+\bibitem[\protect\citeauthoryear{Hamilton}{2021}]{DVN/HJXYKQ_2021}
+Hamilton MP.: {Synthetic (fake) youth mental health datasets and data dictionaries}.
+\newblock Harvard Dataverse.
+\newblock Available from: \url{https://doi.org/10.7910/DVN/HJXYKQ}.
+
+\bibitem[\protect\citeauthoryear{Beck et~al.}{2001}]{beck2001manifesto}
+Beck K, Beedle M, van Bennekum A, Cockburn A, Cunningham W, Fowler M, et~al.: Manifesto for Agile Software Development.
+\newblock Available from: \url{http://www.agilemanifesto.org/}.
+
+\bibitem[\protect\citeauthoryear{Afzali et~al.}{2013}]{Afzali2013}
+Afzali HH, Karnon J, Merlin T.
+\newblock Improving the accuracy and comparability of model-based economic evaluations of health technologies for reimbursement decisions: a methodological framework for the development of reference models [Journal Article].
+\newblock Med Decis Making. 2013;33(3):325--32.
+\newblock \doi{10.1177/0272989x12458160}.
+
+\bibitem[\protect\citeauthoryear{Craig et~al.}{2018}]{craig2018taking}
+Craig P, {Di Ruggiero} E, Frohlich K, Mykhaloviskiy E, White M, Campbell R, et~al.
+\newblock Taking account of context in population health intervention research: guidance for producers, users and funders of research. vol. Online of NIHR Journals Library.
+\newblock National Institutes of Health Research; 2018.
+
+\bibitem[\protect\citeauthoryear{Thokala et~al.}{2023}]{thokala2023living}
+Thokala P, Srivastava T, Smith R, Ren S, Whittington MD, Elvidge J, et~al.
+\newblock Living health technology assessment: issues, challenges and opportunities.
+\newblock PharmacoEconomics. 2023;41(3):227--237.
+
+\end{thebibliography}

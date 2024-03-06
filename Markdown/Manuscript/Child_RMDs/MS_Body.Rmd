@@ -66,5 +66,5 @@ The authors would like to acknowledge the contribution of John Gillam who provid
 ```{r child="../Child_RMDs/MS_COI.Rmd", echo=FALSE}
 ```
 
-## Author contributions
-MPH led the conceptualisation and software implementation of ready4 and readyforwhatsnext and manuscript drafting. MH, CG and GW co-authored the software described in this article. All co-authors critically reviewed and revised manuscript drafts and approved the final manuscript text.
+## Author contributions{-#author-contributions}
+MPH led the conceptualisation and software implementation of ready4 and readyforwhatsnext and manuscript drafting. MPH, CG and GW co-authored the software described in this article. All co-authors critically reviewed and revised manuscript drafts and approved the final manuscript text.
